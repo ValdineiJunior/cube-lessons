@@ -1,3 +1,3 @@
 export function Sidebar() {
-    return <div></div>
+  return <div></div>
 }
