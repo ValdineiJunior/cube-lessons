@@ -1,13 +1,11 @@
 import { Row } from './row'
 
-type Notations = {
-  notation: {
-    colors: string[]
-    moves: string[]
-  }
+export type Notation = {
+  colors: string[]
+  moves: string[]
 }
 
-export function Cube({ notation }: Notations) {
+export function Cube({ notation }: { notation: Notation }) {
   return (
     <>
       <div className="grid grid-cols-3 grid-rows-3 h-52 w-48">

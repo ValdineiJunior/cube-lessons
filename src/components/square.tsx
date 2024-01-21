@@ -1,5 +1,4 @@
 export function Square({ bgColor }: { bgColor: string }) {
-  console.log(bgColor)
   return (
     <>
       <div

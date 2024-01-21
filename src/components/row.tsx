@@ -1,6 +1,7 @@
+import { Notation } from './cube'
 import { Square } from './square'
 
-export function Row({ notation }) {
+export function Row({ notation }: { notation: Notation }) {
   return (
     <>
       {notation.colors.map((n, i) => (
