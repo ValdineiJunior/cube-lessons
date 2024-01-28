@@ -27,7 +27,7 @@ export default function Dashboard() {
       case: 'caseOll4',
       notation: {
         colors: ['l', 'y', 't', 'y', 'y', 'y', 'l', 'y', 'b'],
-        moves: ['R', 'U2', 'R2', "U'", 'R2', 'U2', 'R'],
+        moves: ['R', 'U2', 'R2', "U'", 'R2', "U'", 'R2', 'U2', 'R'],
       },
     },
     {
