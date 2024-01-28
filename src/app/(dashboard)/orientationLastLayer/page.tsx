@@ -1,4 +1,4 @@
-import { Cube } from '@/components/cube'
+import { CubeOll } from '@/components/cubeOll'
 
 export default function OrientationLastLayer() {
   const notations = [
@@ -66,7 +66,7 @@ export default function OrientationLastLayer() {
         </p>
         <div className="flex flex-wrap gap-6 justify-center">
           {notations.map((notation) => (
-            <Cube key={notation.case} notation={notation.notation} />
+            <CubeOll key={notation.case} notation={notation.notation} />
           ))}
         </div>
       </div>

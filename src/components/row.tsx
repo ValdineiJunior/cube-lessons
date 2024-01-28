@@ -1,4 +1,4 @@
-import { Notation } from './cube'
+import { Notation } from './cubeOll'
 import { Square } from './square'
 
 export function Row({ notation }: { notation: Notation }) {

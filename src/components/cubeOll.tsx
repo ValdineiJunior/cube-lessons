@@ -5,7 +5,7 @@ export type Notation = {
   moves: string[]
 }
 
-export function Cube({ notation }: { notation: Notation }) {
+export function CubeOll({ notation }: { notation: Notation }) {
   return (
     <>
       <div className="grid grid-cols-3 grid-rows-3 h-52 w-48">

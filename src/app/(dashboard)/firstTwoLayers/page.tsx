@@ -1,3 +1,5 @@
+import { CubeF2l } from '@/components/cubeF2l'
+
 export default function FirstTwoLayers() {
   return (
     <h1 className=" bg-slate-50 col-span-10 p-6">
@@ -10,7 +12,9 @@ export default function FirstTwoLayers() {
           abordagem difere do método básico ao priorizar a construção simultânea
           de pares de quinas e meios.
         </p>
-        <div className="flex flex-wrap gap-6 justify-center">Cube</div>
+        <div className="flex flex-wrap gap-6 justify-center">
+          <CubeF2l />
+        </div>
       </div>
     </h1>
   )
