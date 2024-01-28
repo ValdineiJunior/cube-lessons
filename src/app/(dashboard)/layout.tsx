@@ -5,14 +5,14 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <div className="grid grid-cols-6 min-h-screen">
+      <div className="min-h-screen">
         <div
-          className="col-span-1 bg-blue-200 p-6
+          className="bg-blue-200 p-3 flex flex-row gap-x-4
         "
         >
-          <div>F2L - 41 cases</div>
-          <div>OLL - 57 cases</div>
-          <div>PLL - 21 cases</div>
+          <div>F2L</div>
+          <div>OLL</div>
+          <div>PLL</div>
         </div>
         {children}
       </div>

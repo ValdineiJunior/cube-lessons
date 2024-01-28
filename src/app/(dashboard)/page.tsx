@@ -54,7 +54,7 @@ export default function Dashboard() {
   ]
 
   return (
-    <h1 className=" bg-slate-50 col-span-5 p-6">
+    <h1 className=" bg-slate-50 col-span-10 p-6">
       <div>
         <h1 className="text-3xl">OLL</h1>
         <p className="py-6">
