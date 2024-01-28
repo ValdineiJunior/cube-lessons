@@ -4,18 +4,15 @@
 
 
 .left {
-    background-color: orange;
     transform: rotate(90deg) skewX(-30deg) scaleY(0.864)
 }
 
 .right {
-    background-color: purple;
     transform: rotate(-30deg) skewX(-30deg) scaleY(0.864);
     bottom: 8em;
 }
 
 .top {
-    background-color: yellow;
-    transform: rotate(210deg) skewX(-30deg) scaleY(0.864);
-    bottom: 16em;
+    transform: rotate(30deg) skewX(-30deg) scaleY(0.864);
+    bottom: 24em;
 }

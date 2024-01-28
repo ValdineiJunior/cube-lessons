@@ -12,7 +12,7 @@ export default function FirstTwoLayers() {
           abordagem difere do método básico ao priorizar a construção simultânea
           de pares de quinas e meios.
         </p>
-        <div className="flex flex-wrap gap-6 justify-center">
+        <div>
           <CubeF2l />
         </div>
       </div>
