@@ -5,49 +5,49 @@ export default function Dashboard() {
     {
       case: 'caseOll1',
       notation: {
-        colors: ['z', 'y', 'z', 'y', 'y', 'y', 'y', 'y', 'z'],
+        colors: ['t', 'y', 'r', 'y', 'y', 'y', 'y', 'y', 'b'],
         moves: ['R', 'U', "R'", 'U', 'R', 'U2', "R'"],
       },
     },
     {
       case: 'caseOll2',
       notation: {
-        colors: ['y', 'y', 'z', 'y', 'y', 'y', 'z', 'y', 'z'],
+        colors: ['y', 'y', 't', 'y', 'y', 'y', 'b', 'y', 'r'],
         moves: ["R'", "U'", 'R', "U'", "R'", 'U2', 'R'],
       },
     },
     {
       case: 'caseOll3',
       notation: {
-        colors: ['z', 'y', 'z', 'y', 'y', 'y', 'z', 'y', 'z'],
+        colors: ['l', 'y', 'r', 'y', 'y', 'y', 'l', 'y', 'r'],
         moves: ['R', 'U', "R'", 'U', 'R', "U'", "R'", 'U', 'R', 'U2', "R'"],
       },
     },
     {
       case: 'caseOll4',
       notation: {
-        colors: ['z', 'y', 'z', 'y', 'y', 'y', 'z', 'y', 'z'],
+        colors: ['l', 'y', 't', 'y', 'y', 'y', 'l', 'y', 'b'],
         moves: ['R', 'U2', 'R2', "U'", 'R2', 'U2', 'R'],
       },
     },
     {
       case: 'caseOll5',
       notation: {
-        colors: ['y', 'y', 'z', 'y', 'y', 'y', 'y', 'y', 'z'],
+        colors: ['y', 'y', 't', 'y', 'y', 'y', 'y', 'y', 'b'],
         moves: ["R'", "F'", 'L', 'F', 'R', "F'", "L'", 'F'],
       },
     },
     {
       case: 'caseOll6',
       notation: {
-        colors: ['z', 'y', 'y', 'y', 'y', 'y', 'y', 'y', 'z'],
+        colors: ['t', 'y', 'y', 'y', 'y', 'y', 'y', 'y', 'r'],
         moves: ['Rw', 'U', 'R', "U'", "L'", 'U', "R'", "U'"],
       },
     },
     {
       case: 'caseOll7',
       notation: {
-        colors: ['z', 'y', 'z', 'y', 'y', 'y', 'y', 'y', 'y'],
+        colors: ['t', 'y', 't', 'y', 'y', 'y', 'y', 'y', 'y'],
         moves: ['R2', "D'", 'R', 'U2', "R'", 'D', 'R', 'U2', 'R'],
       },
     },

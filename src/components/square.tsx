@@ -5,16 +5,16 @@ export function Square({ bgColor }: { bgColor: string }) {
         data-status={bgColor}
         className={`
         w-full h-full
-        border-zinc-950
-        border-2
+        border-4
         rounded
-        data-[status=z]:bg-zinc-400
-        data-[status=r]:bg-red-600
-        data-[status=o]:bg-orange-500
+        bg-zinc-800
+        border-zinc-800
+        data-[status=z]:bg-zinc-800
         data-[status=y]:bg-yellow-400
-        data-[status=g]:bg-green-500
-        data-[status=b]:bg-sky-400
-        data-[status=w]:bg-sky-50
+        data-[status=l]:border-l-yellow-400
+        data-[status=t]:border-t-yellow-400
+        data-[status=r]:border-r-yellow-400
+        data-[status=b]:border-b-yellow-400
         `}
       ></div>
     </>
