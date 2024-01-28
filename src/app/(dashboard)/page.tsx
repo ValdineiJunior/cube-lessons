@@ -64,7 +64,7 @@ export default function Dashboard() {
           completar as duas primeiras camadas, as peças amarelas devem estar em
           uma das 57 situações específicas.
         </p>
-        <div className="flex flex-wrap gap-6">
+        <div className="flex flex-wrap gap-6 justify-center">
           {notations.map((notation) => (
             <Cube key={notation.case} notation={notation.notation} />
           ))}
