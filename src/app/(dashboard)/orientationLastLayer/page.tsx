@@ -1,4 +1,4 @@
-import { CubeOll } from '@/components/cubeOll'
+import { CubeOll } from './cubeOll'
 
 export default function OrientationLastLayer() {
   const notations = [
