@@ -70,7 +70,7 @@ export const ollNotations: OllNotation[] = [
     group: "Dot",
     notation: {
       colors: ["t", "t", "t", "l", "y", "r", "l", "b", "r"],
-      moves: ["r", "U", "r'", "U2", "r", "U2", "R'", "U2", "R", "U'", "r'"],
+      moves: ["R", "U", "R'", "U2", "R", "U2", "R'", "U2", "R", "U'", "R'"],
     },
   },
   {
@@ -79,7 +79,7 @@ export const ollNotations: OllNotation[] = [
     group: "Dot",
     notation: {
       colors: ["t", "t", "r", "l", "y", "r", "y", "b", "b"],
-      moves: ["r'", "R2", "U", "R'", "U", "r", "U2", "r'", "U", "M'"],
+      moves: ["R'", "R2", "U", "R'", "U", "R", "U2", "R'", "U", "M'"],
     },
   },
   {
@@ -88,7 +88,7 @@ export const ollNotations: OllNotation[] = [
     group: "Dot",
     notation: {
       colors: ["l", "t", "t", "l", "y", "r", "b", "b", "y"],
-      moves: ["M", "U'", "r", "U2", "r'", "U'", "R", "U'", "R'", "M'"],
+      moves: ["M", "U'", "R", "U2", "R'", "U'", "R", "U'", "R'", "M'"],
     },
   },
   {
@@ -97,7 +97,7 @@ export const ollNotations: OllNotation[] = [
     group: "Square Shape",
     notation: {
       colors: ["y", "y", "r", "y", "y", "r", "l", "b", "b"],
-      moves: ["l'", "U2", "L", "U", "L'", "U", "l"],
+      moves: ["L'", "U2", "L", "U", "L'", "U", "L"],
     },
   },
   {
@@ -106,7 +106,7 @@ export const ollNotations: OllNotation[] = [
     group: "Square Shape",
     notation: {
       colors: ["l", "y", "y", "l", "y", "y", "b", "b", "r"],
-      moves: ["r", "U2", "R'", "U'", "R", "U'", "r'"],
+      moves: ["R", "U2", "R'", "U'", "R", "U'", "R'"],
     },
   },
   {
@@ -115,7 +115,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small Lightning Bolt",
     notation: {
       colors: ["t", "y", "r", "y", "y", "r", "y", "b", "b"],
-      moves: ["r", "U", "R'", "U", "R", "U2", "r'"],
+      moves: ["R", "U", "R'", "U", "R", "U2", "R'"],
     },
   },
   {
@@ -124,7 +124,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small Lightning Bolt",
     notation: {
       colors: ["l", "y", "t", "l", "y", "y", "b", "b", "y"],
-      moves: ["l'", "U'", "L", "U'", "L'", "U2", "l"],
+      moves: ["L'", "U'", "L", "U'", "L'", "U2", "L"],
     },
   },
   {
@@ -151,7 +151,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small Lightning Bolt",
     notation: {
       colors: ["t", "y", "y", "y", "y", "r", "l", "b", "b"],
-      moves: ["r", "U", "R'", "U", "R'", "F", "R", "F'", "R", "U2", "r'"],
+      moves: ["R", "U", "R'", "U", "R'", "F", "R", "F'", "R", "U2", "R'"],
     },
   },
   {
