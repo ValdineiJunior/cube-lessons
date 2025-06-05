@@ -141,7 +141,7 @@ export const ollNotations: OllNotation[] = [
     number: 10,
     group: "Fish Shape",
     notation: {
-      colors: ["t", "t", "y", "y", "y", "r", "l", "b", "b"],
+      colors: ["t", "t", "y", "y", "y", "r", "l", "y", "b"],
       moves: ["R", "U", "R'", "U", "R'", "F", "R", "F'", "R", "U2", "R'"],
     },
   },
@@ -159,7 +159,7 @@ export const ollNotations: OllNotation[] = [
     number: 12,
     group: "Small Lightning Bolt",
     notation: {
-      colors: ["y", "y", "t", "l", "y", "y", "b", "b", "y"],
+      colors: ["y", "y", "t", "l", "y", "y", "b", "b", "r"],
       moves: ["M'", "R'", "U'", "R", "U'", "R'", "U2", "R", "U'", "R", "r'"],
     },
   },
