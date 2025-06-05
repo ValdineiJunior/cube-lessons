@@ -214,7 +214,7 @@ export default function OrientationLastLayer() {
       number: 21,
       group: "Cross",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "t", "y", "y", "y", "b", "y", "b"],
         moves: ["R", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "R'"],
       },
     },
@@ -223,7 +223,7 @@ export default function OrientationLastLayer() {
       number: 22,
       group: "Cross",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "y", "t", "y", "y", "y", "l", "y", "b"],
         moves: ["R", "U2", "R2", "U'", "R2", "U'", "R2", "U2", "R"],
       },
     },
@@ -232,7 +232,7 @@ export default function OrientationLastLayer() {
       number: 23,
       group: "Cross",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "t", "y", "y", "y", "y", "y", "y"],
         moves: ["R2", "D'", "R", "U2", "R'", "D", "R", "U2", "R"],
       },
     },
@@ -241,7 +241,7 @@ export default function OrientationLastLayer() {
       number: 24,
       group: "Cross",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "y", "y", "y", "y", "b", "y", "y"],
         moves: ["r", "U", "R'", "U'", "r'", "F", "R", "F'"],
       },
     },
@@ -250,7 +250,7 @@ export default function OrientationLastLayer() {
       number: 25,
       group: "Cross",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "y", "y", "y", "y", "y", "y", "y", "b"],
         moves: ["F'", "r", "U", "R'", "U'", "r'", "F", "R"],
       },
     },
@@ -259,7 +259,7 @@ export default function OrientationLastLayer() {
       number: 26,
       group: "Cross",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "y", "y", "y", "y", "y", "b", "y", "r"],
         moves: ["R", "U2", "R'", "U'", "R", "U'", "R'"],
       },
     },
@@ -268,7 +268,7 @@ export default function OrientationLastLayer() {
       number: 27,
       group: "Cross",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "r", "y", "y", "y", "y", "b"],
         moves: ["R", "U", "R'", "U", "R", "U2", "R'"],
       },
     },
@@ -277,7 +277,7 @@ export default function OrientationLastLayer() {
       number: 28,
       group: "Corners Oriented",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "y", "y", "y", "y", "r", "y", "b", "y"],
         moves: ["r", "U", "R'", "U'", "r'", "R", "U", "R", "U'", "R'"],
       },
     },
@@ -286,7 +286,7 @@ export default function OrientationLastLayer() {
       number: 29,
       group: "Awkward Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "y", "y", "y", "r", "b", "b", "y"],
         moves: [
           "R",
           "U",
@@ -309,7 +309,7 @@ export default function OrientationLastLayer() {
       number: 30,
       group: "Awkward Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "y", "r", "y", "y", "r", "y", "b", "y"],
         moves: ["F", "R'", "F", "R2", "U'", "R'", "U'", "R", "U", "R'", "F2"],
       },
     },
@@ -318,7 +318,7 @@ export default function OrientationLastLayer() {
       number: 31,
       group: "P Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "y", "l", "y", "y", "b", "b", "y"],
         moves: ["R'", "U'", "F", "U", "R", "U'", "R'", "F'", "R"],
       },
     },
@@ -327,7 +327,7 @@ export default function OrientationLastLayer() {
       number: 32,
       group: "P Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "y", "t", "y", "y", "r", "y", "b", "b"],
         moves: ["L", "U", "F'", "U'", "L'", "U", "L", "F", "L'"],
       },
     },
@@ -336,7 +336,7 @@ export default function OrientationLastLayer() {
       number: 33,
       group: "T Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "t", "y", "y", "y", "y", "b", "b", "y"],
         moves: ["R", "U", "R'", "U'", "R'", "F", "R", "F'"],
       },
     },
@@ -345,7 +345,7 @@ export default function OrientationLastLayer() {
       number: 34,
       group: "C Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "t", "r", "y", "y", "y", "y", "b", "y"],
         moves: ["R", "U", "R2", "U'", "R'", "F", "R", "U", "R", "U'", "F'"],
       },
     },
@@ -354,7 +354,7 @@ export default function OrientationLastLayer() {
       number: 35,
       group: "Fish Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "t", "r", "l", "y", "y", "b", "y", "y"],
         moves: ["R", "U2", "R2", "F", "R", "F'", "R", "U2", "R'"],
       },
     },
@@ -363,7 +363,7 @@ export default function OrientationLastLayer() {
       number: 36,
       group: "W Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "y", "t", "l", "y", "y", "l", "b", "y"],
         moves: [
           "L'",
           "U'",
@@ -385,7 +385,7 @@ export default function OrientationLastLayer() {
       number: 37,
       group: "Fish Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "y", "r", "y", "y", "r", "b", "b", "y"],
         moves: ["F", "R'", "F'", "R", "U", "R", "U'", "R'"],
       },
     },
@@ -394,7 +394,7 @@ export default function OrientationLastLayer() {
       number: 38,
       group: "W Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "y", "y", "y", "r", "y", "b", "r"],
         moves: [
           "R",
           "U",
@@ -416,7 +416,7 @@ export default function OrientationLastLayer() {
       number: 39,
       group: "Big Lightning Bolt",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "t", "y", "y", "y", "y", "y", "b", "r"],
         moves: ["L", "F'", "L'", "U'", "L", "U", "F", "U'", "L'"],
       },
     },
@@ -425,7 +425,7 @@ export default function OrientationLastLayer() {
       number: 40,
       group: "Big Lightning Bolt",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "t", "t", "y", "y", "y", "l", "b", "y"],
         moves: ["R'", "F", "R", "U", "R'", "U'", "F'", "U", "R"],
       },
     },
@@ -434,7 +434,7 @@ export default function OrientationLastLayer() {
       number: 41,
       group: "Awkward Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "t", "y", "y", "r", "y", "b", "y"],
         moves: [
           "R",
           "U",
@@ -457,7 +457,7 @@ export default function OrientationLastLayer() {
       number: 42,
       group: "Awkward Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "t", "y", "y", "y", "r", "b", "y", "b"],
         moves: [
           "R'",
           "U'",
@@ -480,7 +480,7 @@ export default function OrientationLastLayer() {
       number: 43,
       group: "P Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "y", "y", "l", "y", "y", "l", "b", "y"],
         moves: ["F'", "U'", "L'", "U", "L", "F"],
       },
     },
@@ -489,7 +489,7 @@ export default function OrientationLastLayer() {
       number: 44,
       group: "P Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "y", "r", "y", "y", "r", "y", "b", "r"],
         moves: ["F", "U", "R", "U'", "R'", "F'"],
       },
     },
@@ -498,7 +498,7 @@ export default function OrientationLastLayer() {
       number: 45,
       group: "T Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "t", "y", "y", "y", "y", "l", "b", "y"],
         moves: ["F", "R", "U", "R'", "U'", "F'"],
       },
     },
@@ -507,7 +507,7 @@ export default function OrientationLastLayer() {
       number: 46,
       group: "C Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "y", "r", "l", "y", "r", "y", "y", "r"],
         moves: ["R'", "U'", "R'", "F", "R", "F'", "U", "R"],
       },
     },
@@ -516,7 +516,7 @@ export default function OrientationLastLayer() {
       number: 47,
       group: "Small L Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "r", "l", "y", "y", "b", "b", "r"],
         moves: [
           "R'",
           "U'",
@@ -538,7 +538,7 @@ export default function OrientationLastLayer() {
       number: 48,
       group: "Small L Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "y", "t", "y", "y", "r", "l", "b", "b"],
         moves: ["F", "R", "U", "R'", "U'", "R", "U", "R'", "U'", "F'"],
       },
     },
@@ -547,7 +547,7 @@ export default function OrientationLastLayer() {
       number: 49,
       group: "Small L Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "y", "t", "l", "y", "y", "l", "b", "b"],
         moves: ["r", "U'", "r2", "U", "r2", "U", "r2", "U'", "r"],
       },
     },
@@ -556,7 +556,7 @@ export default function OrientationLastLayer() {
       number: 50,
       group: "Small L Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "t", "t", "l", "y", "y", "l", "y", "b"],
         moves: ["r'", "U", "r2", "U'", "r2", "U'", "r2", "U", "r'"],
       },
     },
@@ -565,7 +565,7 @@ export default function OrientationLastLayer() {
       number: 51,
       group: "I Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "t", "r", "y", "y", "y", "b", "b", "r"],
         moves: ["F", "U", "R", "U'", "R'", "U", "R", "U'", "R'", "F'"],
       },
     },
@@ -574,7 +574,7 @@ export default function OrientationLastLayer() {
       number: 52,
       group: "I Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "r", "l", "y", "r", "b", "y", "r"],
         moves: ["R", "U", "R'", "U", "R", "U'", "B", "U'", "B'", "R'"],
       },
     },
@@ -583,7 +583,7 @@ export default function OrientationLastLayer() {
       number: 53,
       group: "Small L Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "t", "l", "y", "y", "b", "b", "b"],
         moves: ["l'", "U2", "L", "U", "L'", "U'", "L", "U", "L'", "U", "l"],
       },
     },
@@ -592,7 +592,7 @@ export default function OrientationLastLayer() {
       number: 54,
       group: "Small L Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "y", "t", "y", "y", "r", "b", "b", "b"],
         moves: ["r", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "r'"],
       },
     },
@@ -601,7 +601,7 @@ export default function OrientationLastLayer() {
       number: 55,
       group: "I Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["t", "t", "t", "y", "y", "y", "b", "b", "b"],
         moves: [
           "R'",
           "F",
@@ -626,7 +626,7 @@ export default function OrientationLastLayer() {
       number: 56,
       group: "I Shape",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["l", "t", "r", "y", "y", "y", "l", "b", "r"],
         moves: [
           "r'",
           "U'",
@@ -650,7 +650,7 @@ export default function OrientationLastLayer() {
       number: 57,
       group: "Corners Oriented",
       notation: {
-        colors: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+        colors: ["y", "t", "y", "y", "y", "y", "y", "b", "y"],
         moves: ["R", "U", "R'", "U'", "M'", "U", "R", "U'", "r'"],
       },
     },
