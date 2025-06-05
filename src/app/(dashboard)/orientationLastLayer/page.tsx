@@ -1,7 +1,51 @@
 import { CubeOll } from "./cubeOll";
 
+/**
+ * Represents the possible orientations of yellow pieces in the last layer
+ * when viewing the cube from above:
+ * - 'l': yellow face is on the left side
+ * - 'r': yellow face is on the right side
+ * - 't': yellow face is on the top side
+ * - 'b': yellow face is on the bottom side
+ * - 'y': yellow face is correctly oriented (facing up)
+ */
+type YellowOrientation = "l" | "r" | "t" | "b" | "y";
+
+/**
+ * Represents a single move in cube notation
+ * - Uppercase letters (R, L, U, D, F, B) represent clockwise turns
+ * - Lowercase letters (r, l, u, d, f, b) represent double-layer turns
+ * - Prime notation (') represents counter-clockwise turns
+ * - 2 represents a double turn
+ */
+type CubeMove = string;
+
+/**
+ * Represents the color configuration of the last layer
+ * Array of 9 elements representing the 3x3 grid of the last layer
+ * when viewed from above, reading from left to right, top to bottom
+ */
+type LastLayerColors = YellowOrientation[];
+
+/**
+ * Represents a complete OLL notation including:
+ * - case: unique identifier for the OLL case
+ * - number: the standard OLL case number (1-57)
+ * - group: category of similar OLL cases (e.g., "Dot", "Cross", "Fish Shape")
+ * - notation: the specific moves and color configuration for this case
+ */
+interface OllNotation {
+  case: string;
+  number: number;
+  group: string;
+  notation: {
+    colors: LastLayerColors;
+    moves: CubeMove[];
+  };
+}
+
 export default function OrientationLastLayer() {
-  const notations = [
+  const notations: OllNotation[] = [
     {
       case: "caseOll1",
       number: 1,
