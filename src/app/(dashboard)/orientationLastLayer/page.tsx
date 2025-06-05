@@ -1,5 +1,3 @@
-import { CubeOll } from "./cubeOll";
-
 /**
  * Represents the possible orientations of yellow pieces in the last layer
  * when viewing the cube from above:
@@ -42,6 +40,69 @@ interface OllNotation {
     colors: LastLayerColors;
     moves: CubeMove[];
   };
+}
+
+/**
+ * Represents the basic notation for a cube state
+ * Used by the CubeOll component to display the last layer
+ */
+interface Notation {
+  colors: string[];
+  moves: string[];
+}
+
+/**
+ * Square component represents a single piece of the last layer
+ * Shows the orientation of the yellow face through borders and background
+ */
+function Square({ bgColor }: { bgColor: string }) {
+  return (
+    <div
+      data-status={bgColor}
+      className={`
+        w-full h-full
+        border-4
+        rounde
+        bg-zinc-800
+        border-zinc-800
+        data-[status=z]:bg-pale-gray
+        data-[status=y]:bg-pale-yellow
+        data-[status=l]:border-l-pale-yellow
+        data-[status=t]:border-t-pale-yellow
+        data-[status=r]:border-r-pale-yellow
+        data-[status=b]:border-b-pale-yellow
+      `}
+    />
+  );
+}
+
+/**
+ * Row component represents a row of the last layer
+ * Displays the colors and moves for a specific OLL case
+ */
+function Row({ notation }: { notation: Notation }) {
+  return (
+    <>
+      {notation.colors.map((n, i) => (
+        <Square key={i} bgColor={n} />
+      ))}
+      <div className="col-span-3 justify-self-center">
+        {notation.moves.join(" ")}
+      </div>
+    </>
+  );
+}
+
+/**
+ * CubeOll component displays the last layer of the cube
+ * Shows the orientation of pieces and the moves needed to solve the case
+ */
+function CubeOll({ notation }: { notation: Notation }) {
+  return (
+    <div className="grid grid-cols-3 grid-rows-3 h-52 w-48">
+      <Row notation={notation} />
+    </div>
+  );
 }
 
 export default function OrientationLastLayer() {
