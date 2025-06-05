@@ -23,8 +23,10 @@ export default function OrientationLastLayer() {
                     w-full h-full
                     border-4
                     rounded
-                    bg-zinc-800
-                    border-zinc-800
+                    bg-zinc-600
+                    border-zinc-900
+                    ring-1
+                    ring-zinc-900
                     data-[status=y]:bg-pale-yellow
                     data-[status=l]:border-l-pale-yellow
                     data-[status=t]:border-t-pale-yellow

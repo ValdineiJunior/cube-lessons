@@ -308,7 +308,7 @@ export const ollNotations: OllNotation[] = [
     number: 27,
     group: "Cross",
     notation: {
-      colors: ["t", "y", "r", "y", "y", "y", "y", "b"],
+      colors: ["t", "y", "r", "y", "y", "y", "y", "y", "b"],
       moves: ["R", "U", "R'", "U", "R", "U2", "R'"],
     },
   },
