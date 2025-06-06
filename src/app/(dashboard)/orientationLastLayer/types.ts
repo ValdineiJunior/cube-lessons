@@ -160,7 +160,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small Lightning Bolt",
     notation: {
       colors: ["y", "y", "t", "l", "y", "y", "b", "b", "r"],
-      moves: ["M'", "R'", "U'", "R", "U'", "R'", "U2", "R", "U'", "R", "r'"],
+      moves: ["M'", "R'", "U'", "R", "U'", "R'", "U2", "R", "U'", "R", "R'"],
     },
   },
   {
@@ -187,7 +187,7 @@ export const ollNotations: OllNotation[] = [
     group: "Knight Move Shape",
     notation: {
       colors: ["y", "t", "r", "y", "y", "y", "l", "b", "b"],
-      moves: ["l'", "U'", "l", "L'", "U'", "L", "U", "l'", "U", "l"],
+      moves: ["L'", "U'", "L", "L'", "U'", "L", "U", "L'", "U", "L"],
     },
   },
   {
@@ -196,7 +196,7 @@ export const ollNotations: OllNotation[] = [
     group: "Knight Move Shape",
     notation: {
       colors: ["l", "t", "y", "y", "y", "y", "b", "b", "r"],
-      moves: ["r", "U", "r'", "R", "U", "R'", "U'", "r", "U'", "r'"],
+      moves: ["R", "U", "R'", "R", "U", "R'", "U'", "R", "U'", "R'"],
     },
   },
   {
@@ -205,7 +205,7 @@ export const ollNotations: OllNotation[] = [
     group: "Dot",
     notation: {
       colors: ["y", "t", "r", "l", "y", "r", "b", "b", "y"],
-      moves: ["F", "R'", "F'", "R2", "r'", "U", "R", "U'", "R'", "U'", "M'"],
+      moves: ["F", "R'", "F'", "R2", "R'", "U", "R", "U'", "R'", "U'", "M'"],
     },
   },
   {
@@ -215,19 +215,19 @@ export const ollNotations: OllNotation[] = [
     notation: {
       colors: ["y", "t", "y", "l", "y", "r", "b", "b", "b"],
       moves: [
-        "r",
+        "R",
         "U",
         "R'",
         "U",
         "R",
         "U2",
-        "r2",
+        "R2",
         "U'",
         "R",
         "U'",
         "R'",
         "U2",
-        "r",
+        "R",
       ],
     },
   },
@@ -237,7 +237,7 @@ export const ollNotations: OllNotation[] = [
     group: "Dot",
     notation: {
       colors: ["y", "t", "y", "l", "y", "r", "l", "b", "r"],
-      moves: ["r'", "R", "U", "R", "U", "R'", "U'", "M'", "R'", "F", "R", "F'"],
+      moves: ["R'", "R", "U", "R", "U", "R'", "U'", "M'", "R'", "F", "R", "F'"],
     },
   },
   {
@@ -246,7 +246,7 @@ export const ollNotations: OllNotation[] = [
     group: "Dot",
     notation: {
       colors: ["y", "t", "y", "l", "y", "r", "y", "b", "y"],
-      moves: ["r", "U", "R'", "U'", "M2", "U", "R", "U'", "R'", "U'", "M'"],
+      moves: ["R", "U", "R'", "U'", "M2", "U", "R", "U'", "R'", "U'", "M'"],
     },
   },
   {
@@ -282,7 +282,7 @@ export const ollNotations: OllNotation[] = [
     group: "Cross",
     notation: {
       colors: ["t", "y", "y", "y", "y", "y", "b", "y", "y"],
-      moves: ["r", "U", "R'", "U'", "r'", "F", "R", "F'"],
+      moves: ["R", "U", "R'", "U'", "R'", "F", "R", "F'"],
     },
   },
   {
@@ -291,7 +291,7 @@ export const ollNotations: OllNotation[] = [
     group: "Cross",
     notation: {
       colors: ["l", "y", "y", "y", "y", "y", "y", "y", "b"],
-      moves: ["F'", "r", "U", "R'", "U'", "r'", "F", "R"],
+      moves: ["F'", "R", "U", "R'", "U'", "R'", "F", "R"],
     },
   },
   {
@@ -318,7 +318,7 @@ export const ollNotations: OllNotation[] = [
     group: "Corners Oriented",
     notation: {
       colors: ["y", "y", "y", "y", "y", "r", "y", "b", "y"],
-      moves: ["r", "U", "R'", "U'", "r'", "R", "U", "R", "U'", "R'"],
+      moves: ["R", "U", "R'", "U'", "R'", "R", "U", "R", "U'", "R'"],
     },
   },
   {
@@ -549,7 +549,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small L Shape",
     notation: {
       colors: ["l", "y", "t", "l", "y", "y", "l", "b", "b"],
-      moves: ["r", "U'", "r2", "U", "r2", "U", "r2", "U'", "r"],
+      moves: ["R", "U'", "R2", "U", "R2", "U", "R2", "U'", "R"],
     },
   },
   {
@@ -558,7 +558,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small L Shape",
     notation: {
       colors: ["l", "t", "t", "l", "y", "y", "l", "y", "b"],
-      moves: ["r'", "U", "r2", "U'", "r2", "U'", "r2", "U", "r'"],
+      moves: ["R'", "U", "R2", "U'", "R2", "U'", "R2", "U", "R'"],
     },
   },
   {
@@ -585,7 +585,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small L Shape",
     notation: {
       colors: ["t", "y", "t", "l", "y", "y", "b", "b", "b"],
-      moves: ["l'", "U2", "L", "U", "L'", "U'", "L", "U", "L'", "U", "l"],
+      moves: ["L'", "U2", "L", "U", "L'", "U'", "L", "U", "L'", "U", "L"],
     },
   },
   {
@@ -594,7 +594,7 @@ export const ollNotations: OllNotation[] = [
     group: "Small L Shape",
     notation: {
       colors: ["t", "y", "t", "y", "y", "r", "b", "b", "b"],
-      moves: ["r", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "r'"],
+      moves: ["R", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "R'"],
     },
   },
   {
@@ -629,20 +629,20 @@ export const ollNotations: OllNotation[] = [
     notation: {
       colors: ["l", "t", "r", "y", "y", "y", "l", "b", "r"],
       moves: [
-        "r'",
-        "U'",
-        "r",
-        "U'",
         "R'",
-        "U",
+        "U'",
         "R",
         "U'",
         "R'",
         "U",
         "R",
-        "r'",
+        "U'",
+        "R'",
         "U",
-        "r",
+        "R",
+        "R'",
+        "U",
+        "R",
       ],
     },
   },
@@ -652,7 +652,7 @@ export const ollNotations: OllNotation[] = [
     group: "Corners Oriented",
     notation: {
       colors: ["y", "t", "y", "y", "y", "y", "y", "b", "y"],
-      moves: ["R", "U", "R'", "U'", "M'", "U", "R", "U'", "r'"],
+      moves: ["R", "U", "R'", "U'", "M'", "U", "R", "U'", "R'"],
     },
   },
 ];
