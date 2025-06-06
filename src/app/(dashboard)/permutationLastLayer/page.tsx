@@ -1,4 +1,4 @@
-import { Notation, pllNotations } from "./types";
+import { pllNotations } from "./types";
 
 export default function PermutationLastLayer() {
   return (
