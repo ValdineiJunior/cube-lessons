@@ -32,38 +32,46 @@ export default function PermutationLastLayer() {
                       border-zinc-900
                       ring-1
                       ring-zinc-900
-                      data-[border1=gl]:border-l-8 data-[border1=gl]:border-l-green-500
-                      data-[border1=gt]:border-t-8 data-[border1=gt]:border-t-green-500
-                      data-[border1=gr]:border-r-8 data-[border1=gr]:border-r-green-500
-                      data-[border1=gb]:border-b-8 data-[border1=gb]:border-b-green-500
-                      data-[border1=rl]:border-l-8 data-[border1=rl]:border-l-red-500
-                      data-[border1=rt]:border-t-8 data-[border1=rt]:border-t-red-500
-                      data-[border1=rr]:border-r-8 data-[border1=rr]:border-r-red-500
-                      data-[border1=rb]:border-b-8 data-[border1=rb]:border-b-red-500
-                      data-[border1=bl]:border-l-8 data-[border1=bl]:border-l-blue-500
-                      data-[border1=bt]:border-t-8 data-[border1=bt]:border-t-blue-500
-                      data-[border1=br]:border-r-8 data-[border1=br]:border-r-blue-500
-                      data-[border1=bb]:border-b-8 data-[border1=bb]:border-b-blue-500
-                      data-[border1=ol]:border-l-8 data-[border1=ol]:border-l-orange-500
-                      data-[border1=ot]:border-t-8 data-[border1=ot]:border-t-orange-500
-                      data-[border1=or]:border-r-8 data-[border1=or]:border-r-orange-500
-                      data-[border1=ob]:border-b-8 data-[border1=ob]:border-b-orange-500
-                      data-[border2=gl]:border-l-8 data-[border2=gl]:border-l-green-500
-                      data-[border2=gt]:border-t-8 data-[border2=gt]:border-t-green-500
-                      data-[border2=gr]:border-r-8 data-[border2=gr]:border-r-green-500
-                      data-[border2=gb]:border-b-8 data-[border2=gb]:border-b-green-500
-                      data-[border2=rl]:border-l-8 data-[border2=rl]:border-l-red-500
-                      data-[border2=rt]:border-t-8 data-[border2=rt]:border-t-red-500
-                      data-[border2=rr]:border-r-8 data-[border2=rr]:border-r-red-500
-                      data-[border2=rb]:border-b-8 data-[border2=rb]:border-b-red-500
-                      data-[border2=bl]:border-l-8 data-[border2=bl]:border-l-blue-500
-                      data-[border2=bt]:border-t-8 data-[border2=bt]:border-t-blue-500
-                      data-[border2=br]:border-r-8 data-[border2=br]:border-r-blue-500
-                      data-[border2=bb]:border-b-8 data-[border2=bb]:border-b-blue-500
-                      data-[border2=ol]:border-l-8 data-[border2=ol]:border-l-orange-500
-                      data-[border2=ot]:border-t-8 data-[border2=ot]:border-t-orange-500
-                      data-[border2=or]:border-r-8 data-[border2=or]:border-r-orange-500
-                      data-[border2=ob]:border-b-8 data-[border2=ob]:border-b-orange-500
+                      data-[border1=gl]:border-l-green-500
+                      data-[border1=gt]:border-t-green-500
+                      data-[border1=gr]:border-r-green-500
+                      data-[border1=gb]:border-b-green-500
+                      data-[border1=rl]:border-l-red-500
+                      data-[border1=rt]:border-t-red-500
+                      data-[border1=rr]:border-r-red-500
+                      data-[border1=rb]:border-b-red-500
+                      data-[border1=bl]:border-l-blue-500
+                      data-[border1=bt]:border-t-blue-500
+                      data-[border1=br]:border-r-blue-500
+                      data-[border1=bb]:border-b-blue-500
+                      data-[border1=ol]:border-l-orange-500
+                      data-[border1=ot]:border-t-orange-500
+                      data-[border1=or]:border-r-orange-500
+                      data-[border1=ob]:border-b-orange-500
+                      data-[border2=gl]:border-l-green-500
+                      data-[border2=gt]:border-t-green-500
+                      data-[border2=gr]:border-r-green-500
+                      data-[border2=gb]:border-b-green-500
+                      data-[border2=rl]:border-l-red-500
+                      data-[border2=rt]:border-t-red-500
+                      data-[border2=rr]:border-r-red-500
+                      data-[border2=rb]:border-b-red-500
+                      data-[border2=bl]:border-l-blue-500
+                      data-[border2=bt]:border-t-blue-500
+                      data-[border2=br]:border-r-blue-500
+                      data-[border2=bb]:border-b-blue-500
+                      data-[border2=ol]:border-l-orange-500
+                      data-[border2=ot]:border-t-orange-500
+                      data-[border2=or]:border-r-orange-500
+                      data-[border2=ob]:border-b-orange-500
+                      [&:nth-child(1)]:border-t-8 [&:nth-child(1)]:border-l-8
+                      [&:nth-child(2)]:border-t-8
+                      [&:nth-child(3)]:border-t-8 [&:nth-child(3)]:border-r-8
+                      [&:nth-child(4)]:border-l-8
+                      [&:nth-child(6)]:border-r-8
+                      [&:nth-child(7)]:border-l-8 [&:nth-child(7)]:border-b-8
+                      [&:nth-child(8)]:border-b-8
+                      [&:nth-child(9)]:border-b-8 [&:nth-child(9)]:border-r-8
                     `}
                   />
                 );

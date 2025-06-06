@@ -32,6 +32,14 @@ export default function OrientationLastLayer() {
                     data-[status=t]:border-t-pale-yellow
                     data-[status=r]:border-r-pale-yellow
                     data-[status=b]:border-b-pale-yellow
+                    [&:nth-child(1)]:border-t-8 [&:nth-child(1)]:border-l-8
+                    [&:nth-child(2)]:border-t-8
+                    [&:nth-child(3)]:border-t-8 [&:nth-child(3)]:border-r-8
+                    [&:nth-child(4)]:border-l-8
+                    [&:nth-child(6)]:border-r-8
+                    [&:nth-child(7)]:border-l-8 [&:nth-child(7)]:border-b-8
+                    [&:nth-child(8)]:border-b-8
+                    [&:nth-child(9)]:border-b-8 [&:nth-child(9)]:border-r-8
                   `}
                 />
               ))}
