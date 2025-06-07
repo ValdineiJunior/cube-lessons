@@ -17,7 +17,7 @@ export const pllNotations: PllCase[] = [
     group: "Adjacent Corner Swap",
     notation: {
       colors: ["gl-rt", "gt", "bt-or", "ol", "", "rr", "gl-ob", "bb", "bb-rr"],
-      moves: ["X", "L2", "D2", "L'", "U'", "L", "D2", "L'", "U", "L'"],
+      moves: ["x", "L2", "D2", "L'", "U'", "L", "D2", "L'", "U", "L'"],
     },
   },
   {
@@ -26,7 +26,7 @@ export const pllNotations: PllCase[] = [
     group: "Adjacent Corner Swap",
     notation: {
       colors: ["bl-ot", "gt", "gt-rr", "ol", "", "rr", "bl-rb", "bb", "gb-or"],
-      moves: ["X'", "L2", "D2", "L", "U", "L'", "D2", "L", "U'", "L"],
+      moves: ["x'", "L2", "D2", "L", "U", "L'", "D2", "L", "U'", "L"],
     },
   },
   {
@@ -163,7 +163,7 @@ export const pllNotations: PllCase[] = [
     group: "Adjacent Corner Swap",
     notation: {
       colors: ["ol-gt", "rt", "rt-br", "ol", "", "gr", "ol-bb", "bb", "rb-gr"],
-      moves: ["X", "R2", "F", "R", "F'", "R", "U2", "R'", "U", "R", "U2"],
+      moves: ["x", "R2", "F", "R", "F'", "R", "U2", "r'", "U", "r", "U2"],
     },
   },
   {
@@ -268,7 +268,7 @@ export const pllNotations: PllCase[] = [
     notation: {
       colors: ["bl-ot", "gt", "rt-br", "ol", "", "rr", "gl-ob", "bb", "rb-gr"],
       moves: [
-        "X'",
+        "x'",
         "L'",
         "U",
         "L",
@@ -357,7 +357,7 @@ export const pllNotations: PllCase[] = [
         "U",
         "R'",
         "U'",
-        "Y",
+        "y",
         "R'",
         "F'",
         "R2",
