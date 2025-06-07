@@ -1,3 +1,5 @@
+import { Notation as SharedNotation, SquareColors } from "@/types/cube";
+
 /**
  * Represents the possible orientations of yellow pieces in the last layer
  * when viewing the cube from above:
@@ -8,25 +10,6 @@
  * - 'y': yellow face is correctly oriented (facing up)
  */
 export type YellowOrientation = "l" | "r" | "t" | "b" | "y";
-
-export type CubeColor =
-  | "red"
-  | "green"
-  | "blue"
-  | "orange"
-  | "yellow"
-  | "white"
-  | "gray"
-  | "gray"
-  | "";
-
-export type SquareColors = {
-  leftBorder?: CubeColor;
-  rightBorder?: CubeColor;
-  topBorder?: CubeColor;
-  bottomBorder?: CubeColor;
-  centerColor?: CubeColor;
-};
 
 /**
  * Represents a single move in cube notation
@@ -55,20 +38,10 @@ export interface OllNotation {
   case: string;
   number: number;
   group: string;
-  notation: {
-    colors: LastLayerColors;
-    moves: CubeMove[];
-  };
+  notation: SharedNotation;
 }
 
-/**
- * Represents the basic notation for a cube state
- * Used by the CubeOll component to display the last layer
- */
-export interface Notation {
-  colors: string[];
-  moves: string[];
-}
+export type { SharedNotation as Notation };
 
 /**
  * Complete list of OLL notations for all 57 cases
@@ -4226,7 +4199,7 @@ export const ollNotations: OllNotation[] = [
         {
           leftBorder: "gray",
           topBorder: "gray",
-          rightBorder: "gray",
+          rightBorder: "yellow",
           bottomBorder: "gray",
           centerColor: "gray",
         },

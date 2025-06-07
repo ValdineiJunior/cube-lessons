@@ -1,32 +1,13 @@
-export type CubeColor =
-  | "red"
-  | "green"
-  | "blue"
-  | "orange"
-  | "yellow"
-  | "white"
-  | "gray"
-  | "";
-
-export type SquareColors = {
-  leftBorder?: CubeColor;
-  rightBorder?: CubeColor;
-  topBorder?: CubeColor;
-  bottomBorder?: CubeColor;
-  centerColor?: CubeColor;
-};
-
-export type Notation = {
-  colors: SquareColors[];
-  moves: string[];
-};
+import { Notation as SharedNotation, SquareColors } from "@/types/cube";
 
 export type PllCase = {
   case: string;
   name: string;
   group: string;
-  notation: Notation;
+  notation: SharedNotation;
 };
+
+export type { SharedNotation as Notation };
 
 export const pllNotations: PllCase[] = [
   {
