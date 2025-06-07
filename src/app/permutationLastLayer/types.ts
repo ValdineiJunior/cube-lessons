@@ -196,8 +196,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -288,8 +288,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -377,8 +377,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -466,8 +466,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -555,8 +555,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -644,8 +644,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -893,8 +893,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "green",
-          topBorder: "red",
+          rightBorder: "red",
+          topBorder: "green",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -980,8 +980,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -1068,8 +1068,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
@@ -1241,8 +1241,8 @@ export const pllNotations: PllCase[] = [
       colors: [
         {
           leftBorder: "red",
-          bottomBorder: "blue",
-          topBorder: "gray",
+          bottomBorder: "gray",
+          topBorder: "blue",
           rightBorder: "gray",
           centerColor: "yellow",
         },
@@ -1332,8 +1332,8 @@ export const pllNotations: PllCase[] = [
       colors: [
         {
           leftBorder: "red",
-          bottomBorder: "blue",
-          topBorder: "gray",
+          bottomBorder: "gray",
+          topBorder: "blue",
           rightBorder: "gray",
           centerColor: "yellow",
         },
@@ -1421,8 +1421,8 @@ export const pllNotations: PllCase[] = [
       colors: [
         {
           leftBorder: "red",
-          bottomBorder: "blue",
-          topBorder: "gray",
+          bottomBorder: "gray",
+          topBorder: "blue",
           rightBorder: "gray",
           centerColor: "yellow",
         },
@@ -1744,8 +1744,8 @@ export const pllNotations: PllCase[] = [
           centerColor: "yellow",
         },
         {
-          rightBorder: "red",
-          topBorder: "blue",
+          rightBorder: "blue",
+          topBorder: "red",
           leftBorder: "gray",
           bottomBorder: "gray",
           centerColor: "yellow",
