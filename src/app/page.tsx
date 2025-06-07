@@ -1,4 +1,12 @@
-export default function Dashboard() {
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cube Lessons - Master the Rubik's Cube",
+  description:
+    "Learn to solve the Rubik's Cube with step-by-step tutorials, from beginner to advanced methods.",
+};
+
+export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Hero Section */}
