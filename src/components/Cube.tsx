@@ -1,9 +1,6 @@
-interface CubeProps {
-  colors: string[][];
-  moves?: string;
-}
+import { CubeCase } from "@/app/firstTwoLayers/types";
 
-export function Cube({ colors, moves }: CubeProps) {
+export function Cube({ name, colors, description }: CubeCase) {
   return (
     <div className="flex flex-col items-center w-72">
       <div className="relative h-72 w-72">
@@ -72,7 +69,10 @@ export function Cube({ colors, moves }: CubeProps) {
           </div>
         </div>
       </div>
-      {moves && <div className="w-full text-center mt-2 text-sm">{moves}</div>}
+      <div className="w-full text-center mt-2 text-lg">{name}</div>
+      {description && (
+        <div className="w-full text-center mt-2 text-sm">{description}</div>
+      )}
     </div>
   );
 }

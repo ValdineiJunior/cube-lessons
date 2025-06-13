@@ -1,4 +1,4 @@
-import { F2lNotation } from "./types";
+import { CubeCase } from "./types";
 import { f2lNotations } from "./types";
 import { Cube } from "@/components/Cube";
 
@@ -14,11 +14,12 @@ export default function FirstTwoLayers() {
         quinas e meios.
       </p>
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {f2lNotations.map((notation: F2lNotation) => (
+        {f2lNotations.map((notation: CubeCase) => (
           <Cube
-            key={notation.case}
-            colors={notation.notation.colors}
-            moves={notation.notation.moves}
+            key={notation.name}
+            name={notation.name}
+            colors={notation.colors}
+            description={notation.description}
           />
         ))}
       </div>
