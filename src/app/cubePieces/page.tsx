@@ -1,5 +1,5 @@
 import { Cube } from "@/components/Cube";
-import { CubeCase } from "../firstTwoLayers/types";
+import { CubeCase } from "@/types";
 
 export const cubePiecesNotations: CubeCase[] = [
   {

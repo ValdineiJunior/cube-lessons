@@ -1,5 +1,5 @@
-import { Notation, ollNotations } from "./types";
 import { CubeFace } from "@/components/CubeFace";
+import { ollNotations } from "@/types";
 
 export default function OrientationLastLayer() {
   return (

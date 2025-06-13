@@ -1,55 +1,9 @@
-import { Notation as SharedNotation, SquareColors } from "@/types/cube";
+import { Notations } from "./cube";
 
-/**
- * Represents the possible orientations of yellow pieces in the last layer
- * when viewing the cube from above:
- * - 'l': yellow face is on the left side
- * - 'r': yellow face is on the right side
- * - 't': yellow face is on the top side
- * - 'b': yellow face is on the bottom side
- * - 'y': yellow face is correctly oriented (facing up)
- */
-export type YellowOrientation = "l" | "r" | "t" | "b" | "y";
-
-/**
- * Represents a single move in cube notation
- * - Uppercase letters (R, L, U, D, F, B) represent clockwise turns
- * - Lowercase letters (r, l, u, d, f, b) represent double-layer turns
- * - Prime notation (') represents counter-clockwise turns
- * - 2 represents a double turn
- */
-export type CubeMove = string;
-
-/**
- * Represents the color configuration of the last layer
- * Array of 9 elements representing the 3x3 grid of the last layer
- * when viewed from above, reading from left to right, top to bottom
- */
-export type LastLayerColors = SquareColors[];
-
-/**
- * Represents a complete OLL notation including:
- * - case: unique identifier for the OLL case
- * - number: the standard OLL case number (1-57)
- * - group: category of similar OLL cases (e.g., "Dot", "Cross", "Fish Shape")
- * - notation: the specific moves and color configuration for this case
- */
-export interface OllNotation {
-  case: string;
-  number: number;
-  group: string;
-  notation: SharedNotation;
-}
-
-export type { SharedNotation as Notation };
-
-/**
- * Complete list of OLL notations for all 57 cases
- */
-export const ollNotations: OllNotation[] = [
+export const ollNotations: Notations[] = [
   {
     case: "caseOll1",
-    number: 1,
+    name: "1",
     group: "Dot",
     notation: {
       colors: [
@@ -68,7 +22,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll2",
-    number: 2,
+    name: "2",
     group: "Dot",
     notation: {
       colors: [
@@ -105,7 +59,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll3",
-    number: 3,
+    name: "3",
     group: "Dot",
     notation: {
       colors: [
@@ -142,7 +96,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll4",
-    number: 4,
+    name: "4",
     group: "Dot",
     notation: {
       colors: [
@@ -179,7 +133,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll5",
-    number: 5,
+    name: "5",
     group: "Square Shape",
     notation: {
       colors: [
@@ -216,7 +170,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll6",
-    number: 6,
+    name: "6",
     group: "Square Shape",
     notation: {
       colors: [
@@ -253,7 +207,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll7",
-    number: 7,
+    name: "7",
     group: "Small Lightning Bolt",
     notation: {
       colors: [
@@ -290,7 +244,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll8",
-    number: 8,
+    name: "8",
     group: "Small Lightning Bolt",
     notation: {
       colors: [
@@ -327,7 +281,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll9",
-    number: 9,
+    name: "9",
     group: "Fish Shape",
     notation: {
       colors: [
@@ -364,7 +318,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll10",
-    number: 10,
+    name: "10",
     group: "Fish Shape",
     notation: {
       colors: [
@@ -401,7 +355,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll11",
-    number: 11,
+    name: "11",
     group: "Small Lightning Bolt",
     notation: {
       colors: [
@@ -438,7 +392,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll12",
-    number: 12,
+    name: "12",
     group: "Small Lightning Bolt",
     notation: {
       colors: [
@@ -475,7 +429,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll13",
-    number: 13,
+    name: "13",
     group: "Knight Move Shape",
     notation: {
       colors: [
@@ -512,7 +466,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll14",
-    number: 14,
+    name: "14",
     group: "Knight Move Shape",
     notation: {
       colors: [
@@ -549,7 +503,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll15",
-    number: 15,
+    name: "15",
     group: "Knight Move Shape",
     notation: {
       colors: [
@@ -586,7 +540,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll16",
-    number: 16,
+    name: "16",
     group: "Knight Move Shape",
     notation: {
       colors: [
@@ -623,7 +577,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll17",
-    number: 17,
+    name: "17",
     group: "Dot",
     notation: {
       colors: [
@@ -660,7 +614,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll18",
-    number: 18,
+    name: "18",
     group: "Dot",
     notation: {
       colors: [
@@ -711,7 +665,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll19",
-    number: 19,
+    name: "19",
     group: "Dot",
     notation: {
       colors: [
@@ -748,7 +702,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll20",
-    number: 20,
+    name: "20",
     group: "Dot",
     notation: {
       colors: [
@@ -785,7 +739,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll21",
-    number: 21,
+    name: "21",
     group: "Cross",
     notation: {
       colors: [
@@ -822,7 +776,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll22",
-    number: 22,
+    name: "22",
     group: "Cross",
     notation: {
       colors: [
@@ -859,7 +813,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll23",
-    number: 23,
+    name: "23",
     group: "Cross",
     notation: {
       colors: [
@@ -896,7 +850,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll24",
-    number: 24,
+    name: "24",
     group: "Cross",
     notation: {
       colors: [
@@ -933,7 +887,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll25",
-    number: 25,
+    name: "25",
     group: "Cross",
     notation: {
       colors: [
@@ -970,7 +924,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll26",
-    number: 26,
+    name: "26",
     group: "Cross",
     notation: {
       colors: [
@@ -1007,7 +961,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll27",
-    number: 27,
+    name: "27",
     group: "Cross",
     notation: {
       colors: [
@@ -1044,7 +998,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll28",
-    number: 28,
+    name: "28",
     group: "Corners Oriented",
     notation: {
       colors: [
@@ -1081,7 +1035,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll29",
-    number: 29,
+    name: "29",
     group: "Awkward Shape",
     notation: {
       colors: [
@@ -1132,7 +1086,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll30",
-    number: 30,
+    name: "30",
     group: "Awkward Shape",
     notation: {
       colors: [
@@ -1169,7 +1123,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll31",
-    number: 31,
+    name: "31",
     group: "P Shape",
     notation: {
       colors: [
@@ -1206,7 +1160,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll32",
-    number: 32,
+    name: "32",
     group: "P Shape",
     notation: {
       colors: [
@@ -1243,7 +1197,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll33",
-    number: 33,
+    name: "33",
     group: "T Shape",
     notation: {
       colors: [
@@ -1280,7 +1234,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll34",
-    number: 34,
+    name: "34",
     group: "C Shape",
     notation: {
       colors: [
@@ -1317,7 +1271,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll35",
-    number: 35,
+    name: "35",
     group: "Fish Shape",
     notation: {
       colors: [
@@ -1354,7 +1308,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll36",
-    number: 36,
+    name: "36",
     group: "W Shape",
     notation: {
       colors: [
@@ -1391,7 +1345,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll37",
-    number: 37,
+    name: "37",
     group: "Fish Shape",
     notation: {
       colors: [
@@ -1428,7 +1382,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll38",
-    number: 38,
+    name: "38",
     group: "W Shape",
     notation: {
       colors: [
@@ -1465,7 +1419,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll39",
-    number: 39,
+    name: "39",
     group: "Big Lightning Bolt",
     notation: {
       colors: [
@@ -1502,7 +1456,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll40",
-    number: 40,
+    name: "40",
     group: "Big Lightning Bolt",
     notation: {
       colors: [
@@ -1539,7 +1493,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll41",
-    number: 41,
+    name: "41",
     group: "Awkward Shape",
     notation: {
       colors: [
@@ -1590,7 +1544,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll42",
-    number: 42,
+    name: "42",
     group: "Awkward Shape",
     notation: {
       colors: [
@@ -1641,7 +1595,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll43",
-    number: 43,
+    name: "43",
     group: "P Shape",
     notation: {
       colors: [
@@ -1678,7 +1632,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll44",
-    number: 44,
+    name: "44",
     group: "P Shape",
     notation: {
       colors: [
@@ -1715,7 +1669,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll45",
-    number: 45,
+    name: "45",
     group: "T Shape",
     notation: {
       colors: [
@@ -1752,7 +1706,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll46",
-    number: 46,
+    name: "46",
     group: "C Shape",
     notation: {
       colors: [
@@ -1789,7 +1743,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll47",
-    number: 47,
+    name: "47",
     group: "Small L Shape",
     notation: {
       colors: [
@@ -1826,7 +1780,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll48",
-    number: 48,
+    name: "48",
     group: "Small L Shape",
     notation: {
       colors: [
@@ -1863,7 +1817,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll49",
-    number: 49,
+    name: "49",
     group: "Small L Shape",
     notation: {
       colors: [
@@ -1900,7 +1854,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll50",
-    number: 50,
+    name: "50",
     group: "Small L Shape",
     notation: {
       colors: [
@@ -1937,7 +1891,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll51",
-    number: 51,
+    name: "51",
     group: "I Shape",
     notation: {
       colors: [
@@ -1974,7 +1928,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll52",
-    number: 52,
+    name: "52",
     group: "I Shape",
     notation: {
       colors: [
@@ -2011,7 +1965,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll53",
-    number: 53,
+    name: "53",
     group: "Small L Shape",
     notation: {
       colors: [
@@ -2048,7 +2002,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll54",
-    number: 54,
+    name: "54",
     group: "Small L Shape",
     notation: {
       colors: [
@@ -2085,7 +2039,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll55",
-    number: 55,
+    name: "55",
     group: "I Shape",
     notation: {
       colors: [
@@ -2138,7 +2092,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll56",
-    number: 56,
+    name: "56",
     group: "I Shape",
     notation: {
       colors: [
@@ -2190,7 +2144,7 @@ export const ollNotations: OllNotation[] = [
   },
   {
     case: "caseOll57",
-    number: 57,
+    name: "57",
     group: "Corners Oriented",
     notation: {
       colors: [

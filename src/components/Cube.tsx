@@ -1,4 +1,4 @@
-import { CubeCase } from "@/app/firstTwoLayers/types";
+import { CubeCase } from "@/types";
 
 export function Cube({ name, colors, description }: CubeCase) {
   return (

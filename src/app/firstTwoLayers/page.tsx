@@ -1,6 +1,5 @@
-import { CubeCase } from "./types";
-import { f2lNotations } from "./types";
 import { Cube } from "@/components/Cube";
+import { CubeCase, f2lNotations } from "@/types";
 
 export default function FirstTwoLayers() {
   return (

@@ -1,4 +1,5 @@
-import { Notation, getColor } from "../types/cube";
+import { Notation } from "@/types";
+import { getColor } from "@/utils/colorUtil";
 
 interface CubeFaceProps {
   notation: Notation;

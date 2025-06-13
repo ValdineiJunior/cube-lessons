@@ -1,5 +1,5 @@
-import { Notation, pllNotations } from "./types";
 import { CubeFace } from "@/components/CubeFace";
+import { pllNotations } from "@/types";
 
 export default function PermutationLastLayer() {
   return (

@@ -1,15 +1,6 @@
-import { Notation as SharedNotation, SquareColors } from "@/types/cube";
+import { Notations } from "@/types/cube";
 
-export type PllCase = {
-  case: string;
-  name: string;
-  group: string;
-  notation: SharedNotation;
-};
-
-export type { SharedNotation as Notation };
-
-export const pllNotations: PllCase[] = [
+export const pllNotations: Notations[] = [
   {
     case: "Aa",
     name: "1",
