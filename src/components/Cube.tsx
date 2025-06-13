@@ -22,6 +22,8 @@ export function Cube({ name, colors, description }: CubeCase) {
                     data-[status=b]:bg-blue-500
                     data-[status=w]:bg-sky-50
                     data-[status=y]:bg-yellow-400
+                    data-[status=g]:bg-green-500
+                    data-[status=o]:bg-orange-500
                   `}
                 />
               ))}
@@ -42,6 +44,8 @@ export function Cube({ name, colors, description }: CubeCase) {
                     data-[status=b]:bg-blue-500
                     data-[status=w]:bg-sky-50
                     data-[status=y]:bg-yellow-400
+                    data-[status=g]:bg-green-500
+                    data-[status=o]:bg-orange-500
                   `}
                 />
               ))}
@@ -62,6 +66,8 @@ export function Cube({ name, colors, description }: CubeCase) {
                     data-[status=b]:bg-blue-500
                     data-[status=w]:bg-sky-50
                     data-[status=y]:bg-yellow-400
+                    data-[status=g]:bg-green-500
+                    data-[status=o]:bg-orange-500
                   `}
                 />
               ))}
