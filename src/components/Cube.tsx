@@ -1,6 +1,6 @@
 interface CubeProps {
   colors: string[][];
-  moves?: string[];
+  moves?: string;
 }
 
 export function Cube({ colors, moves }: CubeProps) {
@@ -72,9 +72,7 @@ export function Cube({ colors, moves }: CubeProps) {
           </div>
         </div>
       </div>
-      {moves && (
-        <div className="w-full text-center mt-2 text-sm">{moves.join(" ")}</div>
-      )}
+      {moves && <div className="w-full text-center mt-2 text-sm">{moves}</div>}
     </div>
   );
 }

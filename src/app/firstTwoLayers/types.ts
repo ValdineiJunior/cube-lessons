@@ -2,7 +2,7 @@ export type F2lNotation = {
   case: string;
   notation: {
     colors: string[][];
-    moves: string[];
+    moves: string;
   };
 };
 
@@ -15,7 +15,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "b", "z", "z", "y", "z", "z", "z", "r"],
       ],
-      moves: ["R", "U", "R'"],
+      moves: "R U R'",
     },
   },
   {
@@ -26,7 +26,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "r", "y", "z", "z", "z", "b"],
       ],
-      moves: ["y", "L'", "U'", "L"],
+      moves: "y L' U' L",
     },
   },
   {
@@ -37,7 +37,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "r", "r"],
       ],
-      moves: ["y", "U'", "L'", "U", "L"],
+      moves: "y U' L' U L",
     },
   },
   {
@@ -48,7 +48,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "r", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "b", "z", "z", "b"],
       ],
-      moves: ["U", "R", "U'", "R'"],
+      moves: "U R U' R'",
     },
   },
   {
@@ -59,7 +59,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "z", "r", "r", "r", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
       ],
-      moves: ["U", "R", "U'", "R'", "U'", "F'", "U", "F"],
+      moves: "U R U' R' U' F' U F",
     },
   },
   {
@@ -70,7 +70,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "r", "z", "z", "r", "r", "r", "r", "r"],
         ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
       ],
-      moves: ["y", "U'", "L'", "U", "L", "U", "F", "U'", "F'"],
+      moves: "y U' L' U L U F U' F'",
     },
   },
   {
@@ -81,7 +81,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "b", "r", "r", "r", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
       ],
-      moves: ["R", "U'", "R'", "Dw", "R'", "U2", "R", "U2'", "R'", "U", "R"],
+      moves: "R U' R' Dw R' U2 R U2' R' U R",
     },
   },
   {
@@ -92,7 +92,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "r", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "r"],
       ],
-      moves: ["U", "R", "U", "R'", "U2", "R", "U", "R'"],
+      moves: "U R U R' U2 R U R'",
     },
   },
   {
@@ -103,7 +103,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "r", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "b"],
       ],
-      moves: ["U'", "R", "U'", "R'", "U2", "R", "U'", "R'"],
+      moves: "U' R U' R' U2 R U' R'",
     },
   },
   {
@@ -114,7 +114,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "b", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "r"],
       ],
-      moves: ["U2", "R'", "F", "R", "F'", "U2", "R", "U", "R'"],
+      moves: "U2 R' F R F' U2 R U R'",
     },
   },
   {
@@ -125,7 +125,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "b", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "b"],
       ],
-      moves: ["U'", "R", "U", "R'", "U", "F'", "U'", "F"],
+      moves: "U' R U R' U F' U' F",
     },
   },
   {
@@ -136,7 +136,7 @@ export const f2lNotations: F2lNotation[] = [
         ["b", "z", "z", "r", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "w"],
       ],
-      moves: ["R", "U", "R'", "U'", "R", "U", "R'", "U'", "R", "U", "R'"],
+      moves: "R U R' U' R U R' U' R U R'",
     },
   },
   {
@@ -147,7 +147,7 @@ export const f2lNotations: F2lNotation[] = [
         ["b", "z", "z", "b", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "w"],
       ],
-      moves: ["U'", "R'", "F", "R", "F'", "R", "U'", "R'"],
+      moves: "U' R' F R F' R U' R'",
     },
   },
   {
@@ -158,7 +158,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "b", "r"],
       ],
-      moves: ["R", "U'", "R'", "U", "R", "U'", "R'", "U2", "R", "U'", "R'"],
+      moves: "R U' R' U R U' R' U2 R U' R'",
     },
   },
   {
@@ -169,7 +169,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "b", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "r", "z", "z", "b"],
       ],
-      moves: ["U'", "R", "U2", "R'", "U", "F'", "U'", "F"],
+      moves: "U' R U2 R' U F' U' F",
     },
   },
   {
@@ -180,7 +180,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "r", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "b", "z", "z", "r"],
       ],
-      moves: ["U'", "R", "U'", "R'", "U", "R", "U", "R'"],
+      moves: "U' R U' R' U R U R'",
     },
   },
   {
@@ -191,7 +191,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "r", "b"],
       ],
-      moves: ["y'", "U", "R'", "U", "R", "U'", "R'", "U'", "R"],
+      moves: "y' U R' U R U' R' U' R",
     },
   },
   {
@@ -202,7 +202,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "b", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "r", "z", "z", "r"],
       ],
-      moves: ["R", "U'", "R'", "U2", "F'", "U'", "F"],
+      moves: "R U' R' U2 F' U' F",
     },
   },
   {
@@ -213,7 +213,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "b", "b"],
       ],
-      moves: ["R", "U", "R'", "U2", "R", "U'", "R'", "U", "R", "U'", "R'"],
+      moves: "R U R' U2 R U' R' U R U' R'",
     },
   },
   {
@@ -224,7 +224,7 @@ export const f2lNotations: F2lNotation[] = [
         ["b", "r", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "b", "z", "z", "w"],
       ],
-      moves: ["R", "U2", "R'", "U'", "R", "U", "R'"],
+      moves: "R U2 R' U' R U R'",
     },
   },
   {
@@ -235,7 +235,7 @@ export const f2lNotations: F2lNotation[] = [
         ["b", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "r", "w"],
       ],
-      moves: ["y'", "R'", "U2", "R", "U", "R'", "U'", "R"],
+      moves: "y' R' U2 R U R' U' R",
     },
   },
   {
@@ -246,7 +246,7 @@ export const f2lNotations: F2lNotation[] = [
         ["b", "b", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "r", "z", "z", "w"],
       ],
-      moves: ["F", "U", "R", "U'", "R'", "F'", "R", "U'", "R'"],
+      moves: "F U R U' R' F' R U' R'",
     },
   },
   {
@@ -257,7 +257,7 @@ export const f2lNotations: F2lNotation[] = [
         ["b", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "b", "w"],
       ],
-      moves: ["R", "U", "R'", "U2", "R", "U", "R'", "U'", "R", "U", "R'"],
+      moves: "R U R' U2 R U R' U' R U R'",
     },
   },
   {
@@ -268,7 +268,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "r", "z", "z", "r", "r", "z", "r", "r"],
         ["w", "z", "z", "z", "y", "b", "z", "z", "z"],
       ],
-      moves: ["R", "U", "R'", "U", "R", "U'", "R'"],
+      moves: "R U R' U R U' R'",
     },
   },
   {
@@ -279,7 +279,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["w", "z", "z", "z", "y", "z", "z", "r", "z"],
       ],
-      moves: ["y'", "L'", "U'", "L", "U'", "L'", "U", "L"],
+      moves: "y' L' U' L U' L' U L",
     },
   },
   {
@@ -290,7 +290,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "r", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "z", "y", "b", "w", "z", "z"],
       ],
-      moves: ["R", "U2", "R'", "U", "R", "U'", "R'"],
+      moves: "R U2 R' U R U' R'",
     },
   },
   {
@@ -301,7 +301,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "r", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "w", "z", "y", "z", "z", "r", "z"],
       ],
-      moves: ["y'", "L'", "U2", "L", "U'", "L'", "U", "L"],
+      moves: "y' L' U2 L U' L' U L",
     },
   },
   {
@@ -312,7 +312,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "r", "z", "z", "r", "r", "b", "r", "r"],
         ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
       ],
-      moves: ["R", "U'", "R'", "U", "R", "U'", "R'"],
+      moves: "R U' R' U R U' R'",
     },
   },
   {
@@ -323,7 +323,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "z", "r", "r", "w", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
       ],
-      moves: ["R", "U", "R'", "U'", "F", "R'", "F'", "R"],
+      moves: "R U R' U' F R' F' R",
     },
   },
   {
@@ -334,7 +334,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "r", "z", "z", "r", "r", "w", "r", "r"],
         ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
       ],
-      moves: ["R", "U", "R'", "U'", "R", "U", "R'"],
+      moves: "R U R' U' R U R'",
     },
   },
   {
@@ -345,7 +345,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "z", "r", "r", "b", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
       ],
-      moves: ["R'", "F", "R", "F'", "R'", "F", "R", "F'"],
+      moves: "R' F R F' R' F R F'",
     },
   },
   {
@@ -356,7 +356,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "r", "r", "r", "w", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
       ],
-      moves: ["R", "U", "R'", "U2", "R", "U'", "R'", "U", "R", "U", "R'"],
+      moves: "R U R' U2 R U' R' U R U R'",
     },
   },
   {
@@ -367,7 +367,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "r", "r", "r", "b", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
       ],
-      moves: ["R", "U", "R'", "U'", "R", "U2", "R'", "U'", "R", "U", "R'"],
+      moves: "R U R' U' R U2 R' U' R U R'",
     },
   },
   {
@@ -378,7 +378,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "b", "r", "r", "w", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
       ],
-      moves: ["R", "U'", "R'", "Rw", "U'", "Rw'", "U2", "Rw", "U", "Rw'"],
+      moves: "R U' R' Rw U' Rw' U2 Rw U Rw'",
     },
   },
   {
@@ -389,7 +389,7 @@ export const f2lNotations: F2lNotation[] = [
         ["z", "z", "z", "b", "r", "r", "b", "r", "r"],
         ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
       ],
-      moves: ["Rw", "U'", "Rw'", "U2", "Rw", "U", "Rw'", "R", "U", "R'"],
+      moves: "Rw U' Rw' U2 Rw U Rw' R U R'",
     },
   },
   {
@@ -400,7 +400,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "r", "z", "z", "y", "z", "z", "z", "r"],
       ],
-      moves: ["Dw", "R'", "U2", "R", "U2", "R'", "U", "R"],
+      moves: "Dw R' U2 R U2 R' U R",
     },
   },
   {
@@ -411,7 +411,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "b", "y", "z", "z", "z", "b"],
       ],
-      moves: ["U'", "R", "U2", "R'", "U2", "R", "U'", "R'"],
+      moves: "U' R U2 R' U2 R U' R'",
     },
   },
   {
@@ -422,7 +422,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "r", "y", "z", "z", "z", "r"],
       ],
-      moves: ["Dw", "R'", "U'", "R", "U2", "R'", "U", "R"],
+      moves: "Dw R' U' R U2 R' U R",
     },
   },
   {
@@ -433,7 +433,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "b", "z", "z", "y", "z", "z", "z", "b"],
       ],
-      moves: ["U'", "R", "U", "R'", "U2", "R", "U'", "R'"],
+      moves: "U' R U R' U2 R U' R'",
     },
   },
   {
@@ -444,7 +444,7 @@ export const f2lNotations: F2lNotation[] = [
         ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "z", "z", "b", "y", "z", "z", "z", "r"],
       ],
-      moves: ["U'", "R", "U", "R'", "U", "R", "U", "R'"],
+      moves: "U' R U R' U R U R'",
     },
   },
   {
@@ -455,7 +455,7 @@ export const f2lNotations: F2lNotation[] = [
         ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
         ["z", "r", "z", "z", "y", "z", "z", "z", "b"],
       ],
-      moves: ["U'", "R", "U'", "R'", "U", "F'", "U'", "F"],
+      moves: "U' R U' R' U F' U' F",
     },
   },
 ];
