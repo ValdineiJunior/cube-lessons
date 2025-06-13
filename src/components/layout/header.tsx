@@ -27,11 +27,11 @@ export function Header() {
               <Link href="/cubePieces">Peças do Cubo</Link>
             </TabsTrigger>
             <TabsTrigger
-              value="/movimentos"
+              value="/movements"
               asChild
               className="h-14 rounded-none border-b-2 border-transparent px-6 text-base font-medium text-gray-500 transition-all hover:border-gray-300 hover:text-gray-900 data-[state=active]:border-blue-600 data-[state=active]:text-blue-600"
             >
-              <Link href="/movimentos">Movimentos</Link>
+              <Link href="/movements">Movimentos</Link>
             </TabsTrigger>
             <TabsTrigger
               value="/firstTwoLayers"
