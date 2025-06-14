@@ -1,4 +1,4 @@
-import { CubeCase3D } from "../types/firstTwoLayers";
+import { CubeCase3D } from "@/types/types";
 
 export const casesFirstTwoLayers: CubeCase3D[] = [
   {
