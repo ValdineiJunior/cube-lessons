@@ -76,9 +76,7 @@ export function Cube({ name, colors, description }: CubeCase3D) {
         </div>
       </div>
       <div className="w-full text-center mt-2 text-lg">{name}</div>
-      {description && (
-        <div className="w-full text-center mt-2 text-sm">{description}</div>
-      )}
+      <div className="w-full text-center mt-2 text-sm">{description}</div>
     </div>
   );
 }

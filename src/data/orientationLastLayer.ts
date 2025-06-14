@@ -2,2181 +2,1994 @@ import { CubeCase2D } from "../types/types";
 
 export const casesOrientationLastLayer: CubeCase2D[] = [
   {
-    case: "caseOll1",
-    name: "1",
+    name: "case 02",
     group: "Dot",
-    notation: {
-      colors: [
-        { leftBorder: "yellow" },
-        { topBorder: "yellow" },
-        { rightBorder: "yellow" },
-        { leftBorder: "yellow" },
-        { centerColor: "yellow" },
-        { rightBorder: "yellow" },
-        { leftBorder: "yellow" },
-        { bottomBorder: "yellow" },
-        { rightBorder: "yellow" },
-      ],
-      moves: ["R", "U2", "R2", "F", "R", "F'", "U2", "R'", "F", "R", "F'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["r", "U", "r'", "U2", "r", "U2", "R'", "U2", "R", "U'", "r'"],
   },
   {
-    case: "caseOll2",
-    name: "2",
+    name: "case 03",
     group: "Dot",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["r", "U", "r'", "U2", "r", "U2", "R'", "U2", "R", "U'", "r'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["r'", "R2", "U", "R'", "U", "r", "U2", "r'", "U", "M'"],
   },
   {
-    case: "caseOll3",
-    name: "3",
+    name: "case 04",
     group: "Dot",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["r'", "R2", "U", "R'", "U", "r", "U2", "r'", "U", "M'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["M", "U'", "r", "U2", "r'", "U'", "R", "U'", "R'", "M'"],
   },
   {
-    case: "caseOll4",
-    name: "4",
-    group: "Dot",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["M", "U'", "r", "U2", "r'", "U'", "R", "U'", "R'", "M'"],
-    },
-  },
-  {
-    case: "caseOll5",
-    name: "5",
+    name: "case 05",
     group: "Square Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["l'", "U2", "L", "U", "L'", "U", "l"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["l'", "U2", "L", "U", "L'", "U", "l"],
   },
   {
-    case: "caseOll6",
-    name: "6",
+    name: "case 06",
     group: "Square Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["r", "U2", "R'", "U'", "R", "U'", "r'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["r", "U2", "R'", "U'", "R", "U'", "r'"],
   },
   {
-    case: "caseOll7",
-    name: "7",
+    name: "case 07",
     group: "Small Lightning Bolt",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["r", "U", "R'", "U", "R", "U2", "r'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["r", "U", "R'", "U", "R", "U2", "r'"],
   },
   {
-    case: "caseOll8",
-    name: "8",
+    name: "case 08",
     group: "Small Lightning Bolt",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["l'", "U'", "L", "U'", "L'", "U2", "l"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["l'", "U'", "L", "U'", "L'", "U2", "l"],
   },
   {
-    case: "caseOll9",
-    name: "9",
+    name: "case 09",
     group: "Fish Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R'", "U'", "R'", "F", "R2", "U", "R'", "U'", "F'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R'", "U'", "R'", "F", "R2", "U", "R'", "U'", "F'"],
   },
   {
-    case: "caseOll10",
-    name: "10",
+    name: "case 10",
     group: "Fish Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R'", "U", "R'", "F", "R", "F'", "R", "U2", "R'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R'", "U", "R'", "F", "R", "F'", "R", "U2", "R'"],
   },
   {
-    case: "caseOll11",
-    name: "11",
+    name: "case 11",
     group: "Small Lightning Bolt",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["r", "U", "R'", "U", "R'", "F", "R", "F'", "R", "U2", "r'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["r", "U", "R'", "U", "R'", "F", "R", "F'", "R", "U2", "r'"],
   },
   {
-    case: "caseOll12",
-    name: "12",
+    name: "case 12",
     group: "Small Lightning Bolt",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["M'", "R'", "U'", "R", "U'", "R'", "U2", "R", "U'", "R", "r'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["M'", "R'", "U'", "R", "U'", "R'", "U2", "R", "U'", "R", "r'"],
   },
   {
-    case: "caseOll13",
-    name: "13",
+    name: "case 13",
     group: "Knight Move Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["F", "U", "R", "U'", "R2", "F'", "R", "U", "R", "U'", "R'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["F", "U", "R", "U'", "R2", "F'", "R", "U", "R", "U'", "R'"],
   },
   {
-    case: "caseOll14",
-    name: "14",
+    name: "case 14",
     group: "Knight Move Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R'", "F", "R", "U", "R'", "F'", "R", "F", "U'", "F'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R'", "F", "R", "U", "R'", "F'", "R", "F", "U'", "F'"],
   },
   {
-    case: "caseOll15",
-    name: "15",
+    name: "case 15",
     group: "Knight Move Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["l'", "U'", "l", "L'", "U'", "L", "U", "l'", "U", "l"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["l'", "U'", "l", "L'", "U'", "L", "U", "l'", "U", "l"],
   },
   {
-    case: "caseOll16",
-    name: "16",
+    name: "case 16",
     group: "Knight Move Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["r", "U", "r'", "R", "U", "R'", "U'", "r", "U'", "r'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["r", "U", "r'", "R", "U", "R'", "U'", "r", "U'", "r'"],
   },
   {
-    case: "caseOll17",
-    name: "17",
+    name: "case 17",
     group: "Dot",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["F", "R'", "F'", "R2", "r'", "U", "R", "U'", "R'", "U'", "M'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["F", "R'", "F'", "R2", "r'", "U", "R", "U'", "R'", "U'", "M'"],
   },
   {
-    case: "caseOll18",
-    name: "18",
+    name: "case 18",
     group: "Dot",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: [
-        "r",
-        "U",
-        "R'",
-        "U",
-        "R",
-        "U2",
-        "r2",
-        "U'",
-        "R",
-        "U'",
-        "R'",
-        "U2",
-        "r",
-      ],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: [
+      "r",
+      "U",
+      "R'",
+      "U",
+      "R",
+      "U2",
+      "r2",
+      "U'",
+      "R",
+      "U'",
+      "R'",
+      "U2",
+      "r",
+    ],
   },
   {
-    case: "caseOll19",
-    name: "19",
+    name: "case 19",
     group: "Dot",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["r'", "R", "U", "R", "U", "R'", "U'", "M'", "R'", "F", "R", "F'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["r'", "R", "U", "R", "U", "R'", "U'", "M'", "R'", "F", "R", "F'"],
   },
   {
-    case: "caseOll20",
-    name: "20",
+    name: "case 20",
     group: "Dot",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["r", "U", "R'", "U'", "M2", "U", "R", "U'", "R'", "U'", "M'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["r", "U", "R'", "U'", "M2", "U", "R", "U'", "R'", "U'", "M'"],
   },
   {
-    case: "caseOll21",
-    name: "21",
+    name: "case 21",
     group: "Cross",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["R", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "R'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["R", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "R'"],
   },
   {
-    case: "caseOll22",
-    name: "22",
+    name: "case 22",
     group: "Cross",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["R", "U2", "R2", "U'", "R2", "U'", "R2", "U2", "R"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["R", "U2", "R2", "U'", "R2", "U'", "R2", "U2", "R"],
   },
   {
-    case: "caseOll23",
-    name: "23",
+    name: "case 23",
     group: "Cross",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R2", "D'", "R", "U2", "R'", "D", "R", "U2", "R"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R2", "D'", "R", "U2", "R'", "D", "R", "U2", "R"],
   },
   {
-    case: "caseOll24",
-    name: "24",
+    name: "case 24",
     group: "Cross",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["r", "U", "R'", "U'", "r'", "F", "R", "F'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["r", "U", "R'", "U'", "r'", "F", "R", "F'"],
   },
   {
-    case: "caseOll25",
-    name: "25",
+    name: "case 25",
     group: "Cross",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["F'", "r", "U", "R'", "U'", "r'", "F", "R"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["F'", "r", "U", "R'", "U'", "r'", "F", "R"],
   },
   {
-    case: "caseOll26",
-    name: "26",
+    name: "case 26",
     group: "Cross",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["R", "U2", "R'", "U'", "R", "U'", "R'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["R", "U2", "R'", "U'", "R", "U'", "R'"],
   },
   {
-    case: "caseOll27",
-    name: "27",
+    name: "case 27",
     group: "Cross",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R'", "U", "R", "U2", "R'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R'", "U", "R", "U2", "R'"],
   },
   {
-    case: "caseOll28",
-    name: "28",
+    name: "case 28",
     group: "Corners Oriented",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["r", "U", "R'", "U'", "r'", "R", "U", "R", "U'", "R'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["r", "U", "R'", "U'", "r'", "R", "U", "R", "U'", "R'"],
   },
   {
-    case: "caseOll29",
-    name: "29",
+    name: "case 29",
     group: "Awkward Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: [
-        "R",
-        "U",
-        "R'",
-        "U'",
-        "R",
-        "U'",
-        "R'",
-        "F'",
-        "U'",
-        "F",
-        "R",
-        "U",
-        "R'",
-      ],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: [
+      "R",
+      "U",
+      "R'",
+      "U'",
+      "R",
+      "U'",
+      "R'",
+      "F'",
+      "U'",
+      "F",
+      "R",
+      "U",
+      "R'",
+    ],
   },
   {
-    case: "caseOll30",
-    name: "30",
+    name: "case 30",
     group: "Awkward Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["F", "R'", "F", "R2", "U'", "R'", "U'", "R", "U", "R'", "F2"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["F", "R'", "F", "R2", "U'", "R'", "U'", "R", "U", "R'", "F2"],
   },
   {
-    case: "caseOll31",
-    name: "31",
+    name: "case 31",
     group: "P Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R'", "U'", "F", "U", "R", "U'", "R'", "F'", "R"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R'", "U'", "F", "U", "R", "U'", "R'", "F'", "R"],
   },
   {
-    case: "caseOll32",
-    name: "32",
+    name: "case 32",
     group: "P Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["L", "U", "F'", "U'", "L'", "U", "L", "F", "L'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["L", "U", "F'", "U'", "L'", "U", "L", "F", "L'"],
   },
   {
-    case: "caseOll33",
-    name: "33",
+    name: "case 33",
     group: "T Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R'", "U'", "R'", "F", "R", "F'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R'", "U'", "R'", "F", "R", "F'"],
   },
   {
-    case: "caseOll34",
-    name: "34",
+    name: "case 34",
     group: "C Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R2", "U'", "R'", "F", "R", "U", "R", "U'", "F'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R2", "U'", "R'", "F", "R", "U", "R", "U'", "F'"],
   },
   {
-    case: "caseOll35",
-    name: "35",
+    name: "case 35",
     group: "Fish Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R", "U2", "R2", "F", "R", "F'", "R", "U2", "R'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R", "U2", "R2", "F", "R", "F'", "R", "U2", "R'"],
   },
   {
-    case: "caseOll36",
-    name: "36",
+    name: "case 36",
     group: "W Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["L'", "U'", "L", "U'", "L'", "U", "L", "U", "L", "F'", "L'", "F"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["L'", "U'", "L", "U'", "L'", "U", "L", "U", "L", "F'", "L'", "F"],
   },
   {
-    case: "caseOll37",
-    name: "37",
+    name: "case 37",
     group: "Fish Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["F", "R'", "F'", "R", "U", "R", "U'", "R'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["F", "R'", "F'", "R", "U", "R", "U'", "R'"],
   },
   {
-    case: "caseOll38",
-    name: "38",
+    name: "case 38",
     group: "W Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R'", "U", "R", "U'", "R'", "U'", "R'", "F", "R", "F'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R'", "U", "R", "U'", "R'", "U'", "R'", "F", "R", "F'"],
   },
   {
-    case: "caseOll39",
-    name: "39",
+    name: "case 39",
     group: "Big Lightning Bolt",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["L", "F'", "L'", "U'", "L", "U", "F", "U'", "L'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["L", "F'", "L'", "U'", "L", "U", "F", "U'", "L'"],
   },
   {
-    case: "caseOll40",
-    name: "40",
+    name: "case 40",
     group: "Big Lightning Bolt",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R'", "F", "R", "U", "R'", "U'", "F'", "U", "R"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R'", "F", "R", "U", "R'", "U'", "F'", "U", "R"],
   },
   {
-    case: "caseOll41",
-    name: "41",
+    name: "case 41",
     group: "Awkward Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: [
-        "R",
-        "U",
-        "R'",
-        "U",
-        "R",
-        "U2",
-        "R'",
-        "F",
-        "R",
-        "U",
-        "R'",
-        "U'",
-        "F'",
-      ],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: [
+      "R",
+      "U",
+      "R'",
+      "U",
+      "R",
+      "U2",
+      "R'",
+      "F",
+      "R",
+      "U",
+      "R'",
+      "U'",
+      "F'",
+    ],
   },
   {
-    case: "caseOll42",
-    name: "42",
+    name: "case 42",
     group: "Awkward Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: [
-        "R'",
-        "U'",
-        "R",
-        "U'",
-        "R'",
-        "U2",
-        "R",
-        "F",
-        "R",
-        "U",
-        "R'",
-        "U'",
-        "F'",
-      ],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: [
+      "R'",
+      "U'",
+      "R",
+      "U'",
+      "R'",
+      "U2",
+      "R",
+      "F",
+      "R",
+      "U",
+      "R'",
+      "U'",
+      "F'",
+    ],
   },
   {
-    case: "caseOll43",
-    name: "43",
+    name: "case 43",
     group: "P Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["F'", "U'", "L'", "U", "L", "F"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["F'", "U'", "L'", "U", "L", "F"],
   },
   {
-    case: "caseOll44",
-    name: "44",
+    name: "case 44",
     group: "P Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["F", "U", "R", "U'", "R'", "F'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["F", "U", "R", "U'", "R'", "F'"],
   },
   {
-    case: "caseOll45",
-    name: "45",
+    name: "case 45",
     group: "T Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["F", "R", "U", "R'", "U'", "F'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["F", "R", "U", "R'", "U'", "F'"],
   },
   {
-    case: "caseOll46",
-    name: "46",
+    name: "case 46",
     group: "C Shape",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["R'", "U'", "R'", "F", "R", "F'", "U", "R"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["R'", "U'", "R'", "F", "R", "F'", "U", "R"],
   },
   {
-    case: "caseOll47",
-    name: "47",
+    name: "case 47",
     group: "Small L Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["R'", "U'", "R'", "F", "R", "F'", "R'", "F", "R", "F'", "U", "R"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["R'", "U'", "R'", "F", "R", "F'", "R'", "F", "R", "F'", "U", "R"],
   },
   {
-    case: "caseOll48",
-    name: "48",
+    name: "case 48",
     group: "Small L Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["F", "R", "U", "R'", "U'", "R", "U", "R'", "U'", "F'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["F", "R", "U", "R'", "U'", "R", "U", "R'", "U'", "F'"],
   },
   {
-    case: "caseOll49",
-    name: "49",
+    name: "case 49",
     group: "Small L Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["r", "U'", "r2", "U", "r2", "U", "r2", "U'", "r"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["r", "U'", "r2", "U", "r2", "U", "r2", "U'", "r"],
   },
   {
-    case: "caseOll50",
-    name: "50",
+    name: "case 50",
     group: "Small L Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["r'", "U", "r2", "U'", "r2", "U'", "r2", "U", "r'"],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["r'", "U", "r2", "U'", "r2", "U'", "r2", "U", "r'"],
   },
   {
-    case: "caseOll51",
-    name: "51",
+    name: "case 51",
     group: "I Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["F", "U", "R", "U'", "R'", "U", "R", "U'", "R'", "F'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["F", "U", "R", "U'", "R'", "U", "R", "U'", "R'", "F'"],
   },
   {
-    case: "caseOll52",
-    name: "52",
+    name: "case 52",
     group: "I Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R'", "U", "R", "U'", "B", "U'", "B'", "R'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R'", "U", "R", "U'", "B", "U'", "B'", "R'"],
   },
   {
-    case: "caseOll53",
-    name: "53",
+    name: "case 53",
     group: "Small L Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["l'", "U2", "L", "U", "L'", "U'", "L", "U", "L'", "U", "l"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["l'", "U2", "L", "U", "L'", "U'", "L", "U", "L'", "U", "l"],
   },
   {
-    case: "caseOll54",
-    name: "54",
+    name: "case 54",
     group: "Small L Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: ["r", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "r'"],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: ["r", "U2", "R'", "U'", "R", "U", "R'", "U'", "R", "U'", "r'"],
   },
   {
-    case: "caseOll55",
-    name: "55",
+    name: "case 55",
     group: "I Shape",
-    notation: {
-      colors: [
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-      ],
-      moves: [
-        "R'",
-        "F",
-        "R",
-        "U",
-        "R",
-        "U'",
-        "R2",
-        "F'",
-        "R2",
-        "U'",
-        "R'",
-        "U",
-        "R",
-        "U",
-        "R'",
-      ],
-    },
+    colors: [
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+    ],
+    moves: [
+      "R'",
+      "F",
+      "R",
+      "U",
+      "R",
+      "U'",
+      "R2",
+      "F'",
+      "R2",
+      "U'",
+      "R'",
+      "U",
+      "R",
+      "U",
+      "R'",
+    ],
   },
   {
-    case: "caseOll56",
-    name: "56",
+    name: "case 56",
     group: "I Shape",
-    notation: {
-      colors: [
-        {
-          leftBorder: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          leftBorder: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          rightBorder: "yellow",
-        },
-      ],
-      moves: [
-        "r'",
-        "U'",
-        "r",
-        "U'",
-        "R'",
-        "U",
-        "R",
-        "U'",
-        "R'",
-        "U",
-        "R",
-        "r'",
-        "U",
-        "r",
-      ],
-    },
+    colors: [
+      {
+        leftBorder: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        leftBorder: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        rightBorder: "yellow",
+      },
+    ],
+    moves: [
+      "r'",
+      "U'",
+      "r",
+      "U'",
+      "R'",
+      "U",
+      "R",
+      "U'",
+      "R'",
+      "U",
+      "R",
+      "r'",
+      "U",
+      "r",
+    ],
   },
   {
-    case: "caseOll57",
-    name: "57",
+    name: "case 57",
     group: "Corners Oriented",
-    notation: {
-      colors: [
-        {
-          centerColor: "yellow",
-        },
-        {
-          topBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-        {
-          bottomBorder: "yellow",
-        },
-        {
-          centerColor: "yellow",
-        },
-      ],
-      moves: ["R", "U", "R'", "U'", "M'", "U", "R", "U'", "r'"],
-    },
+    colors: [
+      {
+        centerColor: "yellow",
+      },
+      {
+        topBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+      {
+        bottomBorder: "yellow",
+      },
+      {
+        centerColor: "yellow",
+      },
+    ],
+    moves: ["R", "U", "R'", "U'", "M'", "U", "R", "U'", "r'"],
   },
 ];

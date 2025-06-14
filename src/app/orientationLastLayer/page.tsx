@@ -14,7 +14,13 @@ export default function OrientationLastLayer() {
       </p>
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {casesOrientationLastLayer.map((notation) => (
-          <CubeFace key={notation.case} notation={notation.notation} />
+          <CubeFace
+            key={notation.name}
+            name={notation.name}
+            colors={notation.colors}
+            moves={notation.moves}
+            group={notation.group}
+          />
         ))}
       </div>
     </>

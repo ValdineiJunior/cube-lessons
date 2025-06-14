@@ -15,16 +15,11 @@ export type SquareColors = {
   centerColor?: CubeColor;
 };
 
-export type Notation = {
-  colors: SquareColors[];
-  moves: string[];
-};
-
 export interface CubeCase2D {
-  case: string;
   name: string;
   group: string;
-  notation: Notation;
+  colors: SquareColors[];
+  moves: string[];
 }
 
 export type CubeCase3D = {

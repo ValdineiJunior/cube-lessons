@@ -1,11 +1,11 @@
 import { CubeCase2D } from "@/types/types";
 import { getColor } from "@/utils/colorUtil";
 
-export function CubeFace({ notation }: CubeCase2D) {
+export function CubeFace({ name, colors, moves }: CubeCase2D) {
   return (
     <div className="flex flex-col items-center w-72">
       <div className="grid grid-cols-3 grid-rows-3 h-52 w-52">
-        {notation.colors.map((color, i) => (
+        {colors.map((color, i) => (
           <div
             key={i}
             className={`
@@ -56,9 +56,8 @@ export function CubeFace({ notation }: CubeCase2D) {
           />
         ))}
       </div>
-      <div className="w-full text-center mt-2 text-sm">
-        {notation.moves.join(" ")}
-      </div>
+      <div className="w-full text-center mt-2 text-lg">{name}</div>
+      <div className="w-full text-center mt-2 text-sm">{moves.join(" ")}</div>
     </div>
   );
 }
