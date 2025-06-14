@@ -1,6 +1,6 @@
-import { CubeCase } from "@/types";
+import { CubeCase3D } from "@/types/types";
 
-export function Cube({ name, colors, description }: CubeCase) {
+export function Cube({ name, colors, description }: CubeCase3D) {
   return (
     <div className="flex flex-col items-center w-72">
       <div className="relative h-72 w-72">

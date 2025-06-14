@@ -1,11 +1,7 @@
-import { Notation } from "@/types";
+import { CubeCase2D } from "@/types/types";
 import { getColor } from "@/utils/colorUtil";
 
-interface CubeFaceProps {
-  notation: Notation;
-}
-
-export function CubeFace({ notation }: CubeFaceProps) {
+export function CubeFace({ notation }: CubeCase2D) {
   return (
     <div className="flex flex-col items-center w-72">
       <div className="grid grid-cols-3 grid-rows-3 h-52 w-52">

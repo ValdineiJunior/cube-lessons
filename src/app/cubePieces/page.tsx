@@ -1,5 +1,5 @@
 import { Cube } from "@/components/Cube";
-import { cubePiecesNotations } from "@/types";
+import { cubePieceTypes } from "@/data/cubePieceTypes";
 
 export default function CubePieces() {
   return (
@@ -12,7 +12,7 @@ export default function CubePieces() {
       </p>
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {cubePiecesNotations.map((notation) => (
+        {cubePieceTypes.map((notation) => (
           <Cube
             key={notation.name}
             name={notation.name}

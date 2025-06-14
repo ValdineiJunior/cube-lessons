@@ -1,10 +1,6 @@
-export type CubeCase = {
-  name: string;
-  colors: string[][];
-  description: string;
-};
+import { CubeCase3D } from "../types/firstTwoLayers";
 
-export const f2lNotations: CubeCase[] = [
+export const casesFirstTwoLayers: CubeCase3D[] = [
   {
     name: "Caso 01",
     colors: [

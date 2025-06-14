@@ -1,5 +1,5 @@
 import { CubeFace } from "@/components/CubeFace";
-import { pllNotations } from "@/types";
+import { casesPermutationLastLayer } from "@/data/permutationLastLayer";
 
 export default function PermutationLastLayer() {
   return (
@@ -13,7 +13,7 @@ export default function PermutationLastLayer() {
         das 21 situações específicas.
       </p>
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {pllNotations.map((notation) => (
+        {casesPermutationLastLayer.map((notation) => (
           <CubeFace key={notation.case} notation={notation.notation} />
         ))}
       </div>

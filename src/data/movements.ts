@@ -1,6 +1,6 @@
-import { CubeCase } from "./firstTwoLayers";
+import { CubeCase3D } from "../types/firstTwoLayers";
 
-export const basicMovements: CubeCase[] = [
+export const basicMovements: CubeCase3D[] = [
   {
     name: "R - Direita Horário",
     colors: [
@@ -93,7 +93,7 @@ export const basicMovements: CubeCase[] = [
   },
 ];
 
-export const advancedMovements: CubeCase[] = [
+export const advancedMovements: CubeCase3D[] = [
   {
     name: "Uw' - Topo Duplo Anti-horário",
     colors: [

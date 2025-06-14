@@ -1,6 +1,6 @@
-import { Notations } from "./cube";
+import { CubeCase2D } from "../types/types";
 
-export const ollNotations: Notations[] = [
+export const casesOrientationLastLayer: CubeCase2D[] = [
   {
     case: "caseOll1",
     name: "1",

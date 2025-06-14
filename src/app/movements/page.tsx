@@ -1,5 +1,5 @@
 import { Cube } from "@/components/Cube";
-import { CubeCase, advancedMovements, basicMovements } from "@/types";
+import { advancedMovements, basicMovements } from "@/data/movements";
 
 export default function Movements() {
   return (
@@ -19,7 +19,7 @@ export default function Movements() {
       <h2 className="text-2xl text-center py-8">Movimentos Básicos</h2>
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {basicMovements.map((notation: CubeCase) => (
+        {basicMovements.map((notation) => (
           <Cube
             key={notation.name}
             name={notation.name}
@@ -32,7 +32,7 @@ export default function Movements() {
       <h2 className="text-2xl text-center py-8">Movimentos Avançados</h2>
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {advancedMovements.map((notation: CubeCase) => (
+        {advancedMovements.map((notation) => (
           <Cube
             key={notation.name}
             name={notation.name}

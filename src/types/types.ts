@@ -5,8 +5,7 @@ export type CubeColor =
   | "orange"
   | "yellow"
   | "white"
-  | "gray"
-  | "";
+  | "gray";
 
 export type SquareColors = {
   leftBorder?: CubeColor;
@@ -21,9 +20,15 @@ export type Notation = {
   moves: string[];
 };
 
-export interface Notations {
+export interface CubeCase2D {
   case: string;
   name: string;
   group: string;
   notation: Notation;
 }
+
+export type CubeCase3D = {
+  name: string;
+  colors: string[][];
+  description: string;
+};

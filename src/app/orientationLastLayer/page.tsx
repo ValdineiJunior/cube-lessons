@@ -1,5 +1,5 @@
 import { CubeFace } from "@/components/CubeFace";
-import { ollNotations } from "@/types";
+import { casesOrientationLastLayer } from "@/data/orientationLastLayer";
 
 export default function OrientationLastLayer() {
   return (
@@ -13,7 +13,7 @@ export default function OrientationLastLayer() {
         uma das 57 situações específicas.
       </p>
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {ollNotations.map((notation) => (
+        {casesOrientationLastLayer.map((notation) => (
           <CubeFace key={notation.case} notation={notation.notation} />
         ))}
       </div>

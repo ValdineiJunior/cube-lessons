@@ -1,6 +1,6 @@
-import { Notations } from "@/types/cube";
+import { CubeCase2D } from "@/types/types";
 
-export const pllNotations: Notations[] = [
+export const casesPermutationLastLayer: CubeCase2D[] = [
   {
     case: "Aa",
     name: "1",
