@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cube Lessons - Master the Rubik's Cube",
+  title: "Cube Lessons - Master the Rubik&apos;s Cube",
   description:
-    "Learn to solve the Rubik's Cube with step-by-step tutorials, from beginner to advanced methods.",
+    "Learn to solve the Rubik&apos;s Cube with step-by-step tutorials, from beginner to advanced methods.",
 };
 
 export default function Home() {
@@ -12,12 +12,12 @@ export default function Home() {
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-          Master the Rubik's Cube
+          Master the Rubik&apos;s Cube
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Discover the secrets of the world's most famous puzzle. From beginner
-          to advanced, learn step-by-step methods to solve the Rubik's Cube with
-          confidence.
+          Discover the secrets of the world&apos;s most famous puzzle. From
+          beginner to advanced, learn step-by-step methods to solve the
+          Rubik&apos;s Cube with confidence.
         </p>
       </div>
 
