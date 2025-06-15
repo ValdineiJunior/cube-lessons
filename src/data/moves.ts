@@ -1,6 +1,6 @@
-import { CubeCase3D } from "@/types/types";
+import { CubeInfo3D } from "@/types/types";
 
-export const basicMovements: CubeCase3D[] = [
+export const basicMoves: CubeInfo3D[] = [
   {
     name: "R - Direita Horário",
     colors: [
@@ -93,7 +93,7 @@ export const basicMovements: CubeCase3D[] = [
   },
 ];
 
-export const advancedMovements: CubeCase3D[] = [
+export const advancedMoves: CubeInfo3D[] = [
   {
     name: "Uw' - Topo Duplo Anti-horário",
     colors: [

@@ -1,6 +1,6 @@
-import { CubeCase3D } from "@/types/types";
+import { CubeInfo3D } from "@/types/types";
 
-export const cubePieceTypes: CubeCase3D[] = [
+export const cubePieceTypes: CubeInfo3D[] = [
   {
     name: "Centros",
     colors: [

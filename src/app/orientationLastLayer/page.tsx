@@ -1,5 +1,5 @@
-import { CubeFaceContainer } from "@/components/CubeFace";
-import { casesOrientationLastLayer } from "@/data/orientationLastLayer";
+import { CubeInfoCard2D } from "@/components/CubeInfoCard2D";
+import { cubeCasesOrientationLastLayer } from "@/data/cubeCasesOrientationLastLayer";
 
 export default function OrientationLastLayer() {
   return (
@@ -13,12 +13,12 @@ export default function OrientationLastLayer() {
         uma das 57 situações específicas.
       </p>
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {casesOrientationLastLayer.map((notation) => (
-          <CubeFaceContainer
-            key={notation.name}
-            name={notation.name}
-            colors={notation.colors}
-            moves={notation.moves}
+        {cubeCasesOrientationLastLayer.map((cubeCase) => (
+          <CubeInfoCard2D
+            key={cubeCase.name}
+            name={cubeCase.name}
+            colors={cubeCase.colors}
+            moves={cubeCase.moves}
           />
         ))}
       </div>

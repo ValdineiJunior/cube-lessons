@@ -1,5 +1,5 @@
-import { Cube } from "@/components/Cube";
-import { casesFirstTwoLayers } from "@/data/firstTwoLayers";
+import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
+import { cubeCasesFirstTwoLayers } from "@/data/cubeCasesFirstTwoLayers";
 
 export default function FirstTwoLayers() {
   return (
@@ -13,12 +13,12 @@ export default function FirstTwoLayers() {
         quinas e meios.
       </p>
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {casesFirstTwoLayers.map((notation) => (
-          <Cube
-            key={notation.name}
-            name={notation.name}
-            colors={notation.colors}
-            description={notation.description}
+        {cubeCasesFirstTwoLayers.map((cubeCase) => (
+          <CubeInfoCard3D
+            key={cubeCase.name}
+            name={cubeCase.name}
+            colors={cubeCase.colors}
+            description={cubeCase.description}
           />
         ))}
       </div>

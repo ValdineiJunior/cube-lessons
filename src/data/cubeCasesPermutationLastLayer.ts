@@ -1,6 +1,6 @@
-import { CubeCase2D } from "@/types/types";
+import { CubeInfo2D } from "@/types/types";
 
-export const casesPermutationLastLayer: CubeCase2D[] = [
+export const cubeCasesPermutationLastLayer: CubeInfo2D[] = [
   {
     name: "Aa",
     group: "Adjacent Corner Swap",

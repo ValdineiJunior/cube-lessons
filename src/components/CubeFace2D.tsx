@@ -1,11 +1,11 @@
-import { SquareColors } from "@/types/types";
+import { SquareColorDetail } from "@/types/types";
 import { getColor } from "@/utils/colorUtil";
 
-interface CubeFaceGridProps {
-  colors: SquareColors[];
+interface CubeFace2DProps {
+  colors: SquareColorDetail[];
 }
 
-export function CubeFaceGrid({ colors }: CubeFaceGridProps) {
+export function CubeFace2D({ colors }: CubeFace2DProps) {
   return (
     <div className="grid grid-cols-3 grid-rows-3 h-52 w-52">
       {colors.map((color, i) => (

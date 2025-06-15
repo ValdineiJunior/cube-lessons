@@ -1,6 +1,6 @@
-import { CubeCase3D } from "@/types/types";
+import { CubeInfo3D } from "@/types/types";
 
-export const casesFirstTwoLayers: CubeCase3D[] = [
+export const cubeCasesFirstTwoLayers: CubeInfo3D[] = [
   {
     name: "Caso 01",
     colors: [

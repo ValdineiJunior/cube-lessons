@@ -1,5 +1,5 @@
-import { Cube } from "@/components/Cube";
-import { advancedMovements, basicMovements } from "@/data/movements";
+import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
+import { advancedMoves, basicMoves } from "@/data/moves";
 
 export default function Movements() {
   return (
@@ -19,12 +19,12 @@ export default function Movements() {
       <h2 className="text-2xl text-center py-8">Movimentos Básicos</h2>
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {basicMovements.map((notation) => (
-          <Cube
-            key={notation.name}
-            name={notation.name}
-            colors={notation.colors}
-            description={notation.description}
+        {basicMoves.map((cubeMove) => (
+          <CubeInfoCard3D
+            key={cubeMove.name}
+            name={cubeMove.name}
+            colors={cubeMove.colors}
+            description={cubeMove.description}
           />
         ))}
       </div>
@@ -32,12 +32,12 @@ export default function Movements() {
       <h2 className="text-2xl text-center py-8">Movimentos Avançados</h2>
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {advancedMovements.map((notation) => (
-          <Cube
-            key={notation.name}
-            name={notation.name}
-            colors={notation.colors}
-            description={notation.description}
+        {advancedMoves.map((cubeMove) => (
+          <CubeInfoCard3D
+            key={cubeMove.name}
+            name={cubeMove.name}
+            colors={cubeMove.colors}
+            description={cubeMove.description}
           />
         ))}
       </div>

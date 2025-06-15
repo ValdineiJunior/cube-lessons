@@ -7,7 +7,7 @@ export type CubeColor =
   | "white"
   | "gray";
 
-export type SquareColors = {
+export type SquareColorDetail = {
   leftBorder?: CubeColor;
   rightBorder?: CubeColor;
   topBorder?: CubeColor;
@@ -15,14 +15,14 @@ export type SquareColors = {
   centerColor?: CubeColor;
 };
 
-export interface CubeCase2D {
+export interface CubeInfo2D {
   name: string;
   group: string;
-  colors: SquareColors[];
+  colors: SquareColorDetail[];
   moves: string[];
 }
 
-export type CubeCase3D = {
+export type CubeInfo3D = {
   name: string;
   colors: string[][];
   description: string;

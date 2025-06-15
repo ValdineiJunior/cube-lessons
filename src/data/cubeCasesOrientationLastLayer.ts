@@ -1,6 +1,6 @@
-import { CubeCase2D } from "../types/types";
+import { CubeInfo2D } from "../types/types";
 
-export const casesOrientationLastLayer: CubeCase2D[] = [
+export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
   {
     name: "case 02",
     group: "Dot",

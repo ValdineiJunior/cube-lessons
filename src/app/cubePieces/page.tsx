@@ -1,4 +1,4 @@
-import { Cube } from "@/components/Cube";
+import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
 import { cubePieceTypes } from "@/data/cubePieceTypes";
 
 export default function CubePieces() {
@@ -12,12 +12,12 @@ export default function CubePieces() {
       </p>
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
-        {cubePieceTypes.map((notation) => (
-          <Cube
-            key={notation.name}
-            name={notation.name}
-            colors={notation.colors}
-            description={notation.description}
+        {cubePieceTypes.map((cubePieceType) => (
+          <CubeInfoCard3D
+            key={cubePieceType.name}
+            name={cubePieceType.name}
+            colors={cubePieceType.colors}
+            description={cubePieceType.description}
           />
         ))}
       </div>
