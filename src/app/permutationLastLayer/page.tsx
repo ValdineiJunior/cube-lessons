@@ -1,4 +1,4 @@
-import { CubeFace } from "@/components/CubeFace";
+import { CubeFaceContainer } from "@/components/CubeFace";
 import { casesPermutationLastLayer } from "@/data/permutationLastLayer";
 
 export default function PermutationLastLayer() {
@@ -14,12 +14,11 @@ export default function PermutationLastLayer() {
       </p>
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {casesPermutationLastLayer.map((notation) => (
-          <CubeFace
+          <CubeFaceContainer
             key={notation.name}
             name={notation.name}
             colors={notation.colors}
             moves={notation.moves}
-            group={notation.group}
           />
         ))}
       </div>
