@@ -45,6 +45,36 @@ export function Timer() {
       }
     };
 
+    const handleTouchStart = (event: TouchEvent) => {
+      event.preventDefault();
+      if (isRunning) {
+        // Stop the timer immediately if it's running
+        setIsRunning(false);
+      } else if (!holdStartTime) {
+        // Only start the hold process if timer is not running
+        setHoldStartTime(Date.now());
+        setHasReset(false);
+        setHoldProgress(0);
+      }
+    };
+
+    const handleTouchEnd = (event: TouchEvent) => {
+      event.preventDefault();
+      const holdDuration = holdStartTime ? Date.now() - holdStartTime : 0;
+
+      if (holdDuration >= 1000) {
+        // If held for 1 second, start the timer
+        setIsRunning(true);
+      } else if (isRunning) {
+        // If not held long enough and timer is running, stop it
+        setIsRunning(false);
+      }
+
+      setHoldStartTime(null);
+      setHasReset(false);
+      setHoldProgress(0);
+    };
+
     const checkHoldTime = () => {
       if (holdStartTime && !hasReset) {
         const holdDuration = Date.now() - holdStartTime;
@@ -63,10 +93,14 @@ export function Timer() {
 
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
+    document.addEventListener("touchstart", handleTouchStart);
+    document.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("keyup", handleKeyUp);
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchend", handleTouchEnd);
       clearInterval(intervalId);
     };
   }, [holdStartTime, isRunning, hasReset]);
@@ -87,21 +121,8 @@ export function Timer() {
     };
   }, [isRunning]);
 
-  const handleStart = () => {
-    setIsRunning(true);
-  };
-
-  const handlePause = () => {
-    setIsRunning(false);
-  };
-
-  const handleReset = () => {
-    setIsRunning(false);
-    setTime(0);
-  };
-
   return (
-    <div className="text-center">
+    <div className="text-center select-none touch-none">
       <div className="text-6xl font-mono font-bold mb-8">
         {formatTime(time)}
       </div>
@@ -115,36 +136,15 @@ export function Timer() {
       </div>
       <div className="text-sm text-gray-600 mb-8">
         {isRunning ? (
-          <p>Pressione espaço ou o botão para parar o timer</p>
+          <p>
+            Pressione espaço, toque na tela ou use o botão para parar o timer
+          </p>
         ) : (
           <p>
-            Segure espaço por 1 segundo para preparar, solte para iniciar ou
-            utilize os botoes abaixo
+            Segure espaço ou toque na tela por 1 segundo para preparar, solte
+            para iniciar
           </p>
         )}
-      </div>
-      <div className="space-x-4">
-        {!isRunning ? (
-          <button
-            onClick={handleStart}
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Start
-          </button>
-        ) : (
-          <button
-            onClick={handlePause}
-            className="px-6 py-3 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors"
-          >
-            Pause
-          </button>
-        )}
-        <button
-          onClick={handleReset}
-          className="px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-        >
-          Reset
-        </button>
       </div>
     </div>
   );
