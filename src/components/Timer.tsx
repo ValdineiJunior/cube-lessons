@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { formatTime } from "../utils/timeUtils";
 
 export function Timer() {
@@ -9,6 +9,7 @@ export function Timer() {
   const [holdStartTime, setHoldStartTime] = useState<number | null>(null);
   const [hasReset, setHasReset] = useState(false);
   const [holdProgress, setHoldProgress] = useState(0);
+  const timerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -93,14 +94,20 @@ export function Timer() {
 
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
-    document.addEventListener("touchstart", handleTouchStart);
-    document.addEventListener("touchend", handleTouchEnd);
+
+    const timerElement = timerRef.current;
+    if (timerElement) {
+      timerElement.addEventListener("touchstart", handleTouchStart);
+      timerElement.addEventListener("touchend", handleTouchEnd);
+    }
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("keyup", handleKeyUp);
-      document.removeEventListener("touchstart", handleTouchStart);
-      document.removeEventListener("touchend", handleTouchEnd);
+      if (timerElement) {
+        timerElement.removeEventListener("touchstart", handleTouchStart);
+        timerElement.removeEventListener("touchend", handleTouchEnd);
+      }
       clearInterval(intervalId);
     };
   }, [holdStartTime, isRunning, hasReset]);
@@ -122,29 +129,34 @@ export function Timer() {
   }, [isRunning]);
 
   return (
-    <div className="text-center select-none touch-none">
-      <div className="text-6xl font-mono font-bold mb-8">
-        {formatTime(time)}
-      </div>
-      <div className="w-64 h-2 bg-gray-200 rounded-full mx-auto mb-8 overflow-hidden">
-        <div
-          className={`h-full transition-all duration-100 ${
-            holdProgress >= 100 ? "bg-green-500" : "bg-blue-500"
-          }`}
-          style={{ width: `${holdProgress}%` }}
-        />
-      </div>
-      <div className="text-sm text-gray-600 mb-8">
-        {isRunning ? (
-          <p>
-            Pressione espaço, toque na tela ou use o botão para parar o timer
-          </p>
-        ) : (
-          <p>
-            Segure espaço ou toque na tela por 1 segundo para preparar, solte
-            para iniciar
-          </p>
-        )}
+    <div className="min-h-screen select-none touch-none" ref={timerRef}>
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
+            Timer
+          </h1>
+          <div className="text-6xl font-mono font-bold mb-8">
+            {formatTime(time)}
+          </div>
+          <div className="w-64 h-2 bg-gray-200 rounded-full mx-auto mb-8 overflow-hidden">
+            <div
+              className={`h-full transition-all duration-100 ${
+                holdProgress >= 100 ? "bg-green-500" : "bg-blue-500"
+              }`}
+              style={{ width: `${holdProgress}%` }}
+            />
+          </div>
+          <div className="text-sm text-gray-600 mb-8">
+            {isRunning ? (
+              <p>Pressione espaço ou toque na tela para parar o timer</p>
+            ) : (
+              <p>
+                Segure espaço ou toque na tela por 1 segundo para preparar,
+                solte para iniciar
+              </p>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

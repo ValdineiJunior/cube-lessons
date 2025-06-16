@@ -9,12 +9,7 @@ export const metadata: Metadata = {
 export default function TimerPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
-          Timer
-        </h1>
-        <Timer />
-      </div>
+      <Timer />
     </div>
   );
 }
