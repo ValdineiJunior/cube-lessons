@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { formatTime } from "../utils/timeUtils";
 
 export function Timer() {
   const [time, setTime] = useState(0);
@@ -85,13 +86,6 @@ export function Timer() {
       }
     };
   }, [isRunning]);
-
-  const formatTime = (time: number) => {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    const milliseconds = Math.floor((time % 1) * 100);
-    return `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}:${milliseconds.toString().padStart(2, "0")}`;
-  };
 
   const handleStart = () => {
     setIsRunning(true);

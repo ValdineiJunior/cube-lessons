@@ -1,5 +1,5 @@
 import { SquareColorDetail } from "@/types/types";
-import { getColor } from "@/utils/colorUtil";
+import { getColor } from "@/utils/colorUtils";
 
 interface CubeFace2DProps {
   colors: SquareColorDetail[];
