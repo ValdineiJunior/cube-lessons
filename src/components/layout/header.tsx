@@ -54,6 +54,13 @@ export function Header() {
             >
               <Link href="/permutationLastLayer">PLL</Link>
             </TabsTrigger>
+            <TabsTrigger
+              value="/timer"
+              asChild
+              className="h-14 rounded-none border-b-2 border-transparent px-6 text-base font-medium text-gray-500 transition-all hover:border-gray-300 hover:text-gray-900 data-[state=active]:border-blue-600 data-[state=active]:text-blue-600"
+            >
+              <Link href="/timer">Timer</Link>
+            </TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
