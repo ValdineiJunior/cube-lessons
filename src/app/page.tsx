@@ -69,6 +69,45 @@ export default function Home() {
             </p>
           </CardContent>
         </Card>
+
+        <Card className="hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="text-blue-600 text-4xl mb-4">🧩</div>
+            <CardTitle className="text-xl">Peças do Cubo</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              Conheça todas as peças que compõem o Cubo Mágico e entenda como
+              elas se movem e interagem entre si.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="text-blue-600 text-4xl mb-4">🔄</div>
+            <CardTitle className="text-xl">Movimentos</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              Aprenda a notação dos movimentos e como executá-los corretamente
+              para resolver o cubo de forma eficiente.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card className="hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="text-blue-600 text-4xl mb-4">⏱️</div>
+            <CardTitle className="text-xl">Time Tracker</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              Acompanhe seu progresso e melhore seus tempos com nosso sistema de
+              cronometragem e análise de resoluções.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
