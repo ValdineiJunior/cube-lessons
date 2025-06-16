@@ -1,3 +1,4 @@
+import { Timer } from "@/components/Timer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export default function TimerPage() {
         <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
           Timer
         </h1>
-        <div className="text-6xl font-mono font-bold mb-8">00:00.00</div>
+        <Timer />
       </div>
     </div>
   );
