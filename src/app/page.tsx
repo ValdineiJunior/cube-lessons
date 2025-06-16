@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Cube Lessons - Aprenda o Cubo Mágico",
@@ -23,39 +24,51 @@ export default function Home() {
 
       {/* Features Grid */}
       <div className="grid md:grid-cols-3 gap-8 mb-16">
-        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-          <div className="text-blue-600 text-4xl mb-4">🎯</div>
-          <h3 className="text-xl font-semibold mb-3">
-            Primeiras Duas Camadas (F2L)
-          </h3>
-          <p className="text-gray-600">
-            Domine o método eficiente de resolver as duas primeiras camadas
-            simultaneamente, reduzindo significativamente seu tempo de
-            resolução.
-          </p>
-        </div>
+        <Card className="hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="text-blue-600 text-4xl mb-4">🎯</div>
+            <CardTitle className="text-xl">
+              Primeiras Duas Camadas (F2L)
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              Domine o método eficiente de resolver as duas primeiras camadas
+              simultaneamente, reduzindo significativamente seu tempo de
+              resolução.
+            </p>
+          </CardContent>
+        </Card>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-          <div className="text-blue-600 text-4xl mb-4">✨</div>
-          <h3 className="text-xl font-semibold mb-3">
-            Orientação da Última Camada (OLL)
-          </h3>
-          <p className="text-gray-600">
-            Aprenda os algoritmos para orientar todas as peças da última camada,
-            criando uma face superior uniforme.
-          </p>
-        </div>
+        <Card className="hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="text-blue-600 text-4xl mb-4">✨</div>
+            <CardTitle className="text-xl">
+              Orientação da Última Camada (OLL)
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              Aprenda os algoritmos para orientar todas as peças da última
+              camada, criando uma face superior uniforme.
+            </p>
+          </CardContent>
+        </Card>
 
-        <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-          <div className="text-blue-600 text-4xl mb-4">🎨</div>
-          <h3 className="text-xl font-semibold mb-3">
-            Permutação da Última Camada (PLL)
-          </h3>
-          <p className="text-gray-600">
-            Complete sua resolução aprendendo como permutar as peças da última
-            camada em suas posições corretas.
-          </p>
-        </div>
+        <Card className="hover:shadow-lg transition-shadow">
+          <CardHeader>
+            <div className="text-blue-600 text-4xl mb-4">🎨</div>
+            <CardTitle className="text-xl">
+              Permutação da Última Camada (PLL)
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-gray-600">
+              Complete sua resolução aprendendo como permutar as peças da última
+              camada em suas posições corretas.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
