@@ -19,7 +19,7 @@ export interface CubeInfo2D {
   name: string;
   group: string;
   colors: SquareColorDetail[];
-  moves: string[];
+  moves: string;
 }
 
 export type CubeInfo3D = {
