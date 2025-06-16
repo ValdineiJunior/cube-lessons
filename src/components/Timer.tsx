@@ -7,6 +7,21 @@ export function Timer() {
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.code === "Space") {
+        event.preventDefault();
+        setIsRunning((prev) => !prev);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
+  useEffect(() => {
     let intervalId: NodeJS.Timeout;
 
     if (isRunning) {
