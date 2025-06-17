@@ -9,7 +9,20 @@ export function Timer() {
   const [holdStartTime, setHoldStartTime] = useState<number | null>(null);
   const [hasReset, setHasReset] = useState(false);
   const [holdProgress, setHoldProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const timerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -148,11 +161,16 @@ export function Timer() {
           </div>
           <div className="text-sm text-gray-600 mb-8">
             {isRunning ? (
-              <p>Pressione espaço ou toque na tela para parar o timer</p>
+              <p>
+                {isMobile
+                  ? "Toque na tela para parar o timer"
+                  : "Pressione espaço para parar o timer"}
+              </p>
             ) : (
               <p>
-                Segure espaço ou toque na tela por 1 segundo para preparar,
-                solte para iniciar
+                {isMobile
+                  ? "Segure o dedo na tela por 1 segundo para preparar, solte para iniciar"
+                  : "Segure espaço por 1 segundo para preparar, solte para iniciar"}
               </p>
             )}
           </div>
