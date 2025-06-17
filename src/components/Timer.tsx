@@ -107,13 +107,13 @@ export function Timer() {
             {isRunning ? (
               <p>
                 {isMobile
-                  ? "Toque na tela para parar o timer"
+                  ? "Clique na tela para parar o timer"
                   : "Pressione espaço para parar o timer"}
               </p>
             ) : (
               <p>
                 {isMobile
-                  ? "Segure o dedo na tela por 1 segundo para preparar, solte para iniciar"
+                  ? "Pressione a tela por 1 segundo para preparar, solte para iniciar"
                   : "Segure espaço por 1 segundo para preparar, solte para iniciar"}
               </p>
             )}
