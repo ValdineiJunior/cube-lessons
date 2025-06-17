@@ -1,41 +1,32 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { formatTime } from "../utils/timeUtils";
+import { useIsMobile } from "../hooks/useIsMobile";
+import { useTimer } from "../hooks/useTimer";
 
 export function Timer() {
-  const [time, setTime] = useState(0);
-  const [isRunning, setIsRunning] = useState(false);
-  const [holdStartTime, setHoldStartTime] = useState<number | null>(null);
-  const [hasReset, setHasReset] = useState(false);
-  const [holdProgress, setHoldProgress] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const isMobile = useIsMobile();
   const timerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Check if device is mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  const {
+    time,
+    isRunning,
+    holdProgress,
+    holdStartTime,
+    startTimer,
+    stopTimer,
+    startHold,
+    endHold,
+  } = useTimer();
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.code === "Space") {
         event.preventDefault();
         if (isRunning) {
-          // Stop the timer immediately if it's running
-          setIsRunning(false);
-        } else if (!holdStartTime) {
-          // Only start the hold process if timer is not running
-          setHoldStartTime(Date.now());
-          setHasReset(false);
-          setHoldProgress(0);
+          stopTimer();
+        } else {
+          startHold();
         }
       }
     };
@@ -46,29 +37,20 @@ export function Timer() {
         const holdDuration = holdStartTime ? Date.now() - holdStartTime : 0;
 
         if (holdDuration >= 1000) {
-          // If held for 1 second, start the timer
-          setIsRunning(true);
+          startTimer();
         } else if (isRunning) {
-          // If not held long enough and timer is running, stop it
-          setIsRunning(false);
+          stopTimer();
         }
-
-        setHoldStartTime(null);
-        setHasReset(false);
-        setHoldProgress(0);
+        endHold();
       }
     };
 
     const handleTouchStart = (event: TouchEvent) => {
       event.preventDefault();
       if (isRunning) {
-        // Stop the timer immediately if it's running
-        setIsRunning(false);
-      } else if (!holdStartTime) {
-        // Only start the hold process if timer is not running
-        setHoldStartTime(Date.now());
-        setHasReset(false);
-        setHoldProgress(0);
+        stopTimer();
+      } else {
+        startHold();
       }
     };
 
@@ -77,33 +59,12 @@ export function Timer() {
       const holdDuration = holdStartTime ? Date.now() - holdStartTime : 0;
 
       if (holdDuration >= 1000) {
-        // If held for 1 second, start the timer
-        setIsRunning(true);
+        startTimer();
       } else if (isRunning) {
-        // If not held long enough and timer is running, stop it
-        setIsRunning(false);
+        stopTimer();
       }
-
-      setHoldStartTime(null);
-      setHasReset(false);
-      setHoldProgress(0);
+      endHold();
     };
-
-    const checkHoldTime = () => {
-      if (holdStartTime && !hasReset) {
-        const holdDuration = Date.now() - holdStartTime;
-        const progress = Math.min((holdDuration / 1000) * 100, 100);
-        setHoldProgress(progress);
-
-        if (holdDuration >= 1000) {
-          // Reset timer after 1 second of holding
-          setTime(0);
-          setHasReset(true);
-        }
-      }
-    };
-
-    const intervalId = setInterval(checkHoldTime, 10);
 
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
@@ -121,25 +82,8 @@ export function Timer() {
         timerElement.removeEventListener("touchstart", handleTouchStart);
         timerElement.removeEventListener("touchend", handleTouchEnd);
       }
-      clearInterval(intervalId);
     };
-  }, [holdStartTime, isRunning, hasReset]);
-
-  useEffect(() => {
-    let intervalId: NodeJS.Timeout;
-
-    if (isRunning) {
-      intervalId = setInterval(() => {
-        setTime((prevTime) => prevTime + 0.01);
-      }, 10);
-    }
-
-    return () => {
-      if (intervalId) {
-        clearInterval(intervalId);
-      }
-    };
-  }, [isRunning]);
+  }, [isRunning, holdStartTime, startTimer, stopTimer, startHold, endHold]);
 
   return (
     <div className="min-h-screen select-none touch-none" ref={timerRef}>
