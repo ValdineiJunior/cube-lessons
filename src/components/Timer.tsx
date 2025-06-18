@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { formatTime } from "../utils/timeUtils";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useTimer } from "../hooks/useTimer";
+import { MIN_HOLD_DURATION_MS } from "../constants/time";
 
 export function Timer() {
   const isMobile = useIsMobile();
@@ -36,7 +37,7 @@ export function Timer() {
         event.preventDefault();
         const holdDuration = holdStartTime ? Date.now() - holdStartTime : 0;
 
-        if (holdDuration >= 1000) {
+        if (holdDuration >= MIN_HOLD_DURATION_MS) {
           startTimer();
         } else if (isRunning) {
           stopTimer();
@@ -58,7 +59,7 @@ export function Timer() {
       event.preventDefault();
       const holdDuration = holdStartTime ? Date.now() - holdStartTime : 0;
 
-      if (holdDuration >= 1000) {
+      if (holdDuration >= MIN_HOLD_DURATION_MS) {
         startTimer();
       } else if (isRunning) {
         stopTimer();

@@ -1,4 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
+import {
+  TIMER_INCREMENT_MS,
+  TIMER_UPDATE_INTERVAL_MS,
+  MIN_HOLD_DURATION_MS,
+  MAX_PROGRESS_PERCENTAGE,
+} from "../constants/time";
 
 interface UseTimerReturn {
   time: number;
@@ -24,8 +30,8 @@ export function useTimer(): UseTimerReturn {
 
     if (isRunning) {
       intervalId = setInterval(() => {
-        setTime((prevTime) => prevTime + 0.01);
-      }, 10);
+        setTime((prevTime) => prevTime + TIMER_INCREMENT_MS);
+      }, TIMER_UPDATE_INTERVAL_MS);
     }
 
     return () => {
@@ -65,10 +71,13 @@ export function useTimer(): UseTimerReturn {
   const checkHoldTime = useCallback(() => {
     if (holdStartTime && !hasReset) {
       const holdDuration = Date.now() - holdStartTime;
-      const progress = Math.min((holdDuration / 1000) * 100, 100);
+      const progress = Math.min(
+        (holdDuration / MIN_HOLD_DURATION_MS) * MAX_PROGRESS_PERCENTAGE,
+        MAX_PROGRESS_PERCENTAGE,
+      );
       setHoldProgress(progress);
 
-      if (holdDuration >= 1000) {
+      if (holdDuration >= MIN_HOLD_DURATION_MS) {
         resetTimer();
       }
     }
