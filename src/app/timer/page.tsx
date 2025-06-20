@@ -7,9 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function TimerPage() {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <Timer />
-    </div>
-  );
+  return <Timer />;
 }
