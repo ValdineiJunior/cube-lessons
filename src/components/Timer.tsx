@@ -5,6 +5,7 @@ import { formatTime } from "../utils/timeUtils";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useTimer } from "../hooks/useTimer";
 import { useTimerControls } from "../hooks/useTimerControls";
+import { useSolveStats } from "../hooks/useSolveStats";
 
 export function Timer() {
   const isMobile = useIsMobile();
@@ -20,56 +21,18 @@ export function Timer() {
     endHold,
   } = useTimer();
 
-  // --- New state for solve times ---
-  const [solveTimes, setSolveTimes] = useState<number[]>([]);
+  // --- Use custom hook for solve stats ---
+  const { addSolveTime, stats } = useSolveStats();
   const [prevIsRunning, setPrevIsRunning] = useState(false);
 
   // Detect when timer stops and save the time
   useEffect(() => {
     if (prevIsRunning && !isRunning && time > 0) {
-      setSolveTimes((prev) => [...prev, time]);
+      addSolveTime(time);
     }
     setPrevIsRunning(isRunning);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isRunning]);
-
-  // --- Stats calculation helpers ---
-  function format(time: number) {
-    return formatTime(time);
-  }
-  const best = solveTimes.length ? Math.min(...solveTimes) : null;
-  const worst = solveTimes.length ? Math.max(...solveTimes) : null;
-  function averageOf(n: number) {
-    if (solveTimes.length < n) return null;
-    const lastN = solveTimes.slice(-n);
-    const sum = lastN.reduce((a, b) => a + b, 0);
-    return sum / n;
-  }
-  const stats = [
-    { label: "Best time", value: best !== null ? format(best) : "N/A" },
-    { label: "Worst time", value: worst !== null ? format(worst) : "N/A" },
-    {
-      label: "Average of 5",
-      value: averageOf(5) ? format(averageOf(5)!) : "N/A",
-    },
-    {
-      label: "Average of 12",
-      value: averageOf(12) ? format(averageOf(12)!) : "N/A",
-    },
-    {
-      label: "Average of 50",
-      value: averageOf(50) ? format(averageOf(50)!) : "N/A",
-    },
-    {
-      label: "Average of 100",
-      value: averageOf(100) ? format(averageOf(100)!) : "N/A",
-    },
-    {
-      label: "Average of 1000",
-      value: averageOf(1000) ? format(averageOf(1000)!) : "N/A",
-    },
-    { label: "Number of solutions", value: solveTimes.length },
-  ];
 
   useTimerControls({
     timerRef,
