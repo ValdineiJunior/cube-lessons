@@ -4,28 +4,36 @@ import { formatTime } from "../utils/timeUtils";
 const STORAGE_KEY = "cube-solve-times";
 
 export function useSolveStats() {
-  const [solveTimes, setSolveTimes] = useState<number[]>(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored);
-        if (
-          Array.isArray(parsed) &&
-          parsed.every((n) => typeof n === "number")
-        ) {
-          return parsed;
-        }
-      } catch (e) {
-        // Ignore parse errors
-      }
-    }
-    return [];
-  });
+  const [solveTimes, setSolveTimes] = useState<number[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Save to localStorage whenever solveTimes changes
+  // Load from localStorage on client only
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(solveTimes));
-  }, [solveTimes]);
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          if (
+            Array.isArray(parsed) &&
+            parsed.every((n) => typeof n === "number")
+          ) {
+            setSolveTimes(parsed);
+          }
+        } catch (e) {
+          // Ignore parse errors
+        }
+      }
+      setIsLoaded(true);
+    }
+  }, []);
+
+  // Save to localStorage whenever solveTimes changes (after initial load)
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(solveTimes));
+    }
+  }, [solveTimes, isLoaded]);
 
   // Add a new solve time
   const addSolveTime = useCallback((time: number) => {
