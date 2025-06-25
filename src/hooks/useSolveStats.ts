@@ -1,8 +1,31 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { formatTime } from "../utils/timeUtils";
 
+const STORAGE_KEY = "cube-solve-times";
+
 export function useSolveStats() {
-  const [solveTimes, setSolveTimes] = useState<number[]>([]);
+  const [solveTimes, setSolveTimes] = useState<number[]>(() => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        if (
+          Array.isArray(parsed) &&
+          parsed.every((n) => typeof n === "number")
+        ) {
+          return parsed;
+        }
+      } catch (e) {
+        // Ignore parse errors
+      }
+    }
+    return [];
+  });
+
+  // Save to localStorage whenever solveTimes changes
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(solveTimes));
+  }, [solveTimes]);
 
   // Add a new solve time
   const addSolveTime = useCallback((time: number) => {
