@@ -40,6 +40,11 @@ export function useSolveStats() {
     setSolveTimes((prev) => [...prev, time]);
   }, []);
 
+  // Delete a solve time by index
+  const deleteSolveTime = useCallback((index: number) => {
+    setSolveTimes((prev) => prev.filter((_, i) => i !== index));
+  }, []);
+
   // Format helper
   function format(time: number) {
     return formatTime(time);
@@ -84,6 +89,7 @@ export function useSolveStats() {
   return {
     solveTimes,
     addSolveTime,
+    deleteSolveTime,
     stats,
     format,
   };

@@ -22,6 +22,7 @@ export function Header() {
     { href: "/orientationLastLayer", label: "OLL" },
     { href: "/permutationLastLayer", label: "PLL" },
     { href: "/timer", label: "Timer" },
+    { href: "/solveTimes", label: "Tempos Salvos" },
   ];
 
   return (
