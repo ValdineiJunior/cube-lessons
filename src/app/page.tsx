@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import PageHeader from "@/components/layout/PageHeader";
 
 export const metadata: Metadata = {
   title: "Cube Lessons - Aprenda o Cubo Mágico",
@@ -11,17 +12,10 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Hero Section */}
-      <div className="text-center mb-16">
-        <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-          Aprenda o Cubo Mágico
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Descubra os segredos do quebra-cabeça mais famoso do mundo. Do básico
-          ao avançado, aprenda métodos passo a passo para resolver o Cubo Mágico
-          com confiança.
-        </p>
-      </div>
-
+      <PageHeader
+        title="Aprenda o Cubo Mágico"
+        description="Descubra os segredos do quebra-cabeça mais famoso do mundo. Do básico ao avançado, aprenda métodos passo a passo para resolver o Cubo Mágico com confiança."
+      />
       {/* Features Grid */}
       <div className="grid md:grid-cols-3 gap-8 mb-16">
         <Card className="hover:shadow-lg transition-shadow">

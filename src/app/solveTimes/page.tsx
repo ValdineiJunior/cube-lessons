@@ -1,5 +1,6 @@
 "use client";
 
+import PageHeader from "@/components/layout/PageHeader";
 import { useSolveStats } from "../../hooks/useSolveStats";
 
 export default function SolveTimesPage() {
@@ -7,9 +8,7 @@ export default function SolveTimesPage() {
 
   return (
     <div className="min-h-screen p-6 flex flex-col items-center">
-      <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-        Solve Times
-      </h1>
+      <PageHeader title="Solve Times" />
       {solveTimes.length === 0 ? (
         <div className="text-gray-500">No solves recorded yet.</div>
       ) : (

@@ -1,15 +1,16 @@
 import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
+import PageHeader from "@/components/layout/PageHeader";
 import { cubePieceTypes } from "@/data/cubePieceTypes";
 
 export default function CubePieces() {
   return (
     <>
-      <h1 className="text-3xl">Peças do Cubo</h1>
-      <p className="py-8">
-        O Cubo Mágico possui 3 tipos de peças, cada uma com características
+      <PageHeader
+        title="Peças do Cubo"
+        description="O Cubo Mágico possui 3 tipos de peças, cada uma com características
         únicas e posições específicas. Conhecer estas peças é fundamental para
-        entender os métodos de solução.
-      </p>
+        entender os métodos de solução."
+      />
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {cubePieceTypes.map((cubePieceType) => (
