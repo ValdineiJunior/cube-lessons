@@ -95,16 +95,16 @@ export const basicMoves: CubeInfo3D[] = [
 
 export const advancedMoves: CubeInfo3D[] = [
   {
-    name: "Uw' - Topo Duplo Anti-horário",
+    name: "Uw / u - Topo Duplo Horário",
     colors: [
-      ["o", "o", "b", "o", "o", "b", "o", "o", "b"],
-      ["b", "b", "b", "b", "b", "b", "r", "r", "r"],
+      ["r", "r", "b", "r", "r", "b", "r", "r", "b"],
+      ["g", "g", "g", "g", "g", "g", "r", "r", "r"],
       ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
     ],
-    description: "Movimento de duas camadas do topo no sentido anti-horário",
+    description: "Movimento de duas camadas do topo no sentido horário",
   },
   {
-    name: "Fw - Frente Duplo Horário",
+    name: "Fw / f - Frente Duplo Horário",
     colors: [
       ["b", "b", "b", "b", "b", "b", "b", "b", "b"],
       ["y", "y", "r", "y", "y", "r", "y", "y", "r"],
@@ -113,14 +113,40 @@ export const advancedMoves: CubeInfo3D[] = [
     description: "Movimento de duas camadas da face no sentido horário",
   },
   {
-    name: "Lw' - Esquerda Duplo Anti-horário",
+    name: "Lw / l - Esquerda Duplo Horário",
     colors: [
-      ["b", "b", "b", "w", "w", "w", "w", "w", "w"],
+      ["b", "b", "b", "y", "y", "y", "y", "y", "y"],
       ["r", "r", "r", "r", "r", "r", "r", "r", "r"],
-      ["b", "b", "y", "b", "b", "y", "b", "b", "y"],
+      ["g", "g", "y", "g", "g", "y", "g", "g", "y"],
     ],
-    description:
-      "Movimento de duas camadas da esquerda no sentido anti-horário",
+    description: "Movimento de duas camadas da esquerda no sentido horário",
+  },
+  {
+    name: "Dw / d - Base Duplo Horário",
+    colors: [
+      ["b", "o", "o", "b", "o", "o", "b", "o", "o"],
+      ["r", "r", "r", "b", "b", "b", "b", "b", "b"],
+      ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
+    ],
+    description: "Movimento de duas camadas da base no sentido horário",
+  },
+  {
+    name: "Rw / r - Direita Duplo Horário",
+    colors: [
+      ["w", "w", "w", "w", "w", "w", "b", "b", "b"],
+      ["r", "r", "r", "r", "r", "r", "r", "r", "r"],
+      ["y", "b", "b", "y", "b", "b", "y", "b", "b"],
+    ],
+    description: "Movimento de duas camadas da direita no sentido horário",
+  },
+  {
+    name: "Bw / b - Traseira Duplo Horário",
+    colors: [
+      ["b", "b", "b", "b", "b", "b", "b", "b", "b"],
+      ["r", "w", "w", "r", "w", "w", "r", "w", "w"],
+      ["r", "r", "r", "r", "r", "r", "y", "y", "y"],
+    ],
+    description: "Movimento de duas camadas da traseira no sentido horário",
   },
   {
     name: "M - Meio",
