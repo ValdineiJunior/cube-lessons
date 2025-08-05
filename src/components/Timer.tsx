@@ -34,7 +34,7 @@ export function Timer() {
   // Detect when timer stops and save the time, also generate new scramble
   useEffect(() => {
     if (prevIsRunning && !isRunning && time > 0) {
-      addSolveTime(time);
+      addSolveTime(time, currentScramble);
       // Generate new scramble when timer stops
       setCurrentScramble(generateScramble());
     }

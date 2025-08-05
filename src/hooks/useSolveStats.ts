@@ -3,8 +3,13 @@ import { formatTime } from "../utils/timeUtils";
 
 const STORAGE_KEY = "cube-solve-times";
 
+interface SolveTime {
+  time: number;
+  scramble: string;
+}
+
 export function useSolveStats() {
-  const [solveTimes, setSolveTimes] = useState<number[]>([]);
+  const [solveTimes, setSolveTimes] = useState<SolveTime[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Load from localStorage on client only
@@ -16,7 +21,12 @@ export function useSolveStats() {
           const parsed = JSON.parse(stored);
           if (
             Array.isArray(parsed) &&
-            parsed.every((n) => typeof n === "number")
+            parsed.every(
+              (item: any) =>
+                item &&
+                typeof item.time === "number" &&
+                typeof item.scramble === "string",
+            )
           ) {
             setSolveTimes(parsed);
           }
@@ -35,9 +45,9 @@ export function useSolveStats() {
     }
   }, [solveTimes, isLoaded]);
 
-  // Add a new solve time
-  const addSolveTime = useCallback((time: number) => {
-    setSolveTimes((prev) => [...prev, time]);
+  // Add a new solve time with scramble
+  const addSolveTime = useCallback((time: number, scramble: string) => {
+    setSolveTimes((prev) => [...prev, { time, scramble }]);
   }, []);
 
   // Delete a solve time by index
@@ -51,11 +61,12 @@ export function useSolveStats() {
   }
 
   // Stats calculations
-  const best = solveTimes.length ? Math.min(...solveTimes) : null;
-  const worst = solveTimes.length ? Math.max(...solveTimes) : null;
+  const times = solveTimes.map((solve) => solve.time);
+  const best = times.length ? Math.min(...times) : null;
+  const worst = times.length ? Math.max(...times) : null;
   function averageOf(n: number) {
-    if (solveTimes.length < n) return null;
-    const lastN = solveTimes.slice(-n);
+    if (times.length < n) return null;
+    const lastN = times.slice(-n);
     const sum = lastN.reduce((a, b) => a + b, 0);
     return sum / n;
   }
