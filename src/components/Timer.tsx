@@ -6,11 +6,16 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useTimer } from "../hooks/useTimer";
 import { useTimerControls } from "../hooks/useTimerControls";
 import { useSolveStats } from "../hooks/useSolveStats";
+import { generateScramble } from "../utils/crambleDisplay";
 import PageHeader from "./layout/PageHeader";
 
 export function Timer() {
   const isMobile = useIsMobile();
   const timerRef = useRef<HTMLDivElement>(null);
+  const [currentScramble, setCurrentScramble] = useState(() =>
+    generateScramble(),
+  );
+
   const {
     time,
     isRunning,
@@ -26,10 +31,12 @@ export function Timer() {
   const { addSolveTime, stats } = useSolveStats();
   const [prevIsRunning, setPrevIsRunning] = useState(false);
 
-  // Detect when timer stops and save the time
+  // Detect when timer stops and save the time, also generate new scramble
   useEffect(() => {
     if (prevIsRunning && !isRunning && time > 0) {
       addSolveTime(time);
+      // Generate new scramble when timer stops
+      setCurrentScramble(generateScramble());
     }
     setPrevIsRunning(isRunning);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -57,6 +64,8 @@ export function Timer() {
             </div>
           ))}
         </div>
+        <p className="text-lg font-mono mb-4">{currentScramble}</p>
+
         {/* --- Timer display --- */}
         <div className="text-6xl font-mono font-bold mb-8">
           {formatTime(time)}
