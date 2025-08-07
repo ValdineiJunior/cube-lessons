@@ -19,7 +19,7 @@ export default function SolveTimesPage() {
                 <th className="py-2 px-4 text-left">#</th>
                 <th className="py-2 px-4 text-left">Time</th>
                 <th className="py-2 px-4 text-left">Scramble</th>
-                <th className="py-2 px-4 text-left">Actions</th>
+                <th className="py-2 px-4 text-left">Action</th>
               </tr>
             </thead>
             <tbody>
