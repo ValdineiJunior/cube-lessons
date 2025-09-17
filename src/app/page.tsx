@@ -18,12 +18,13 @@ export default function Home() {
         description="Descubra os segredos do quebra-cabeça mais famoso do mundo. Do básico ao avançado, aprenda métodos passo a passo para resolver o Cubo Mágico com confiança."
       />
       {/* Features Grid */}
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
+      <div className="grid md:grid-cols-3 gap-8 mb-16 items-stretch">
         <Link
           href="/firstTwoLayers"
           aria-label="Ir para Primeiras Duas Camadas (F2L)"
+          className="block h-full"
         >
-          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col">
             <CardHeader>
               <div className="text-blue-600 text-4xl mb-4">🎯</div>
               <CardTitle className="text-xl">
@@ -43,8 +44,9 @@ export default function Home() {
         <Link
           href="/orientationLastLayer"
           aria-label="Ir para Orientação da Última Camada (OLL)"
+          className="block h-full"
         >
-          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col">
             <CardHeader>
               <div className="text-blue-600 text-4xl mb-4">✨</div>
               <CardTitle className="text-xl">
@@ -63,8 +65,9 @@ export default function Home() {
         <Link
           href="/permutationLastLayer"
           aria-label="Ir para Permutação da Última Camada (PLL)"
+          className="block h-full"
         >
-          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col">
             <CardHeader>
               <div className="text-blue-600 text-4xl mb-4">🎨</div>
               <CardTitle className="text-xl">
@@ -80,8 +83,12 @@ export default function Home() {
           </Card>
         </Link>
 
-        <Link href="/cubePieces" aria-label="Ir para Peças do Cubo">
-          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+        <Link
+          href="/cubePieces"
+          aria-label="Ir para Peças do Cubo"
+          className="block h-full"
+        >
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col">
             <CardHeader>
               <div className="text-blue-600 text-4xl mb-4">🧩</div>
               <CardTitle className="text-xl">Peças do Cubo</CardTitle>
@@ -95,8 +102,12 @@ export default function Home() {
           </Card>
         </Link>
 
-        <Link href="/movements" aria-label="Ir para Movimentos">
-          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+        <Link
+          href="/movements"
+          aria-label="Ir para Movimentos"
+          className="block h-full"
+        >
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col">
             <CardHeader>
               <div className="text-blue-600 text-4xl mb-4">🔄</div>
               <CardTitle className="text-xl">Movimentos</CardTitle>
@@ -110,8 +121,8 @@ export default function Home() {
           </Card>
         </Link>
 
-        <Link href="/timer" aria-label="Ir para Timer">
-          <Card className="hover:shadow-lg transition-shadow cursor-pointer">
+        <Link href="/timer" aria-label="Ir para Timer" className="block h-full">
+          <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col">
             <CardHeader>
               <div className="text-blue-600 text-4xl mb-4">⏱️</div>
               <CardTitle className="text-xl">Timer</CardTitle>
