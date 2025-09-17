@@ -6,7 +6,36 @@ import { Header } from "@/components/layout/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cube Lessons",
+  title: {
+    default: "Cube Lessons",
+    template: "%s | Cube Lessons",
+  },
+  description:
+    "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+  applicationName: "Cube Lessons",
+  authors: [{ name: "Cube Lessons" }],
+  keywords: [
+    "Cubo Mágico",
+    "Cubo de Rubik",
+    "Rubik's Cube",
+    "F2L",
+    "OLL",
+    "PLL",
+    "speedcubing",
+    "algoritmos",
+    "notação de movimentos",
+    "tutorial",
+    "aprendizado",
+  ],
+  category: "education",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={inter.className}>
         {
           <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
