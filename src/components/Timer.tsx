@@ -12,9 +12,8 @@ import PageHeader from "./layout/PageHeader";
 export function Timer() {
   const isMobile = useIsMobile();
   const timerRef = useRef<HTMLDivElement>(null);
-  const [currentScramble, setCurrentScramble] = useState(() =>
-    generateScramble(),
-  );
+  const [currentScramble, setCurrentScramble] = useState<string>("");
+  const [isHydrated, setIsHydrated] = useState(false);
 
   const {
     time,
@@ -30,6 +29,12 @@ export function Timer() {
   // --- Use custom hook for solve stats ---
   const { addSolveTime, stats } = useSolveStats();
   const [prevIsRunning, setPrevIsRunning] = useState(false);
+
+  // Generate initial scramble only on client side after hydration
+  useEffect(() => {
+    setIsHydrated(true);
+    setCurrentScramble(generateScramble());
+  }, []);
 
   // Detect when timer stops and save the time, also generate new scramble
   useEffect(() => {
@@ -64,7 +69,9 @@ export function Timer() {
             </div>
           ))}
         </div>
-        <p className="text-lg font-mono mb-4">{currentScramble}</p>
+        <p className="text-lg font-mono mb-4">
+          {isHydrated ? currentScramble : "Generating scramble..."}
+        </p>
 
         {/* --- Timer display --- */}
         <div className="text-6xl font-mono font-bold mb-8">
