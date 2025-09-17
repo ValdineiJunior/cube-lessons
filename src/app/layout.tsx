@@ -28,39 +28,13 @@ export const metadata: Metadata = {
     "aprendizado",
   ],
   category: "education",
-  openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "/",
-    siteName: "Cube Lessons",
-    title: "Cube Lessons",
-    description:
-      "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Cube Lessons",
-    description:
-      "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "/",
-  },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    viewportFit: "cover",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
