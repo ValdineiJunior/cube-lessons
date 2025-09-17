@@ -17,8 +17,7 @@ export function CubeFace3D({ colors, position }: CubeFace3DProps) {
             border-2
             border-black
             rounded
-            bg-zinc-800
-            data-[status=z]:bg-zinc-800
+            data-[status=z]:bg-zinc-600
             data-[status=r]:bg-red-500
             data-[status=b]:bg-blue-500
             data-[status=w]:bg-sky-50
