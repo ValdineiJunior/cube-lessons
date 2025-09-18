@@ -1,17 +1,23 @@
-import { Metadata } from "next";
+import { Locale } from "next-intl";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import PageHeader from "@/components/layout/PageHeader";
-import { useTranslations } from "next-intl";
 
-export const metadata: Metadata = {
-  title: "Cube Lessons - Learn the Rubik's Cube",
-  description:
-    "Learn to solve the Rubik's Cube with step-by-step tutorials, from basic to advanced.",
+type PageProps = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Home() {
-  const t = useTranslations("home");
+export default async function Home({ params }: PageProps) {
+  const { locale } = await params;
+
+  // Enable static rendering
+  setRequestLocale(locale as Locale);
+
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "home",
+  });
 
   return (
     <div className="container mx-auto px-4 py-8">
