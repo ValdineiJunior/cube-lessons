@@ -171,6 +171,176 @@
       }
     }
   },
+  "firstTwoLayers": {
+    "title": "Primeiras Duas Camadas - F2L",
+    "description": "O método F2L, abreviação para First Two Layers ou Primeiras Duas Camadas, foca na conclusão das primeiras duas camadas do cubo, representando dois terços da resolução total. Neste estágio, a abordagem difere do método básico ao priorizar a construção simultânea de pares de quinas e meios.",
+    "cases": {
+      "case01": {
+        "name": "Caso 01",
+        "description": "R U R'"
+      },
+      "case02": {
+        "name": "Caso 02",
+        "description": "y L' U' L"
+      },
+      "case03": {
+        "name": "Caso 03",
+        "description": "y U' L' U L"
+      },
+      "case04": {
+        "name": "Caso 04",
+        "description": "U R U' R'"
+      },
+      "case05": {
+        "name": "Caso 05",
+        "description": "U R U' R' U' F' U F"
+      },
+      "case06": {
+        "name": "Caso 06",
+        "description": "y U' L' U L U F U' F'"
+      },
+      "case07": {
+        "name": "Caso 07",
+        "description": "R U' R' Dw R' U2 R U2' R' U R"
+      },
+      "case08": {
+        "name": "Caso 08",
+        "description": "U R U R' U2 R U R'"
+      },
+      "case09": {
+        "name": "Caso 09",
+        "description": "U' R U' R' U2 R U' R'"
+      },
+      "case10": {
+        "name": "Caso 10",
+        "description": "U2 R' F R F' U2 R U R'"
+      },
+      "case11": {
+        "name": "Caso 11",
+        "description": "U' R U R' U F' U' F"
+      },
+      "case12": {
+        "name": "Caso 12",
+        "description": "R U R' U' R U R' U' R U R'"
+      },
+      "case13": {
+        "name": "Caso 13",
+        "description": "U' R' F R F' R U' R'"
+      },
+      "case14": {
+        "name": "Caso 14",
+        "description": "R U' R' U R U' R' U2 R U' R'"
+      },
+      "case15": {
+        "name": "Caso 15",
+        "description": "U' R U2 R' U F' U' F"
+      },
+      "case16": {
+        "name": "Caso 16",
+        "description": "U' R U' R' U R U R'"
+      },
+      "case17": {
+        "name": "Caso 17",
+        "description": "y' U R' U R U' R' U' R"
+      },
+      "case18": {
+        "name": "Caso 18",
+        "description": "R U' R' U2 F' U' F"
+      },
+      "case19": {
+        "name": "Caso 19",
+        "description": "R U R' U2 R U' R' U R U' R'"
+      },
+      "case20": {
+        "name": "Caso 20",
+        "description": "R U2 R' U' R U R'"
+      },
+      "case21": {
+        "name": "Caso 21",
+        "description": "y' R' U2 R U R' U' R"
+      },
+      "case22": {
+        "name": "Caso 22",
+        "description": "F U R U' R' F' R U' R'"
+      },
+      "case23": {
+        "name": "Caso 23",
+        "description": "R U R' U2 R U R' U' R U R'"
+      },
+      "case24": {
+        "name": "Caso 24",
+        "description": "R U R' U R U' R'"
+      },
+      "case25": {
+        "name": "Caso 25",
+        "description": "y' L' U' L U' L' U L"
+      },
+      "case26": {
+        "name": "Caso 26",
+        "description": "R U2 R' U R U' R'"
+      },
+      "case27": {
+        "name": "Caso 27",
+        "description": "y' L' U2 L U' L' U L"
+      },
+      "case28": {
+        "name": "Caso 28",
+        "description": "R U' R' U R U' R'"
+      },
+      "case29": {
+        "name": "Caso 29",
+        "description": "R U R' U' F R' F' R"
+      },
+      "case30": {
+        "name": "Caso 30",
+        "description": "R U R' U' R U R'"
+      },
+      "case31": {
+        "name": "Caso 31",
+        "description": "R' F R F' R' F R F'"
+      },
+      "case32": {
+        "name": "Caso 32",
+        "description": "R U R' U2 R U' R' U R U R'"
+      },
+      "case33": {
+        "name": "Caso 33",
+        "description": "R U R' U' R U2 R' U' R U R'"
+      },
+      "case34": {
+        "name": "Caso 34",
+        "description": "R U' R' Rw U' Rw' U2 Rw U Rw'"
+      },
+      "case35": {
+        "name": "Caso 35",
+        "description": "Rw U' Rw' U2 Rw U Rw' R U R'"
+      },
+      "case36": {
+        "name": "Caso 36",
+        "description": "Dw R' U2 R U2 R' U R"
+      },
+      "case37": {
+        "name": "Caso 37",
+        "description": "U' R U2 R' U2 R U' R'"
+      },
+      "case38": {
+        "name": "Caso 38",
+        "description": "Dw R' U' R U2 R' U R"
+      },
+      "case39": {
+        "name": "Caso 39",
+        "description": "U' R U R' U2 R U' R'"
+      },
+      "case40": {
+        "name": "Caso 40",
+        "description": "U' R U R' U R U R'"
+      },
+      "case41": {
+        "name": "Caso 41",
+        "description": "U' R U' R' U F' U' F"
+      }
+    }
+  },
   "language": {
     "switch": "Trocar idioma",
     "portuguese": "Português",

@@ -171,6 +171,176 @@
       }
     }
   },
+  "firstTwoLayers": {
+    "title": "First Two Layers - F2L",
+    "description": "The F2L method, abbreviation for First Two Layers, focuses on completing the first two layers of the cube, representing two thirds of the total solution. At this stage, the approach differs from the basic method by prioritizing the simultaneous construction of corner and edge pairs.",
+    "cases": {
+      "case01": {
+        "name": "Case 01",
+        "description": "R U R'"
+      },
+      "case02": {
+        "name": "Case 02",
+        "description": "y L' U' L"
+      },
+      "case03": {
+        "name": "Case 03",
+        "description": "y U' L' U L"
+      },
+      "case04": {
+        "name": "Case 04",
+        "description": "U R U' R'"
+      },
+      "case05": {
+        "name": "Case 05",
+        "description": "U R U' R' U' F' U F"
+      },
+      "case06": {
+        "name": "Case 06",
+        "description": "y U' L' U L U F U' F'"
+      },
+      "case07": {
+        "name": "Case 07",
+        "description": "R U' R' Dw R' U2 R U2' R' U R"
+      },
+      "case08": {
+        "name": "Case 08",
+        "description": "U R U R' U2 R U R'"
+      },
+      "case09": {
+        "name": "Case 09",
+        "description": "U' R U' R' U2 R U' R'"
+      },
+      "case10": {
+        "name": "Case 10",
+        "description": "U2 R' F R F' U2 R U R'"
+      },
+      "case11": {
+        "name": "Case 11",
+        "description": "U' R U R' U F' U' F"
+      },
+      "case12": {
+        "name": "Case 12",
+        "description": "R U R' U' R U R' U' R U R'"
+      },
+      "case13": {
+        "name": "Case 13",
+        "description": "U' R' F R F' R U' R'"
+      },
+      "case14": {
+        "name": "Case 14",
+        "description": "R U' R' U R U' R' U2 R U' R'"
+      },
+      "case15": {
+        "name": "Case 15",
+        "description": "U' R U2 R' U F' U' F"
+      },
+      "case16": {
+        "name": "Case 16",
+        "description": "U' R U' R' U R U R'"
+      },
+      "case17": {
+        "name": "Case 17",
+        "description": "y' U R' U R U' R' U' R"
+      },
+      "case18": {
+        "name": "Case 18",
+        "description": "R U' R' U2 F' U' F"
+      },
+      "case19": {
+        "name": "Case 19",
+        "description": "R U R' U2 R U' R' U R U' R'"
+      },
+      "case20": {
+        "name": "Case 20",
+        "description": "R U2 R' U' R U R'"
+      },
+      "case21": {
+        "name": "Case 21",
+        "description": "y' R' U2 R U R' U' R"
+      },
+      "case22": {
+        "name": "Case 22",
+        "description": "F U R U' R' F' R U' R'"
+      },
+      "case23": {
+        "name": "Case 23",
+        "description": "R U R' U2 R U R' U' R U R'"
+      },
+      "case24": {
+        "name": "Case 24",
+        "description": "R U R' U R U' R'"
+      },
+      "case25": {
+        "name": "Case 25",
+        "description": "y' L' U' L U' L' U L"
+      },
+      "case26": {
+        "name": "Case 26",
+        "description": "R U2 R' U R U' R'"
+      },
+      "case27": {
+        "name": "Case 27",
+        "description": "y' L' U2 L U' L' U L"
+      },
+      "case28": {
+        "name": "Case 28",
+        "description": "R U' R' U R U' R'"
+      },
+      "case29": {
+        "name": "Case 29",
+        "description": "R U R' U' F R' F' R"
+      },
+      "case30": {
+        "name": "Case 30",
+        "description": "R U R' U' R U R'"
+      },
+      "case31": {
+        "name": "Case 31",
+        "description": "R' F R F' R' F R F'"
+      },
+      "case32": {
+        "name": "Case 32",
+        "description": "R U R' U2 R U' R' U R U R'"
+      },
+      "case33": {
+        "name": "Case 33",
+        "description": "R U R' U' R U2 R' U' R U R'"
+      },
+      "case34": {
+        "name": "Case 34",
+        "description": "R U' R' Rw U' Rw' U2 Rw U Rw'"
+      },
+      "case35": {
+        "name": "Case 35",
+        "description": "Rw U' Rw' U2 Rw U Rw' R U R'"
+      },
+      "case36": {
+        "name": "Case 36",
+        "description": "Dw R' U2 R U2 R' U R"
+      },
+      "case37": {
+        "name": "Case 37",
+        "description": "U' R U2 R' U2 R U' R'"
+      },
+      "case38": {
+        "name": "Case 38",
+        "description": "Dw R' U' R U2 R' U R"
+      },
+      "case39": {
+        "name": "Case 39",
+        "description": "U' R U R' U2 R U' R'"
+      },
+      "case40": {
+        "name": "Case 40",
+        "description": "U' R U R' U R U R'"
+      },
+      "case41": {
+        "name": "Case 41",
+        "description": "U' R U' R' U F' U' F"
+      }
+    }
+  },
   "language": {
     "switch": "Switch language",
     "portuguese": "Português",

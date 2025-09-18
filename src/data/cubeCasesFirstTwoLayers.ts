@@ -1,373 +1,330 @@
-import { CubeInfo3D } from "@/types/types";
-
-export const cubeCasesFirstTwoLayers: CubeInfo3D[] = [
+export const cubeCasesFirstTwoLayers = [
   {
-    name: "Caso 01",
+    key: "case01",
     colors: [
       ["b", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "b", "z", "z", "y", "z", "z", "z", "r"],
     ],
-    description: "R U R'",
   },
   {
-    name: "Caso 02",
+    key: "case02",
     colors: [
       ["w", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "r", "y", "z", "z", "z", "b"],
     ],
-    description: "y L' U' L",
   },
   {
-    name: "Caso 03",
+    key: "case03",
     colors: [
       ["b", "z", "z", "b", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "r"],
     ],
-    description: "y U' L' U L",
   },
   {
-    name: "Caso 04",
+    key: "case04",
     colors: [
       ["w", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "b"],
     ],
-    description: "U R U' R'",
   },
   {
-    name: "Caso 05",
+    key: "case05",
     colors: [
       ["z", "z", "b", "b", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "z", "r", "r", "r", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
-    description: "U R U' R' U' F' U F",
   },
   {
-    name: "Caso 06",
+    key: "case06",
     colors: [
       ["z", "z", "b", "z", "b", "b", "z", "b", "b"],
       ["z", "r", "z", "z", "r", "r", "r", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
-    description: "y U' L' U L U F U' F'",
   },
   {
-    name: "Caso 07",
+    key: "case07",
     colors: [
       ["z", "r", "b", "z", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "b", "r", "r", "r", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
-    description: "R U' R' Dw R' U2 R U2' R' U R",
   },
   {
-    name: "Caso 08",
+    key: "case08",
     colors: [
       ["b", "b", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "r", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "r"],
     ],
-    description: "U R U R' U2 R U R'",
   },
   {
-    name: "Caso 09",
+    key: "case09",
     colors: [
       ["w", "b", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "r", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "b"],
     ],
-    description: "U' R U' R' U2 R U' R'",
   },
   {
-    name: "Caso 10",
+    key: "case10",
     colors: [
       ["b", "r", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "b", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "r"],
     ],
-    description: "U2 R' F R F' U2 R U R'",
   },
   {
-    name: "Caso 11",
+    key: "case11",
     colors: [
       ["w", "r", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "b", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "b"],
     ],
-    description: "U' R U R' U F' U' F",
   },
   {
-    name: "Caso 12",
+    key: "case12",
     colors: [
       ["r", "b", "z", "z", "b", "b", "z", "b", "b"],
       ["b", "z", "z", "r", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "w"],
     ],
-    description: "R U R' U' R U R' U' R U R'",
   },
   {
-    name: "Caso 13",
+    key: "case13",
     colors: [
       ["r", "r", "z", "z", "b", "b", "z", "b", "b"],
       ["b", "z", "z", "b", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "w"],
     ],
-    description: "U' R' F R F' R U' R'",
   },
   {
-    name: "Caso 14",
+    key: "case14",
     colors: [
       ["b", "z", "z", "r", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "b", "r"],
     ],
-    description: "R U' R' U R U' R' U2 R U' R'",
   },
   {
-    name: "Caso 15",
+    key: "case15",
     colors: [
       ["w", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "b", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "r", "z", "z", "b"],
     ],
-    description: "U' R U2 R' U F' U' F",
   },
   {
-    name: "Caso 16",
+    key: "case16",
     colors: [
       ["b", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "r"],
     ],
-    description: "U' R U' R' U R U R'",
   },
   {
-    name: "Caso 17",
+    key: "case17",
     colors: [
       ["w", "z", "z", "b", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "b"],
     ],
-    description: "y' U R' U R U' R' U' R",
   },
   {
-    name: "Caso 18",
+    key: "case18",
     colors: [
       ["b", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "b", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "r", "z", "z", "r"],
     ],
-    description: "R U' R' U2 F' U' F",
   },
   {
-    name: "Caso 19",
+    key: "case19",
     colors: [
       ["w", "z", "z", "r", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "b", "b"],
     ],
-    description: "R U R' U2 R U' R' U R U' R'",
   },
   {
-    name: "Caso 20",
+    key: "case20",
     colors: [
       ["r", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["b", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "w"],
     ],
-    description: "R U2 R' U' R U R'",
   },
   {
-    name: "Caso 21",
+    key: "case21",
     colors: [
       ["r", "z", "z", "b", "b", "b", "z", "b", "b"],
       ["b", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "w"],
     ],
-    description: "y' R' U2 R U R' U' R",
   },
   {
-    name: "Caso 22",
+    key: "case22",
     colors: [
       ["r", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["b", "b", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "r", "z", "z", "w"],
     ],
-    description: "F U R U' R' F' R U' R'",
   },
   {
-    name: "Caso 23",
+    key: "case23",
     colors: [
       ["r", "z", "z", "r", "b", "b", "z", "b", "b"],
       ["b", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "b", "w"],
     ],
-    description: "R U R' U2 R U R' U' R U R'",
   },
   {
-    name: "Caso 24",
+    key: "case24",
     colors: [
       ["z", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["z", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["w", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
-    description: "R U R' U R U' R'",
   },
   {
-    name: "Caso 25",
+    key: "case25",
     colors: [
       ["z", "z", "z", "b", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["w", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
-    description: "y' L' U' L U' L' U L",
   },
   {
-    name: "Caso 26",
+    key: "case26",
     colors: [
       ["z", "z", "z", "z", "b", "b", "b", "b", "b"],
       ["z", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "w", "z", "z"],
     ],
-    description: "R U2 R' U R U' R'",
   },
   {
-    name: "Caso 27",
+    key: "case27",
     colors: [
       ["z", "z", "z", "b", "b", "b", "z", "b", "b"],
       ["z", "z", "r", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "w", "z", "y", "z", "z", "r", "z"],
     ],
-    description: "y' L' U2 L U' L' U L",
   },
   {
-    name: "Caso 28",
+    key: "case28",
     colors: [
       ["z", "z", "w", "z", "b", "b", "z", "b", "b"],
       ["z", "r", "z", "z", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
-    description: "R U' R' U R U' R'",
   },
   {
-    name: "Caso 29",
+    key: "case29",
     colors: [
       ["z", "z", "r", "b", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "z", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
-    description: "R U R' U' F R' F' R",
   },
   {
-    name: "Caso 30",
+    key: "case30",
     colors: [
       ["z", "z", "r", "z", "b", "b", "z", "b", "b"],
       ["z", "r", "z", "z", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
-    description: "R U R' U' R U R'",
   },
   {
-    name: "Caso 31",
+    key: "case31",
     colors: [
       ["z", "z", "w", "b", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "z", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
-    description: "R' F R F' R' F R F'",
   },
   {
-    name: "Caso 32",
+    key: "case32",
     colors: [
       ["z", "b", "r", "z", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "r", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
-    description: "R U R' U2 R U' R' U R U R'",
   },
   {
-    name: "Caso 33",
+    key: "case33",
     colors: [
       ["z", "b", "w", "z", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "r", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
-    description: "R U R' U' R U2 R' U' R U R'",
   },
   {
-    name: "Caso 34",
+    key: "case34",
     colors: [
       ["z", "r", "r", "z", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "b", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
-    description: "R U' R' Rw U' Rw' U2 Rw U Rw'",
   },
   {
-    name: "Caso 35",
+    key: "case35",
     colors: [
       ["z", "r", "w", "z", "b", "b", "z", "b", "b"],
       ["z", "z", "z", "b", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
-    description: "Rw U' Rw' U2 Rw U Rw' R U R'",
   },
   {
-    name: "Caso 36",
+    key: "case36",
     colors: [
       ["b", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "r", "z", "z", "y", "z", "z", "z", "r"],
     ],
-    description: "Dw R' U2 R U2 R' U R",
   },
   {
-    name: "Caso 37",
+    key: "case37",
     colors: [
       ["w", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "b", "y", "z", "z", "z", "b"],
     ],
-    description: "U' R U2 R' U2 R U' R'",
   },
   {
-    name: "Caso 38",
+    key: "case38",
     colors: [
       ["b", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "r", "y", "z", "z", "z", "r"],
     ],
-    description: "Dw R' U' R U2 R' U R",
   },
   {
-    name: "Caso 39",
+    key: "case39",
     colors: [
       ["w", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "b", "z", "z", "y", "z", "z", "z", "b"],
     ],
-    description: "U' R U R' U2 R U' R'",
   },
   {
-    name: "Caso 40",
+    key: "case40",
     colors: [
       ["b", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "b", "y", "z", "z", "z", "r"],
     ],
-    description: "U' R U R' U R U R'",
   },
   {
-    name: "Caso 41",
+    key: "case41",
     colors: [
       ["w", "z", "z", "z", "b", "b", "z", "b", "b"],
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "r", "z", "z", "y", "z", "z", "z", "b"],
     ],
-    description: "U' R U' R' U F' U' F",
   },
 ];

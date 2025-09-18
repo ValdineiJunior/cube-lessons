@@ -37,3 +37,8 @@ export type MoveType = {
   key: string;
   colors: string[][];
 };
+
+export type F2LCaseType = {
+  key: string;
+  colors: string[][];
+};

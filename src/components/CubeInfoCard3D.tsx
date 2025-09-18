@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 type CubeInfoCard3DProps = {
   pieceKey: string;
   colors: string[][];
-  namespace?: "cubePieces.pieces" | "movements.moves";
+  namespace?: "cubePieces.pieces" | "movements.moves" | "firstTwoLayers.cases";
 };
 
 export function CubeInfoCard3D({

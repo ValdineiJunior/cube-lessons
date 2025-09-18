@@ -1,6 +1,7 @@
 import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesFirstTwoLayers } from "@/data/cubeCasesFirstTwoLayers";
+import { getTranslations } from "next-intl/server";
 import { setRequestLocale } from "next-intl/server";
 
 type Props = {
@@ -10,24 +11,20 @@ type Props = {
 export default async function FirstTwoLayers({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "firstTwoLayers" });
+
   return (
     <>
-      <PageHeader
-        title="First Two Layers - F2L"
-        description="O método F2L, abreviação para First Two Layers ou Primeiras Duas
-        Camadas, foca na conclusão das primeiras duas camadas do cubo,
-        representando dois terços da resolução total. Neste estágio, a abordagem
-        difere do método básico ao priorizar a construção simultânea de pares de
-        quinas e meios."
-      />
+      <PageHeader title={t("title")} description={t("description")} />
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {cubeCasesFirstTwoLayers.map((cubeCase) => (
           <CubeInfoCard3D
-            key={cubeCase.name}
-            name={cubeCase.name}
+            key={cubeCase.key}
+            pieceKey={cubeCase.key}
             colors={cubeCase.colors}
-            description={cubeCase.description}
+            namespace="firstTwoLayers.cases"
           />
         ))}
       </div>
