@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "title": "Cube Lessons - Learn the Rubik's Cube",
+    "description": "Learn to solve the Rubik's Cube with step-by-step tutorials, from basic to advanced.",
+    "applicationName": "Cube Lessons",
+    "keywords": [
+      "Rubik's Cube",
+      "Magic Cube",
+      "Cube",
+      "F2L",
+      "OLL",
+      "PLL",
+      "speedcubing",
+      "algorithms",
+      "move notation",
+      "tutorial",
+      "learning"
+    ]
+  },
+  "navigation": {
+    "home": "Home",
+    "cubePieces": "Cube Pieces",
+    "movements": "Movements",
+    "firstTwoLayers": "F2L",
+    "orientationLastLayer": "OLL",
+    "permutationLastLayer": "PLL",
+    "timer": "Timer",
+    "solveTimes": "Solve Times"
+  },
+  "home": {
+    "title": "Learn the Rubik's Cube",
+    "description": "Discover the secrets of the world's most famous puzzle. From basic to advanced, learn step-by-step methods to solve the Rubik's Cube with confidence.",
+    "features": {
+      "f2l": {
+        "title": "First Two Layers (F2L)",
+        "description": "Master the efficient method of solving the first two layers simultaneously, significantly reducing your solve time.",
+        "ariaLabel": "Go to First Two Layers (F2L)"
+      },
+      "oll": {
+        "title": "Orientation of Last Layer (OLL)",
+        "description": "Learn the algorithms to orient all pieces of the last layer, creating a uniform top face.",
+        "ariaLabel": "Go to Orientation of Last Layer (OLL)"
+      },
+      "pll": {
+        "title": "Permutation of Last Layer (PLL)",
+        "description": "Complete your solve by learning how to permute the pieces of the last layer into their correct positions.",
+        "ariaLabel": "Go to Permutation of Last Layer (PLL)"
+      },
+      "cubePieces": {
+        "title": "Cube Pieces",
+        "description": "Learn about all the pieces that make up the Rubik's Cube and understand how they move and interact with each other.",
+        "ariaLabel": "Go to Cube Pieces"
+      },
+      "movements": {
+        "title": "Movements",
+        "description": "Learn the movement notation and how to execute them correctly to solve the cube efficiently.",
+        "ariaLabel": "Go to Movements"
+      },
+      "timer": {
+        "title": "Timer",
+        "description": "Track your progress and improve your times with our timing and solve analysis system.",
+        "ariaLabel": "Go to Timer"
+      }
+    }
+  },
+  "cubePieces": {
+    "title": "Cube Pieces",
+    "description": "The Rubik's Cube has 3 types of pieces, each with unique characteristics and specific positions. Knowing these pieces is fundamental to understanding solution methods."
+  },
+  "language": {
+    "switch": "Switch language",
+    "portuguese": "Português",
+    "english": "English"
+  }
+}

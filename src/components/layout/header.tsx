@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Menu } from "lucide-react";
+import { Menu, Globe } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -13,24 +14,32 @@ import {
 
 export function Header() {
   const pathname = usePathname();
+  const router = useRouter();
+  const t = useTranslations("navigation");
+  const locale = useLocale();
 
   const navigationItems = [
-    { href: "/", label: "Home" },
-    { href: "/cubePieces", label: "Peças do Cubo" },
-    { href: "/movements", label: "Movimentos" },
-    { href: "/firstTwoLayers", label: "F2L" },
-    { href: "/orientationLastLayer", label: "OLL" },
-    { href: "/permutationLastLayer", label: "PLL" },
-    { href: "/timer", label: "Timer" },
-    { href: "/solveTimes", label: "Tempos Salvos" },
+    { href: "/", label: t("home") },
+    { href: "/cubePieces", label: t("cubePieces") },
+    { href: "/movements", label: t("movements") },
+    { href: "/firstTwoLayers", label: t("firstTwoLayers") },
+    { href: "/orientationLastLayer", label: t("orientationLastLayer") },
+    { href: "/permutationLastLayer", label: t("permutationLastLayer") },
+    { href: "/timer", label: t("timer") },
+    { href: "/solveTimes", label: t("solveTimes") },
   ];
+
+  const switchLanguage = (newLocale: string) => {
+    const newPath = pathname.replace(/^\/[a-z]{2}/, `/${newLocale}`);
+    router.push(newPath);
+  };
 
   return (
     <div className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4">
         {/* Desktop Navigation */}
-        <div className="hidden md:block">
-          <Tabs value={pathname} className="w-full">
+        <div className="hidden md:flex items-center justify-between">
+          <Tabs value={pathname} className="flex-1">
             <TabsList className="h-14 w-full justify-start rounded-none border-b bg-transparent p-0">
               {navigationItems.map((item) => (
                 <TabsTrigger
@@ -44,10 +53,21 @@ export function Header() {
               ))}
             </TabsList>
           </Tabs>
+
+          {/* Language Switcher */}
+          <div className="flex items-center gap-2 ml-4">
+            <Globe className="h-4 w-4 text-gray-500" />
+            <button
+              onClick={() => switchLanguage(locale === "en" ? "pt" : "en")}
+              className="px-3 py-1 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+            >
+              {locale === "en" ? "PT" : "EN"}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
-        <div className="flex h-14 items-center md:hidden">
+        <div className="flex h-14 items-center justify-between md:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <button className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900">
@@ -71,9 +91,33 @@ export function Header() {
                     </Link>
                   </SheetClose>
                 ))}
+
+                {/* Mobile Language Switcher */}
+                <div className="flex items-center gap-2 pt-4 border-t">
+                  <Globe className="h-4 w-4 text-gray-500" />
+                  <button
+                    onClick={() =>
+                      switchLanguage(locale === "en" ? "pt" : "en")
+                    }
+                    className="px-3 py-1 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+                  >
+                    {locale === "en" ? "Português" : "English"}
+                  </button>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>
+
+          {/* Mobile Language Switcher */}
+          <div className="flex items-center gap-2">
+            <Globe className="h-4 w-4 text-gray-500" />
+            <button
+              onClick={() => switchLanguage(locale === "en" ? "pt" : "en")}
+              className="px-3 py-1 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+            >
+              {locale === "en" ? "PT" : "EN"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

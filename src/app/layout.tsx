@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/header";
+import { NextIntlClientProvider } from "next-intl";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,21 +11,21 @@ export const metadata: Metadata = {
     template: "%s | Cube Lessons",
   },
   description:
-    "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+    "Learn to solve the Rubik's Cube with step-by-step tutorials, from basic to advanced.",
   applicationName: "Cube Lessons",
   authors: [{ name: "Cube Lessons" }],
   keywords: [
-    "Cubo Mágico",
-    "Cubo de Rubik",
     "Rubik's Cube",
+    "Magic Cube",
+    "Cube",
     "F2L",
     "OLL",
     "PLL",
     "speedcubing",
-    "algoritmos",
-    "notação de movimentos",
+    "algorithms",
+    "move notation",
     "tutorial",
-    "aprendizado",
+    "learning",
   ],
   category: "education",
   icons: {
@@ -44,14 +44,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html>
       <body className={inter.className}>
-        {
-          <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-            <Header />
-            <main className="container mx-auto px-4 py-8">{children}</main>
-          </div>
-        }
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

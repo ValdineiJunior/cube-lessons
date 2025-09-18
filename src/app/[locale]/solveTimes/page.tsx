@@ -1,7 +1,7 @@
 "use client";
 
 import PageHeader from "@/components/layout/PageHeader";
-import { useSolveStats } from "../../hooks/useSolveStats";
+import { useSolveStats } from "@/hooks/useSolveStats";
 
 export default function SolveTimesPage() {
   const { solveTimes, deleteSolveTime, format } = useSolveStats();

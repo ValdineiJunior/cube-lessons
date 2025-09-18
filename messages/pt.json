@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "title": "Cube Lessons - Aprenda o Cubo Mágico",
+    "description": "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+    "applicationName": "Cube Lessons",
+    "keywords": [
+      "Cubo Mágico",
+      "Cubo de Rubik",
+      "Rubik's Cube",
+      "F2L",
+      "OLL",
+      "PLL",
+      "speedcubing",
+      "algoritmos",
+      "notação de movimentos",
+      "tutorial",
+      "aprendizado"
+    ]
+  },
+  "navigation": {
+    "home": "Home",
+    "cubePieces": "Peças do Cubo",
+    "movements": "Movimentos",
+    "firstTwoLayers": "F2L",
+    "orientationLastLayer": "OLL",
+    "permutationLastLayer": "PLL",
+    "timer": "Timer",
+    "solveTimes": "Tempos Salvos"
+  },
+  "home": {
+    "title": "Aprenda o Cubo Mágico",
+    "description": "Descubra os segredos do quebra-cabeça mais famoso do mundo. Do básico ao avançado, aprenda métodos passo a passo para resolver o Cubo Mágico com confiança.",
+    "features": {
+      "f2l": {
+        "title": "Primeiras Duas Camadas (F2L)",
+        "description": "Domine o método eficiente de resolver as duas primeiras camadas simultaneamente, reduzindo significativamente seu tempo de resolução.",
+        "ariaLabel": "Ir para Primeiras Duas Camadas (F2L)"
+      },
+      "oll": {
+        "title": "Orientação da Última Camada (OLL)",
+        "description": "Aprenda os algoritmos para orientar todas as peças da última camada, criando uma face superior uniforme.",
+        "ariaLabel": "Ir para Orientação da Última Camada (OLL)"
+      },
+      "pll": {
+        "title": "Permutação da Última Camada (PLL)",
+        "description": "Complete sua resolução aprendendo como permutar as peças da última camada em suas posições corretas.",
+        "ariaLabel": "Ir para Permutação da Última Camada (PLL)"
+      },
+      "cubePieces": {
+        "title": "Peças do Cubo",
+        "description": "Conheça todas as peças que compõem o Cubo Mágico e entenda como elas se movem e interagem entre si.",
+        "ariaLabel": "Ir para Peças do Cubo"
+      },
+      "movements": {
+        "title": "Movimentos",
+        "description": "Aprenda a notação dos movimentos e como executá-los corretamente para resolver o cubo de forma eficiente.",
+        "ariaLabel": "Ir para Movimentos"
+      },
+      "timer": {
+        "title": "Timer",
+        "description": "Acompanhe seu progresso e melhore seus tempos com nosso sistema de cronometragem e análise de resoluções.",
+        "ariaLabel": "Ir para Timer"
+      }
+    }
+  },
+  "cubePieces": {
+    "title": "Peças do Cubo",
+    "description": "O Cubo Mágico possui 3 tipos de peças, cada uma com características únicas e posições específicas. Conhecer estas peças é fundamental para entender os métodos de solução."
+  },
+  "language": {
+    "switch": "Trocar idioma",
+    "portuguese": "Português",
+    "english": "English"
+  }
+}
