@@ -1,10 +1,18 @@
 import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubePieceTypes } from "@/data/cubePieceTypes";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 
-export default function CubePieces() {
-  const t = useTranslations("cubePieces");
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function CubePieces({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "cubePieces" });
 
   return (
     <>

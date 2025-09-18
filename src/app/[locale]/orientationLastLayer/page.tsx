@@ -1,8 +1,15 @@
 import { CubeInfoCard2D } from "@/components/CubeInfoCard2D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesOrientationLastLayer } from "@/data/cubeCasesOrientationLastLayer";
+import { setRequestLocale } from "next-intl/server";
 
-export default function OrientationLastLayer() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function OrientationLastLayer({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHeader

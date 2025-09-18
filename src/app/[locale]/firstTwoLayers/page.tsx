@@ -1,8 +1,15 @@
 import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesFirstTwoLayers } from "@/data/cubeCasesFirstTwoLayers";
+import { setRequestLocale } from "next-intl/server";
 
-export default function FirstTwoLayers() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function FirstTwoLayers({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHeader

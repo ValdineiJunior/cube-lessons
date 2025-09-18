@@ -1,8 +1,15 @@
 import { CubeInfoCard2D } from "@/components/CubeInfoCard2D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesPermutationLastLayer } from "@/data/cubeCasesPermutationLastLayer";
+import { setRequestLocale } from "next-intl/server";
 
-export default function PermutationLastLayer() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function PermutationLastLayer({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHeader

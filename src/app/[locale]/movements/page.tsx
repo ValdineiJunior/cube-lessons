@@ -1,8 +1,15 @@
 import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
 import PageHeader from "@/components/layout/PageHeader";
 import { advancedMoves, basicMoves } from "@/data/moves";
+import { setRequestLocale } from "next-intl/server";
 
-export default function Movements() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Movements({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <>
       <PageHeader
