@@ -27,3 +27,8 @@ export type CubeInfo3D = {
   colors: string[][];
   description: string;
 };
+
+export type CubePieceType = {
+  key: string;
+  colors: string[][];
+};

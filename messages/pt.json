@@ -63,7 +63,21 @@
   },
   "cubePieces": {
     "title": "Peças do Cubo",
-    "description": "O Cubo Mágico possui 3 tipos de peças, cada uma com características únicas e posições específicas. Conhecer estas peças é fundamental para entender os métodos de solução."
+    "description": "O Cubo Mágico possui 3 tipos de peças, cada uma com características únicas e posições específicas. Conhecer estas peças é fundamental para entender os métodos de solução.",
+    "pieces": {
+      "centers": {
+        "name": "Centros",
+        "description": "6 peças fixas que definem a cor de cada face. Não podem ser movidas de posição."
+      },
+      "edges": {
+        "name": "Meios",
+        "description": "12 peças com 2 cores. Só podem ser posicionadas entre centros."
+      },
+      "corners": {
+        "name": "Quinas",
+        "description": "8 peças com 3 cores, localizadas nos vértices do cubo."
+      }
+    }
   },
   "language": {
     "switch": "Trocar idioma",

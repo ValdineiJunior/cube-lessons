@@ -63,7 +63,21 @@
   },
   "cubePieces": {
     "title": "Cube Pieces",
-    "description": "The Rubik's Cube has 3 types of pieces, each with unique characteristics and specific positions. Knowing these pieces is fundamental to understanding solution methods."
+    "description": "The Rubik's Cube has 3 types of pieces, each with unique characteristics and specific positions. Knowing these pieces is fundamental to understanding solution methods.",
+    "pieces": {
+      "centers": {
+        "name": "Centers",
+        "description": "6 fixed pieces that define the color of each face. They cannot be moved from their position."
+      },
+      "edges": {
+        "name": "Edges",
+        "description": "12 pieces with 2 colors. They can only be positioned between centers."
+      },
+      "corners": {
+        "name": "Corners",
+        "description": "8 pieces with 3 colors, located at the vertices of the cube."
+      }
+    }
   },
   "language": {
     "switch": "Switch language",

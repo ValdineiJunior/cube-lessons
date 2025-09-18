@@ -21,10 +21,9 @@ export default async function CubePieces({ params }: Props) {
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {cubePieceTypes.map((cubePieceType) => (
           <CubeInfoCard3D
-            key={cubePieceType.name}
-            name={cubePieceType.name}
+            key={cubePieceType.key}
+            pieceKey={cubePieceType.key}
             colors={cubePieceType.colors}
-            description={cubePieceType.description}
           />
         ))}
       </div>
