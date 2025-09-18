@@ -3,19 +3,17 @@
     "title": "Cube Lessons - Aprenda o Cubo Mágico",
     "description": "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
     "applicationName": "Cube Lessons",
-    "keywords": [
-      "Cubo Mágico",
-      "Cubo de Rubik",
-      "Rubik's Cube",
-      "F2L",
-      "OLL",
-      "PLL",
-      "speedcubing",
-      "algoritmos",
-      "notação de movimentos",
-      "tutorial",
-      "aprendizado"
-    ]
+    "keywords": "Cubo Mágico, Cubo de Rubik, Rubik's Cube, F2L, OLL, PLL, speedcubing, algoritmos, notação de movimentos, tutorial, aprendizado",
+    "ogTitle": "Cube Lessons - Aprenda o Cubo Mágico",
+    "ogDescription": "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+    "ogImage": "/og-image.jpg",
+    "ogImageAlt": "Cube Lessons - Aprenda o Cubo Mágico",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Cube Lessons - Aprenda o Cubo Mágico",
+    "twitterDescription": "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+    "twitterImage": "/twitter-image.jpg",
+    "canonicalUrl": "https://cube-lessons.vercel.app",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   },
   "navigation": {
     "home": "Home",
