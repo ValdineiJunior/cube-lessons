@@ -79,6 +79,98 @@
       }
     }
   },
+  "movements": {
+    "title": "Movements",
+    "description": "To solve the Rubik's Cube we will use some formulas, which are sequences of movements that can be written (translated) with letters. It seems very complex, but it is extremely simple and intuitive. Each side of the cube is represented by its initial in English. If the letter is alone it means the movement is clockwise. If it is accompanied by an apostrophe, it means it is counterclockwise. And if it is followed by the number 2, it means it is a double movement.",
+    "basicMoves": "Basic Moves",
+    "advancedMoves": "Advanced Moves",
+    "moves": {
+      "R": {
+        "name": "R - Right Clockwise",
+        "description": "Right face movement clockwise"
+      },
+      "R_prime": {
+        "name": "R' - Right Counter-clockwise",
+        "description": "Right face movement counter-clockwise"
+      },
+      "R2": {
+        "name": "R2 - Right Double",
+        "description": "Right face movement twice"
+      },
+      "L": {
+        "name": "L - Left Clockwise",
+        "description": "Left face movement clockwise"
+      },
+      "L_prime": {
+        "name": "L' - Left Counter-clockwise",
+        "description": "Left face movement counter-clockwise"
+      },
+      "L2": {
+        "name": "L2 - Left Double",
+        "description": "Left face movement twice"
+      },
+      "U": {
+        "name": "U - Top Clockwise",
+        "description": "Top face movement clockwise"
+      },
+      "D": {
+        "name": "D - Bottom Clockwise",
+        "description": "Bottom face movement clockwise"
+      },
+      "F": {
+        "name": "F - Front Clockwise",
+        "description": "Front face movement clockwise"
+      },
+      "B": {
+        "name": "B - Back Clockwise",
+        "description": "Back face movement clockwise"
+      },
+      "Uw": {
+        "name": "Uw / u - Top Double Clockwise",
+        "description": "Two top layers movement clockwise"
+      },
+      "Fw": {
+        "name": "Fw / f - Front Double Clockwise",
+        "description": "Two front layers movement clockwise"
+      },
+      "Lw": {
+        "name": "Lw / l - Left Double Clockwise",
+        "description": "Two left layers movement clockwise"
+      },
+      "Dw": {
+        "name": "Dw / d - Bottom Double Clockwise",
+        "description": "Two bottom layers movement clockwise"
+      },
+      "Rw": {
+        "name": "Rw / r - Right Double Clockwise",
+        "description": "Two right layers movement clockwise"
+      },
+      "Bw": {
+        "name": "Bw / b - Back Double Clockwise",
+        "description": "Two back layers movement clockwise"
+      },
+      "M": {
+        "name": "M - Middle",
+        "description": "Middle layer movement in the same direction as L"
+      },
+      "S": {
+        "name": "S - Middle",
+        "description": "Middle layer movement in the same direction as F"
+      },
+      "X": {
+        "name": "X - Whole Cube",
+        "description": "Whole cube movement in the same direction as R"
+      },
+      "Y": {
+        "name": "Y - Whole Cube",
+        "description": "Whole cube movement in the same direction as U"
+      },
+      "Z": {
+        "name": "Z - Whole Cube",
+        "description": "Whole cube movement in the same direction as F"
+      }
+    }
+  },
   "language": {
     "switch": "Switch language",
     "portuguese": "Português",

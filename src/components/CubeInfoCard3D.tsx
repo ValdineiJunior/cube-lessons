@@ -4,10 +4,15 @@ import { useTranslations } from "next-intl";
 type CubeInfoCard3DProps = {
   pieceKey: string;
   colors: string[][];
+  namespace?: "cubePieces.pieces" | "movements.moves";
 };
 
-export function CubeInfoCard3D({ pieceKey, colors }: CubeInfoCard3DProps) {
-  const t = useTranslations("cubePieces.pieces");
+export function CubeInfoCard3D({
+  pieceKey,
+  colors,
+  namespace = "cubePieces.pieces",
+}: CubeInfoCard3DProps) {
+  const t = useTranslations(namespace);
 
   return (
     <div className="flex flex-col items-center w-72">

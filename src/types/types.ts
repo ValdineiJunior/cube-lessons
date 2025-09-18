@@ -32,3 +32,8 @@ export type CubePieceType = {
   key: string;
   colors: string[][];
 };
+
+export type MoveType = {
+  key: string;
+  colors: string[][];
+};

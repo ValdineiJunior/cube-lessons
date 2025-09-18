@@ -79,6 +79,98 @@
       }
     }
   },
+  "movements": {
+    "title": "Movimentos",
+    "description": "Para solucionar o Cubo Mágico nós vamos utilizar algumas fórmulas, que são sequencias de movimentos que podem ser escritos (traduzidos) com letras. Parece muito complexo, mas é extremamente simples e intuitivo. Cada lado do cubo é representado pela sua inicial em inglês. Se a letra estiver sozinha significa que o movimento é no sentido horário. Se estiver acompanhada de um apóstrofo, significa que é no sentido anti-horário. E se for seguida do número 2, significa que é um movimento duplo.",
+    "basicMoves": "Movimentos Básicos",
+    "advancedMoves": "Movimentos Avançados",
+    "moves": {
+      "R": {
+        "name": "R - Direita Horário",
+        "description": "Movimento da face direita no sentido horário"
+      },
+      "R_prime": {
+        "name": "R' - Direita Anti-horário",
+        "description": "Movimento da face direita no sentido anti-horário"
+      },
+      "R2": {
+        "name": "R2 - Direita Duplo",
+        "description": "Movimento da face direita duas vezes"
+      },
+      "L": {
+        "name": "L - Esquerda Horário",
+        "description": "Movimento da face esquerda no sentido horário"
+      },
+      "L_prime": {
+        "name": "L' - Esquerda Anti-horário",
+        "description": "Movimento da face esquerda no sentido anti-horário"
+      },
+      "L2": {
+        "name": "L2 - Esquerda Duplo",
+        "description": "Movimento da face esquerda duas vezes"
+      },
+      "U": {
+        "name": "U - Topo Horário",
+        "description": "Movimento da face superior no sentido horário"
+      },
+      "D": {
+        "name": "D - Base Horário",
+        "description": "Movimento da face inferior no sentido horário"
+      },
+      "F": {
+        "name": "F - Frente Horário",
+        "description": "Movimento da face frontal no sentido horário"
+      },
+      "B": {
+        "name": "B - Atrás Horário",
+        "description": "Movimento da face traseira no sentido horário"
+      },
+      "Uw": {
+        "name": "Uw / u - Topo Duplo Horário",
+        "description": "Movimento de duas camadas do topo no sentido horário"
+      },
+      "Fw": {
+        "name": "Fw / f - Frente Duplo Horário",
+        "description": "Movimento de duas camadas da face no sentido horário"
+      },
+      "Lw": {
+        "name": "Lw / l - Esquerda Duplo Horário",
+        "description": "Movimento de duas camadas da esquerda no sentido horário"
+      },
+      "Dw": {
+        "name": "Dw / d - Base Duplo Horário",
+        "description": "Movimento de duas camadas da base no sentido horário"
+      },
+      "Rw": {
+        "name": "Rw / r - Direita Duplo Horário",
+        "description": "Movimento de duas camadas da direita no sentido horário"
+      },
+      "Bw": {
+        "name": "Bw / b - Traseira Duplo Horário",
+        "description": "Movimento de duas camadas da traseira no sentido horário"
+      },
+      "M": {
+        "name": "M - Meio",
+        "description": "Movimento da camada do meio no mesmo sentido do L"
+      },
+      "S": {
+        "name": "S - Meio",
+        "description": "Movimento da camada do meio no mesmo sentido do F"
+      },
+      "X": {
+        "name": "X - Cubo Todo",
+        "description": "Movimento do cubo todo no mesmo sentido do R"
+      },
+      "Y": {
+        "name": "Y - Cubo Todo",
+        "description": "Movimento do cubo todo no mesmo sentido do U"
+      },
+      "Z": {
+        "name": "Z - Cubo Todo",
+        "description": "Movimento do cubo todo no mesmo sentido do F"
+      }
+    }
+  },
   "language": {
     "switch": "Trocar idioma",
     "portuguese": "Português",
