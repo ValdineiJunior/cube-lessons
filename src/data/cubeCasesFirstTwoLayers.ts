@@ -6,6 +6,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "b", "z", "z", "y", "z", "z", "z", "r"],
     ],
+    moves: "R U R'",
   },
   {
     key: "case02",
@@ -14,6 +15,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "r", "y", "z", "z", "z", "b"],
     ],
+    moves: "y L' U' L",
   },
   {
     key: "case03",
@@ -22,6 +24,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "r"],
     ],
+    moves: "y U' L' U L",
   },
   {
     key: "case04",
@@ -30,6 +33,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "b"],
     ],
+    moves: "U R U' R'",
   },
   {
     key: "case05",
@@ -38,6 +42,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "z", "r", "r", "r", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
+    moves: "U R U' R' U' F' U F",
   },
   {
     key: "case06",
@@ -46,6 +51,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "r", "z", "z", "r", "r", "r", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
+    moves: "y U' L' U L U F U' F'",
   },
   {
     key: "case07",
@@ -54,6 +60,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "b", "r", "r", "r", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
+    moves: "R U' R' Dw R' U2 R U2' R' U R",
   },
   {
     key: "case08",
@@ -62,6 +69,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "r", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "r"],
     ],
+    moves: "U R U R' U2 R U R'",
   },
   {
     key: "case09",
@@ -70,6 +78,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "r", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "b"],
     ],
+    moves: "U' R U' R' U2 R U' R'",
   },
   {
     key: "case10",
@@ -78,6 +87,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "b", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "r"],
     ],
+    moves: "U2 R' F R F' U2 R U R'",
   },
   {
     key: "case11",
@@ -86,6 +96,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "b", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "b"],
     ],
+    moves: "U' R U R' U F' U' F",
   },
   {
     key: "case12",
@@ -94,6 +105,7 @@ export const cubeCasesFirstTwoLayers = [
       ["b", "z", "z", "r", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "w"],
     ],
+    moves: "R U R' U' R U R' U' R U R'",
   },
   {
     key: "case13",
@@ -102,6 +114,7 @@ export const cubeCasesFirstTwoLayers = [
       ["b", "z", "z", "b", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "w"],
     ],
+    moves: "U' R' F R F' R U' R'",
   },
   {
     key: "case14",
@@ -110,6 +123,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "b", "r"],
     ],
+    moves: "R U' R' U R U' R' U2 R U' R'",
   },
   {
     key: "case15",
@@ -118,6 +132,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "b", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "r", "z", "z", "b"],
     ],
+    moves: "U' R U2 R' U F' U' F",
   },
   {
     key: "case16",
@@ -126,6 +141,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "r"],
     ],
+    moves: "U' R U' R' U R U R'",
   },
   {
     key: "case17",
@@ -134,6 +150,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "b"],
     ],
+    moves: "y' U R' U R U' R' U' R",
   },
   {
     key: "case18",
@@ -142,6 +159,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "b", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "r", "z", "z", "r"],
     ],
+    moves: "R U' R' U2 F' U' F",
   },
   {
     key: "case19",
@@ -150,6 +168,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "b", "b"],
     ],
+    moves: "R U R' U2 R U' R' U R U' R'",
   },
   {
     key: "case20",
@@ -158,6 +177,7 @@ export const cubeCasesFirstTwoLayers = [
       ["b", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "w"],
     ],
+    moves: "R U2 R' U' R U R'",
   },
   {
     key: "case21",
@@ -166,6 +186,7 @@ export const cubeCasesFirstTwoLayers = [
       ["b", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "w"],
     ],
+    moves: "y' R' U2 R U R' U' R",
   },
   {
     key: "case22",
@@ -174,6 +195,7 @@ export const cubeCasesFirstTwoLayers = [
       ["b", "b", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "r", "z", "z", "w"],
     ],
+    moves: "F U R U' R' F' R U' R'",
   },
   {
     key: "case23",
@@ -182,6 +204,7 @@ export const cubeCasesFirstTwoLayers = [
       ["b", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "b", "w"],
     ],
+    moves: "R U R' U2 R U R' U' R U R'",
   },
   {
     key: "case24",
@@ -190,6 +213,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["w", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
+    moves: "R U R' U R U' R'",
   },
   {
     key: "case25",
@@ -198,6 +222,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["w", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
+    moves: "y' L' U' L U' L' U L",
   },
   {
     key: "case26",
@@ -206,6 +231,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "r", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "w", "z", "z"],
     ],
+    moves: "R U2 R' U R U' R'",
   },
   {
     key: "case27",
@@ -214,6 +240,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "r", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "w", "z", "y", "z", "z", "r", "z"],
     ],
+    moves: "y' L' U2 L U' L' U L",
   },
   {
     key: "case28",
@@ -222,6 +249,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "r", "z", "z", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
+    moves: "R U' R' U R U' R'",
   },
   {
     key: "case29",
@@ -230,6 +258,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "z", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
+    moves: "R U R' U' F R' F' R",
   },
   {
     key: "case30",
@@ -238,6 +267,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "r", "z", "z", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
+    moves: "R U R' U' R U R'",
   },
   {
     key: "case31",
@@ -246,6 +276,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "z", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "z"],
     ],
+    moves: "R' F R F' R' F R F'",
   },
   {
     key: "case32",
@@ -254,6 +285,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "r", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
+    moves: "R U R' U2 R U' R' U R U R'",
   },
   {
     key: "case33",
@@ -262,6 +294,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "r", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
+    moves: "R U R' U' R U2 R' U' R U R'",
   },
   {
     key: "case34",
@@ -270,6 +303,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "b", "r", "r", "w", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
+    moves: "R U' R' Rw U' Rw' U2 Rw U Rw'",
   },
   {
     key: "case35",
@@ -278,6 +312,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "z", "z", "b", "r", "r", "b", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "z", "z"],
     ],
+    moves: "Rw U' Rw' U2 Rw U Rw' R U R'",
   },
   {
     key: "case36",
@@ -286,6 +321,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "r", "z", "z", "y", "z", "z", "z", "r"],
     ],
+    moves: "Dw R' U2 R U2 R' U R",
   },
   {
     key: "case37",
@@ -294,6 +330,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "b", "y", "z", "z", "z", "b"],
     ],
+    moves: "U' R U2 R' U2 R U' R'",
   },
   {
     key: "case38",
@@ -302,6 +339,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "r", "y", "z", "z", "z", "r"],
     ],
+    moves: "Dw R' U' R U2 R' U R",
   },
   {
     key: "case39",
@@ -310,6 +348,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "b", "z", "z", "y", "z", "z", "z", "b"],
     ],
+    moves: "U' R U R' U2 R U' R'",
   },
   {
     key: "case40",
@@ -318,6 +357,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "b", "y", "z", "z", "z", "r"],
     ],
+    moves: "U' R U R' U R U R'",
   },
   {
     key: "case41",
@@ -326,5 +366,6 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "r", "z", "z", "y", "z", "z", "z", "b"],
     ],
+    moves: "U' R U' R' U F' U' F",
   },
 ];
