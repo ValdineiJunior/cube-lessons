@@ -10,6 +10,7 @@ import {
   SheetContent,
   SheetTrigger,
   SheetClose,
+  SheetTitle,
 } from "@/components/ui/sheet";
 
 export function Header() {
@@ -76,7 +77,10 @@ export function Header() {
               </button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4 mt-8">
+              <SheetTitle className="mt-8 text-lg font-semibold text-gray-900">
+                Menu
+              </SheetTitle>
+              <nav className="flex flex-col space-y-4 mt-4">
                 {navigationItems.map((item) => (
                   <SheetClose key={item.href} asChild>
                     <Link
