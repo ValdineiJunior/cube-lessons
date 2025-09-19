@@ -345,6 +345,10 @@
     "title": "Orientação da Última Camada - OLL",
     "description": "OLL significa Orientação da Última Camada. Nesta etapa o objetivo é orientar todas as peças da face superior (geralmente amarela) para que fiquem voltadas para cima. Após completar as duas primeiras camadas, as peças da última camada estarão em uma das 57 situações específicas."
   },
+  "permutationLastLayer": {
+    "title": "Permutação da Última Camada - PLL",
+    "description": "PLL significa Permutação da Última Camada. Nesta etapa, o objetivo é resolver todas as peças da última camada mantendo a orientação correta. Após completar o OLL, as peças estarão em uma das 21 situações específicas."
+  },
   "language": {
     "switch": "Trocar idioma",
     "portuguese": "Português",

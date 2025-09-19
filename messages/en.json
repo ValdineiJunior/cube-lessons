@@ -345,6 +345,10 @@
     "title": "Orientation Last Layer - OLL",
     "description": "OLL stands for Orientation of the Last Layer. At this stage the goal is to orient all pieces on the top face (usually yellow) so they face upward. After completing the first two layers, the top layer pieces will be in one of the 57 specific orientation cases."
   },
+  "permutationLastLayer": {
+    "title": "Permutation Last Layer - PLL",
+    "description": "PLL stands for Permutation of the Last Layer. At this stage, the goal is to solve all pieces in the last layer while maintaining their orientation. After completing OLL, the pieces will be in one of the 21 specific cases."
+  },
   "language": {
     "switch": "Switch language",
     "portuguese": "Português",
