@@ -361,5 +361,13 @@
     "stopDesktop": "Press space to stop the timer",
     "prepareMobile": "Press and hold the screen for 1 second to prepare, release to start",
     "prepareDesktop": "Hold space for 1 second to prepare, release to start"
+  },
+  "solveTimes": {
+    "title": "Solve Times",
+    "noSolves": "No solves recorded yet.",
+    "time": "Time",
+    "scramble": "Scramble",
+    "action": "Action",
+    "delete": "Delete"
   }
 }

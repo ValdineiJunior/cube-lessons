@@ -2,24 +2,26 @@
 
 import PageHeader from "@/components/layout/PageHeader";
 import { useSolveStats } from "@/hooks/useSolveStats";
+import { useTranslations } from "next-intl";
 
 export default function SolveTimesPage() {
   const { solveTimes, deleteSolveTime, format } = useSolveStats();
+  const t = useTranslations("solveTimes");
 
   return (
     <div className="min-h-screen p-6 flex flex-col items-center">
-      <PageHeader title="Solve Times" />
+      <PageHeader title={t("title")} />
       {solveTimes.length === 0 ? (
-        <div className="text-gray-500">No solves recorded yet.</div>
+        <div className="text-gray-500">{t("noSolves")}</div>
       ) : (
         <div className="w-full max-w-4xl overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
               <tr className="bg-gray-100">
                 <th className="py-2 px-4 text-left">#</th>
-                <th className="py-2 px-4 text-left">Time</th>
-                <th className="py-2 px-4 text-left">Scramble</th>
-                <th className="py-2 px-4 text-left">Action</th>
+                <th className="py-2 px-4 text-left">{t("time")}</th>
+                <th className="py-2 px-4 text-left">{t("scramble")}</th>
+                <th className="py-2 px-4 text-left">{t("action")}</th>
               </tr>
             </thead>
             <tbody>
@@ -38,7 +40,7 @@ export default function SolveTimesPage() {
                       className="text-red-500 hover:underline"
                       onClick={() => deleteSolveTime(idx)}
                     >
-                      Delete
+                      {t("delete")}
                     </button>
                   </td>
                 </tr>

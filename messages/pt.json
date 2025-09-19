@@ -361,5 +361,13 @@
     "stopDesktop": "Pressione espaço para parar o timer",
     "prepareMobile": "Pressione a tela por 1 segundo para preparar, solte para iniciar",
     "prepareDesktop": "Segure espaço por 1 segundo para preparar, solte para iniciar"
+  },
+  "solveTimes": {
+    "title": "Tempos Salvos",
+    "noSolves": "Nenhuma resolução registrada ainda.",
+    "time": "Tempo",
+    "scramble": "Embaralhamento",
+    "action": "Ação",
+    "delete": "Excluir"
   }
 }
