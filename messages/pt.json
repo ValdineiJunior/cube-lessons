@@ -1,0 +1,373 @@
+{
+  "metadata": {
+    "title": "Cube Lessons - Aprenda o Cubo Mágico",
+    "description": "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+    "applicationName": "Cube Lessons",
+    "keywords": "Cubo Mágico, Cubo de Rubik, Rubik's Cube, F2L, OLL, PLL, speedcubing, algoritmos, notação de movimentos, tutorial, aprendizado",
+    "ogTitle": "Cube Lessons - Aprenda o Cubo Mágico",
+    "ogDescription": "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+    "ogImage": "/og-image.jpg",
+    "ogImageAlt": "Cube Lessons - Aprenda o Cubo Mágico",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Cube Lessons - Aprenda o Cubo Mágico",
+    "twitterDescription": "Aprenda a resolver o Cubo Mágico com tutoriais passo a passo, do básico ao avançado.",
+    "twitterImage": "/twitter-image.jpg",
+    "canonicalUrl": "https://cube-lessons.vercel.app",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  },
+  "navigation": {
+    "home": "Home",
+    "cubePieces": "Peças do Cubo",
+    "movements": "Movimentos",
+    "firstTwoLayers": "F2L",
+    "orientationLastLayer": "OLL",
+    "permutationLastLayer": "PLL",
+    "timer": "Timer",
+    "solveTimes": "Tempos Salvos"
+  },
+  "home": {
+    "title": "Aprenda o Cubo Mágico",
+    "description": "Descubra os segredos do quebra-cabeça mais famoso do mundo. Do básico ao avançado, aprenda métodos passo a passo para resolver o Cubo Mágico com confiança.",
+    "features": {
+      "f2l": {
+        "title": "Primeiras Duas Camadas (F2L)",
+        "description": "Domine o método eficiente de resolver as duas primeiras camadas simultaneamente, reduzindo significativamente seu tempo de resolução.",
+        "ariaLabel": "Ir para Primeiras Duas Camadas (F2L)"
+      },
+      "oll": {
+        "title": "Orientação da Última Camada (OLL)",
+        "description": "Aprenda os algoritmos para orientar todas as peças da última camada, criando uma face superior uniforme.",
+        "ariaLabel": "Ir para Orientação da Última Camada (OLL)"
+      },
+      "pll": {
+        "title": "Permutação da Última Camada (PLL)",
+        "description": "Complete sua resolução aprendendo como permutar as peças da última camada em suas posições corretas.",
+        "ariaLabel": "Ir para Permutação da Última Camada (PLL)"
+      },
+      "cubePieces": {
+        "title": "Peças do Cubo",
+        "description": "Conheça todas as peças que compõem o Cubo Mágico e entenda como elas se movem e interagem entre si.",
+        "ariaLabel": "Ir para Peças do Cubo"
+      },
+      "movements": {
+        "title": "Movimentos",
+        "description": "Aprenda a notação dos movimentos e como executá-los corretamente para resolver o cubo de forma eficiente.",
+        "ariaLabel": "Ir para Movimentos"
+      },
+      "timer": {
+        "title": "Timer",
+        "description": "Acompanhe seu progresso e melhore seus tempos com nosso sistema de cronometragem e análise de resoluções.",
+        "ariaLabel": "Ir para Timer"
+      }
+    }
+  },
+  "cubePieces": {
+    "title": "Peças do Cubo",
+    "description": "O Cubo Mágico possui 3 tipos de peças, cada uma com características únicas e posições específicas. Conhecer estas peças é fundamental para entender os métodos de solução.",
+    "pieces": {
+      "centers": {
+        "name": "Centros",
+        "description": "6 peças fixas que definem a cor de cada face. Não podem ser movidas de posição."
+      },
+      "edges": {
+        "name": "Meios",
+        "description": "12 peças com 2 cores. Só podem ser posicionadas entre centros."
+      },
+      "corners": {
+        "name": "Quinas",
+        "description": "8 peças com 3 cores, localizadas nos vértices do cubo."
+      }
+    }
+  },
+  "movements": {
+    "title": "Movimentos",
+    "description": "Para solucionar o Cubo Mágico nós vamos utilizar algumas fórmulas, que são sequencias de movimentos que podem ser escritos (traduzidos) com letras. Parece muito complexo, mas é extremamente simples e intuitivo. Cada lado do cubo é representado pela sua inicial em inglês. Se a letra estiver sozinha significa que o movimento é no sentido horário. Se estiver acompanhada de um apóstrofo, significa que é no sentido anti-horário. E se for seguida do número 2, significa que é um movimento duplo.",
+    "basicMoves": "Movimentos Básicos",
+    "advancedMoves": "Movimentos Avançados",
+    "moves": {
+      "R": {
+        "name": "R - Direita Horário",
+        "description": "Movimento da face direita no sentido horário"
+      },
+      "R_prime": {
+        "name": "R' - Direita Anti-horário",
+        "description": "Movimento da face direita no sentido anti-horário"
+      },
+      "R2": {
+        "name": "R2 - Direita Duplo",
+        "description": "Movimento da face direita duas vezes"
+      },
+      "L": {
+        "name": "L - Esquerda Horário",
+        "description": "Movimento da face esquerda no sentido horário"
+      },
+      "L_prime": {
+        "name": "L' - Esquerda Anti-horário",
+        "description": "Movimento da face esquerda no sentido anti-horário"
+      },
+      "L2": {
+        "name": "L2 - Esquerda Duplo",
+        "description": "Movimento da face esquerda duas vezes"
+      },
+      "U": {
+        "name": "U - Topo Horário",
+        "description": "Movimento da face superior no sentido horário"
+      },
+      "D": {
+        "name": "D - Base Horário",
+        "description": "Movimento da face inferior no sentido horário"
+      },
+      "F": {
+        "name": "F - Frente Horário",
+        "description": "Movimento da face frontal no sentido horário"
+      },
+      "B": {
+        "name": "B - Atrás Horário",
+        "description": "Movimento da face traseira no sentido horário"
+      },
+      "Uw": {
+        "name": "Uw / u - Topo Duplo Horário",
+        "description": "Movimento de duas camadas do topo no sentido horário"
+      },
+      "Fw": {
+        "name": "Fw / f - Frente Duplo Horário",
+        "description": "Movimento de duas camadas da face no sentido horário"
+      },
+      "Lw": {
+        "name": "Lw / l - Esquerda Duplo Horário",
+        "description": "Movimento de duas camadas da esquerda no sentido horário"
+      },
+      "Dw": {
+        "name": "Dw / d - Base Duplo Horário",
+        "description": "Movimento de duas camadas da base no sentido horário"
+      },
+      "Rw": {
+        "name": "Rw / r - Direita Duplo Horário",
+        "description": "Movimento de duas camadas da direita no sentido horário"
+      },
+      "Bw": {
+        "name": "Bw / b - Traseira Duplo Horário",
+        "description": "Movimento de duas camadas da traseira no sentido horário"
+      },
+      "M": {
+        "name": "M - Meio",
+        "description": "Movimento da camada do meio no mesmo sentido do L"
+      },
+      "S": {
+        "name": "S - Meio",
+        "description": "Movimento da camada do meio no mesmo sentido do F"
+      },
+      "X": {
+        "name": "X - Cubo Todo",
+        "description": "Movimento do cubo todo no mesmo sentido do R"
+      },
+      "Y": {
+        "name": "Y - Cubo Todo",
+        "description": "Movimento do cubo todo no mesmo sentido do U"
+      },
+      "Z": {
+        "name": "Z - Cubo Todo",
+        "description": "Movimento do cubo todo no mesmo sentido do F"
+      }
+    }
+  },
+  "firstTwoLayers": {
+    "title": "Primeiras Duas Camadas - F2L",
+    "description": "O método F2L, abreviação para First Two Layers ou Primeiras Duas Camadas, foca na conclusão das primeiras duas camadas do cubo, representando dois terços da resolução total. Neste estágio, a abordagem difere do método básico ao priorizar a construção simultânea de pares de quinas e meios.",
+    "cases": {
+      "case01": {
+        "name": "Caso 01",
+        "description": "R U R'"
+      },
+      "case02": {
+        "name": "Caso 02",
+        "description": "y L' U' L"
+      },
+      "case03": {
+        "name": "Caso 03",
+        "description": "y U' L' U L"
+      },
+      "case04": {
+        "name": "Caso 04",
+        "description": "U R U' R'"
+      },
+      "case05": {
+        "name": "Caso 05",
+        "description": "U R U' R' U' F' U F"
+      },
+      "case06": {
+        "name": "Caso 06",
+        "description": "y U' L' U L U F U' F'"
+      },
+      "case07": {
+        "name": "Caso 07",
+        "description": "R U' R' Dw R' U2 R U2' R' U R"
+      },
+      "case08": {
+        "name": "Caso 08",
+        "description": "U R U R' U2 R U R'"
+      },
+      "case09": {
+        "name": "Caso 09",
+        "description": "U' R U' R' U2 R U' R'"
+      },
+      "case10": {
+        "name": "Caso 10",
+        "description": "U2 R' F R F' U2 R U R'"
+      },
+      "case11": {
+        "name": "Caso 11",
+        "description": "U' R U R' U F' U' F"
+      },
+      "case12": {
+        "name": "Caso 12",
+        "description": "R U R' U' R U R' U' R U R'"
+      },
+      "case13": {
+        "name": "Caso 13",
+        "description": "U' R' F R F' R U' R'"
+      },
+      "case14": {
+        "name": "Caso 14",
+        "description": "R U' R' U R U' R' U2 R U' R'"
+      },
+      "case15": {
+        "name": "Caso 15",
+        "description": "U' R U2 R' U F' U' F"
+      },
+      "case16": {
+        "name": "Caso 16",
+        "description": "U' R U' R' U R U R'"
+      },
+      "case17": {
+        "name": "Caso 17",
+        "description": "y' U R' U R U' R' U' R"
+      },
+      "case18": {
+        "name": "Caso 18",
+        "description": "R U' R' U2 F' U' F"
+      },
+      "case19": {
+        "name": "Caso 19",
+        "description": "R U R' U2 R U' R' U R U' R'"
+      },
+      "case20": {
+        "name": "Caso 20",
+        "description": "R U2 R' U' R U R'"
+      },
+      "case21": {
+        "name": "Caso 21",
+        "description": "y' R' U2 R U R' U' R"
+      },
+      "case22": {
+        "name": "Caso 22",
+        "description": "F U R U' R' F' R U' R'"
+      },
+      "case23": {
+        "name": "Caso 23",
+        "description": "R U R' U2 R U R' U' R U R'"
+      },
+      "case24": {
+        "name": "Caso 24",
+        "description": "R U R' U R U' R'"
+      },
+      "case25": {
+        "name": "Caso 25",
+        "description": "y' L' U' L U' L' U L"
+      },
+      "case26": {
+        "name": "Caso 26",
+        "description": "R U2 R' U R U' R'"
+      },
+      "case27": {
+        "name": "Caso 27",
+        "description": "y' L' U2 L U' L' U L"
+      },
+      "case28": {
+        "name": "Caso 28",
+        "description": "R U' R' U R U' R'"
+      },
+      "case29": {
+        "name": "Caso 29",
+        "description": "R U R' U' F R' F' R"
+      },
+      "case30": {
+        "name": "Caso 30",
+        "description": "R U R' U' R U R'"
+      },
+      "case31": {
+        "name": "Caso 31",
+        "description": "R' F R F' R' F R F'"
+      },
+      "case32": {
+        "name": "Caso 32",
+        "description": "R U R' U2 R U' R' U R U R'"
+      },
+      "case33": {
+        "name": "Caso 33",
+        "description": "R U R' U' R U2 R' U' R U R'"
+      },
+      "case34": {
+        "name": "Caso 34",
+        "description": "R U' R' Rw U' Rw' U2 Rw U Rw'"
+      },
+      "case35": {
+        "name": "Caso 35",
+        "description": "Rw U' Rw' U2 Rw U Rw' R U R'"
+      },
+      "case36": {
+        "name": "Caso 36",
+        "description": "Dw R' U2 R U2 R' U R"
+      },
+      "case37": {
+        "name": "Caso 37",
+        "description": "U' R U2 R' U2 R U' R'"
+      },
+      "case38": {
+        "name": "Caso 38",
+        "description": "Dw R' U' R U2 R' U R"
+      },
+      "case39": {
+        "name": "Caso 39",
+        "description": "U' R U R' U2 R U' R'"
+      },
+      "case40": {
+        "name": "Caso 40",
+        "description": "U' R U R' U R U R'"
+      },
+      "case41": {
+        "name": "Caso 41",
+        "description": "U' R U' R' U F' U' F"
+      }
+    }
+  },
+  "orientationLastLayer": {
+    "title": "Orientação da Última Camada - OLL",
+    "description": "OLL significa Orientação da Última Camada. Nesta etapa o objetivo é orientar todas as peças da face superior (geralmente amarela) para que fiquem voltadas para cima. Após completar as duas primeiras camadas, as peças da última camada estarão em uma das 57 situações específicas."
+  },
+  "permutationLastLayer": {
+    "title": "Permutação da Última Camada - PLL",
+    "description": "PLL significa Permutação da Última Camada. Nesta etapa, o objetivo é resolver todas as peças da última camada mantendo a orientação correta. Após completar o OLL, as peças estarão em uma das 21 situações específicas."
+  },
+  "language": {
+    "switch": "Trocar idioma",
+    "portuguese": "Português",
+    "english": "English"
+  },
+  "timer": {
+    "title": "Timer",
+    "generatingScramble": "Gerando embaralhamento...",
+    "stopMobile": "Clique na tela para parar o timer",
+    "stopDesktop": "Pressione espaço para parar o timer",
+    "prepareMobile": "Pressione a tela por 1 segundo para preparar, solte para iniciar",
+    "prepareDesktop": "Segure espaço por 1 segundo para preparar, solte para iniciar"
+  },
+  "solveTimes": {
+    "title": "Tempos Salvos",
+    "noSolves": "Nenhuma resolução registrada ainda.",
+    "time": "Tempo",
+    "scramble": "Embaralhamento",
+    "action": "Ação",
+    "delete": "Excluir"
+  }
+}

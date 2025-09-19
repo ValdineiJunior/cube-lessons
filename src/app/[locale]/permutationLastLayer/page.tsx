@@ -1,18 +1,22 @@
 import { CubeInfoCard2D } from "@/components/CubeInfoCard2D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesPermutationLastLayer } from "@/data/cubeCasesPermutationLastLayer";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
-export default function PermutationLastLayer() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function PermutationLastLayer({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({
+    locale,
+    namespace: "permutationLastLayer",
+  });
   return (
     <>
-      <PageHeader
-        title="Permutation Last Layer - PLL"
-        description="PLL significa (Permutação da Última Camada), ou seja, é a forma como as
-        peças estão posicionadas na camada superior do cubo. Nesta etapa, o
-        objetivo é resolver todas as peças da última camada, mantendo a
-        orientação correta. Após completar o OLL, as peças devem estar em uma
-        das 21 situações específicas."
-      />
+      <PageHeader title={t("title")} description={t("description")} />
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {cubeCasesPermutationLastLayer.map((cubeCase) => (
           <CubeInfoCard2D

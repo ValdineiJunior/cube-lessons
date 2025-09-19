@@ -1,0 +1,373 @@
+{
+  "metadata": {
+    "title": "Cube Lessons - Learn the Rubik's Cube",
+    "description": "Learn to solve the Rubik's Cube with step-by-step tutorials, from basic to advanced.",
+    "applicationName": "Cube Lessons",
+    "keywords": "Rubik's Cube, Magic Cube, Cube, F2L, OLL, PLL, speedcubing, algorithms, move notation, tutorial, learning",
+    "ogTitle": "Cube Lessons - Learn the Rubik's Cube",
+    "ogDescription": "Learn to solve the Rubik's Cube with step-by-step tutorials, from basic to advanced.",
+    "ogImage": "/og-image.jpg",
+    "ogImageAlt": "Cube Lessons - Learn the Rubik's Cube",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Cube Lessons - Learn the Rubik's Cube",
+    "twitterDescription": "Learn to solve the Rubik's Cube with step-by-step tutorials, from basic to advanced.",
+    "twitterImage": "/twitter-image.jpg",
+    "canonicalUrl": "https://cube-lessons.vercel.app",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  },
+  "navigation": {
+    "home": "Home",
+    "cubePieces": "Cube Pieces",
+    "movements": "Movements",
+    "firstTwoLayers": "F2L",
+    "orientationLastLayer": "OLL",
+    "permutationLastLayer": "PLL",
+    "timer": "Timer",
+    "solveTimes": "Solve Times"
+  },
+  "home": {
+    "title": "Learn the Rubik's Cube",
+    "description": "Discover the secrets of the world's most famous puzzle. From basic to advanced, learn step-by-step methods to solve the Rubik's Cube with confidence.",
+    "features": {
+      "f2l": {
+        "title": "First Two Layers (F2L)",
+        "description": "Master the efficient method of solving the first two layers simultaneously, significantly reducing your solve time.",
+        "ariaLabel": "Go to First Two Layers (F2L)"
+      },
+      "oll": {
+        "title": "Orientation of Last Layer (OLL)",
+        "description": "Learn the algorithms to orient all pieces of the last layer, creating a uniform top face.",
+        "ariaLabel": "Go to Orientation of Last Layer (OLL)"
+      },
+      "pll": {
+        "title": "Permutation of Last Layer (PLL)",
+        "description": "Complete your solve by learning how to permute the pieces of the last layer into their correct positions.",
+        "ariaLabel": "Go to Permutation of Last Layer (PLL)"
+      },
+      "cubePieces": {
+        "title": "Cube Pieces",
+        "description": "Learn about all the pieces that make up the Rubik's Cube and understand how they move and interact with each other.",
+        "ariaLabel": "Go to Cube Pieces"
+      },
+      "movements": {
+        "title": "Movements",
+        "description": "Learn the movement notation and how to execute them correctly to solve the cube efficiently.",
+        "ariaLabel": "Go to Movements"
+      },
+      "timer": {
+        "title": "Timer",
+        "description": "Track your progress and improve your times with our timing and solve analysis system.",
+        "ariaLabel": "Go to Timer"
+      }
+    }
+  },
+  "cubePieces": {
+    "title": "Cube Pieces",
+    "description": "The Rubik's Cube has 3 types of pieces, each with unique characteristics and specific positions. Knowing these pieces is fundamental to understanding solution methods.",
+    "pieces": {
+      "centers": {
+        "name": "Centers",
+        "description": "6 fixed pieces that define the color of each face. They cannot be moved from their position."
+      },
+      "edges": {
+        "name": "Edges",
+        "description": "12 pieces with 2 colors. They can only be positioned between centers."
+      },
+      "corners": {
+        "name": "Corners",
+        "description": "8 pieces with 3 colors, located at the vertices of the cube."
+      }
+    }
+  },
+  "movements": {
+    "title": "Movements",
+    "description": "To solve the Rubik's Cube we will use some formulas, which are sequences of movements that can be written (translated) with letters. It seems very complex, but it is extremely simple and intuitive. Each side of the cube is represented by its initial in English. If the letter is alone it means the movement is clockwise. If it is accompanied by an apostrophe, it means it is counterclockwise. And if it is followed by the number 2, it means it is a double movement.",
+    "basicMoves": "Basic Moves",
+    "advancedMoves": "Advanced Moves",
+    "moves": {
+      "R": {
+        "name": "R - Right Clockwise",
+        "description": "Right face movement clockwise"
+      },
+      "R_prime": {
+        "name": "R' - Right Counter-clockwise",
+        "description": "Right face movement counter-clockwise"
+      },
+      "R2": {
+        "name": "R2 - Right Double",
+        "description": "Right face movement twice"
+      },
+      "L": {
+        "name": "L - Left Clockwise",
+        "description": "Left face movement clockwise"
+      },
+      "L_prime": {
+        "name": "L' - Left Counter-clockwise",
+        "description": "Left face movement counter-clockwise"
+      },
+      "L2": {
+        "name": "L2 - Left Double",
+        "description": "Left face movement twice"
+      },
+      "U": {
+        "name": "U - Top Clockwise",
+        "description": "Top face movement clockwise"
+      },
+      "D": {
+        "name": "D - Bottom Clockwise",
+        "description": "Bottom face movement clockwise"
+      },
+      "F": {
+        "name": "F - Front Clockwise",
+        "description": "Front face movement clockwise"
+      },
+      "B": {
+        "name": "B - Back Clockwise",
+        "description": "Back face movement clockwise"
+      },
+      "Uw": {
+        "name": "Uw / u - Top Double Clockwise",
+        "description": "Two top layers movement clockwise"
+      },
+      "Fw": {
+        "name": "Fw / f - Front Double Clockwise",
+        "description": "Two front layers movement clockwise"
+      },
+      "Lw": {
+        "name": "Lw / l - Left Double Clockwise",
+        "description": "Two left layers movement clockwise"
+      },
+      "Dw": {
+        "name": "Dw / d - Bottom Double Clockwise",
+        "description": "Two bottom layers movement clockwise"
+      },
+      "Rw": {
+        "name": "Rw / r - Right Double Clockwise",
+        "description": "Two right layers movement clockwise"
+      },
+      "Bw": {
+        "name": "Bw / b - Back Double Clockwise",
+        "description": "Two back layers movement clockwise"
+      },
+      "M": {
+        "name": "M - Middle",
+        "description": "Middle layer movement in the same direction as L"
+      },
+      "S": {
+        "name": "S - Middle",
+        "description": "Middle layer movement in the same direction as F"
+      },
+      "X": {
+        "name": "X - Whole Cube",
+        "description": "Whole cube movement in the same direction as R"
+      },
+      "Y": {
+        "name": "Y - Whole Cube",
+        "description": "Whole cube movement in the same direction as U"
+      },
+      "Z": {
+        "name": "Z - Whole Cube",
+        "description": "Whole cube movement in the same direction as F"
+      }
+    }
+  },
+  "firstTwoLayers": {
+    "title": "First Two Layers - F2L",
+    "description": "The F2L method, abbreviation for First Two Layers, focuses on completing the first two layers of the cube, representing two thirds of the total solution. At this stage, the approach differs from the basic method by prioritizing the simultaneous construction of corner and edge pairs.",
+    "cases": {
+      "case01": {
+        "name": "Case 01",
+        "description": "R U R'"
+      },
+      "case02": {
+        "name": "Case 02",
+        "description": "y L' U' L"
+      },
+      "case03": {
+        "name": "Case 03",
+        "description": "y U' L' U L"
+      },
+      "case04": {
+        "name": "Case 04",
+        "description": "U R U' R'"
+      },
+      "case05": {
+        "name": "Case 05",
+        "description": "U R U' R' U' F' U F"
+      },
+      "case06": {
+        "name": "Case 06",
+        "description": "y U' L' U L U F U' F'"
+      },
+      "case07": {
+        "name": "Case 07",
+        "description": "R U' R' Dw R' U2 R U2' R' U R"
+      },
+      "case08": {
+        "name": "Case 08",
+        "description": "U R U R' U2 R U R'"
+      },
+      "case09": {
+        "name": "Case 09",
+        "description": "U' R U' R' U2 R U' R'"
+      },
+      "case10": {
+        "name": "Case 10",
+        "description": "U2 R' F R F' U2 R U R'"
+      },
+      "case11": {
+        "name": "Case 11",
+        "description": "U' R U R' U F' U' F"
+      },
+      "case12": {
+        "name": "Case 12",
+        "description": "R U R' U' R U R' U' R U R'"
+      },
+      "case13": {
+        "name": "Case 13",
+        "description": "U' R' F R F' R U' R'"
+      },
+      "case14": {
+        "name": "Case 14",
+        "description": "R U' R' U R U' R' U2 R U' R'"
+      },
+      "case15": {
+        "name": "Case 15",
+        "description": "U' R U2 R' U F' U' F"
+      },
+      "case16": {
+        "name": "Case 16",
+        "description": "U' R U' R' U R U R'"
+      },
+      "case17": {
+        "name": "Case 17",
+        "description": "y' U R' U R U' R' U' R"
+      },
+      "case18": {
+        "name": "Case 18",
+        "description": "R U' R' U2 F' U' F"
+      },
+      "case19": {
+        "name": "Case 19",
+        "description": "R U R' U2 R U' R' U R U' R'"
+      },
+      "case20": {
+        "name": "Case 20",
+        "description": "R U2 R' U' R U R'"
+      },
+      "case21": {
+        "name": "Case 21",
+        "description": "y' R' U2 R U R' U' R"
+      },
+      "case22": {
+        "name": "Case 22",
+        "description": "F U R U' R' F' R U' R'"
+      },
+      "case23": {
+        "name": "Case 23",
+        "description": "R U R' U2 R U R' U' R U R'"
+      },
+      "case24": {
+        "name": "Case 24",
+        "description": "R U R' U R U' R'"
+      },
+      "case25": {
+        "name": "Case 25",
+        "description": "y' L' U' L U' L' U L"
+      },
+      "case26": {
+        "name": "Case 26",
+        "description": "R U2 R' U R U' R'"
+      },
+      "case27": {
+        "name": "Case 27",
+        "description": "y' L' U2 L U' L' U L"
+      },
+      "case28": {
+        "name": "Case 28",
+        "description": "R U' R' U R U' R'"
+      },
+      "case29": {
+        "name": "Case 29",
+        "description": "R U R' U' F R' F' R"
+      },
+      "case30": {
+        "name": "Case 30",
+        "description": "R U R' U' R U R'"
+      },
+      "case31": {
+        "name": "Case 31",
+        "description": "R' F R F' R' F R F'"
+      },
+      "case32": {
+        "name": "Case 32",
+        "description": "R U R' U2 R U' R' U R U R'"
+      },
+      "case33": {
+        "name": "Case 33",
+        "description": "R U R' U' R U2 R' U' R U R'"
+      },
+      "case34": {
+        "name": "Case 34",
+        "description": "R U' R' Rw U' Rw' U2 Rw U Rw'"
+      },
+      "case35": {
+        "name": "Case 35",
+        "description": "Rw U' Rw' U2 Rw U Rw' R U R'"
+      },
+      "case36": {
+        "name": "Case 36",
+        "description": "Dw R' U2 R U2 R' U R"
+      },
+      "case37": {
+        "name": "Case 37",
+        "description": "U' R U2 R' U2 R U' R'"
+      },
+      "case38": {
+        "name": "Case 38",
+        "description": "Dw R' U' R U2 R' U R"
+      },
+      "case39": {
+        "name": "Case 39",
+        "description": "U' R U R' U2 R U' R'"
+      },
+      "case40": {
+        "name": "Case 40",
+        "description": "U' R U R' U R U R'"
+      },
+      "case41": {
+        "name": "Case 41",
+        "description": "U' R U' R' U F' U' F"
+      }
+    }
+  },
+  "orientationLastLayer": {
+    "title": "Orientation Last Layer - OLL",
+    "description": "OLL stands for Orientation of the Last Layer. At this stage the goal is to orient all pieces on the top face (usually yellow) so they face upward. After completing the first two layers, the top layer pieces will be in one of the 57 specific orientation cases."
+  },
+  "permutationLastLayer": {
+    "title": "Permutation Last Layer - PLL",
+    "description": "PLL stands for Permutation of the Last Layer. At this stage, the goal is to solve all pieces in the last layer while maintaining their orientation. After completing OLL, the pieces will be in one of the 21 specific cases."
+  },
+  "language": {
+    "switch": "Switch language",
+    "portuguese": "Português",
+    "english": "English"
+  },
+  "timer": {
+    "title": "Timer",
+    "generatingScramble": "Generating scramble...",
+    "stopMobile": "Tap the screen to stop the timer",
+    "stopDesktop": "Press space to stop the timer",
+    "prepareMobile": "Press and hold the screen for 1 second to prepare, release to start",
+    "prepareDesktop": "Hold space for 1 second to prepare, release to start"
+  },
+  "solveTimes": {
+    "title": "Solve Times",
+    "noSolves": "No solves recorded yet.",
+    "time": "Time",
+    "scramble": "Scramble",
+    "action": "Action",
+    "delete": "Delete"
+  }
+}
