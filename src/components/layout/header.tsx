@@ -11,6 +11,7 @@ import {
   SheetTrigger,
   SheetClose,
   SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 
 export function Header() {
@@ -80,6 +81,11 @@ export function Header() {
               <SheetTitle className="mt-8 text-lg font-semibold text-gray-900">
                 Menu
               </SheetTitle>
+              <SheetDescription className="sr-only">
+                {locale === "en"
+                  ? "Navigation menu and language switcher. Use the links to navigate."
+                  : "Menu de navegação e troca de idioma. Use os links para navegar."}
+              </SheetDescription>
               <nav className="flex flex-col space-y-4 mt-4">
                 {navigationItems.map((item) => (
                   <SheetClose key={item.href} asChild>
