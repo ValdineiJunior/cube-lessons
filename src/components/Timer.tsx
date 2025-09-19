@@ -2,15 +2,18 @@
 
 import { useRef, useEffect, useState } from "react";
 import { formatTime } from "../utils/timeUtils";
+import PageHeader from "./layout/PageHeader";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useTimer } from "../hooks/useTimer";
 import { useTimerControls } from "../hooks/useTimerControls";
 import { useSolveStats } from "../hooks/useSolveStats";
 import { generateScramble } from "../utils/crambleDisplay";
-import PageHeader from "./layout/PageHeader";
+
+import { useTranslations } from "next-intl";
 
 export function Timer() {
   const isMobile = useIsMobile();
+  const t = useTranslations("timer");
   const timerRef = useRef<HTMLDivElement>(null);
   const [currentScramble, setCurrentScramble] = useState<string>("");
   const [isHydrated, setIsHydrated] = useState(false);
@@ -60,7 +63,7 @@ export function Timer() {
   return (
     <div className="min-h-screen select-none touch-none" ref={timerRef}>
       <div className="text-center">
-        <PageHeader title="Timer" />
+        <PageHeader title={t("title")} />
         {/* --- Stats display --- */}
         <div className="mb-8 flex flex-col items-center gap-1">
           {stats.map((stat) => (
@@ -70,7 +73,7 @@ export function Timer() {
           ))}
         </div>
         <p className="text-lg font-mono mb-4">
-          {isHydrated ? currentScramble : "Generating scramble..."}
+          {isHydrated ? currentScramble : t("generatingScramble")}
         </p>
 
         {/* --- Timer display --- */}
@@ -87,17 +90,9 @@ export function Timer() {
         </div>
         <div className="text-sm text-gray-600 mb-8">
           {isRunning ? (
-            <p>
-              {isMobile
-                ? "Clique na tela para parar o timer"
-                : "Pressione espaço para parar o timer"}
-            </p>
+            <p>{isMobile ? t("stopMobile") : t("stopDesktop")}</p>
           ) : (
-            <p>
-              {isMobile
-                ? "Pressione a tela por 1 segundo para preparar, solte para iniciar"
-                : "Segure espaço por 1 segundo para preparar, solte para iniciar"}
-            </p>
+            <p>{isMobile ? t("prepareMobile") : t("prepareDesktop")}</p>
           )}
         </div>
       </div>

@@ -353,5 +353,13 @@
     "switch": "Trocar idioma",
     "portuguese": "Português",
     "english": "English"
+  },
+  "timer": {
+    "title": "Timer",
+    "generatingScramble": "Gerando embaralhamento...",
+    "stopMobile": "Clique na tela para parar o timer",
+    "stopDesktop": "Pressione espaço para parar o timer",
+    "prepareMobile": "Pressione a tela por 1 segundo para preparar, solte para iniciar",
+    "prepareDesktop": "Segure espaço por 1 segundo para preparar, solte para iniciar"
   }
 }

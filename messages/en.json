@@ -353,5 +353,13 @@
     "switch": "Switch language",
     "portuguese": "Português",
     "english": "English"
+  },
+  "timer": {
+    "title": "Timer",
+    "generatingScramble": "Generating scramble...",
+    "stopMobile": "Tap the screen to stop the timer",
+    "stopDesktop": "Press space to stop the timer",
+    "prepareMobile": "Press and hold the screen for 1 second to prepare, release to start",
+    "prepareDesktop": "Hold space for 1 second to prepare, release to start"
   }
 }
