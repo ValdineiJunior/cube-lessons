@@ -7,7 +7,7 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useTimer } from "../hooks/useTimer";
 import { useTimerControls } from "../hooks/useTimerControls";
 import { useSolveStats } from "../hooks/useSolveStats";
-import { generateScramble } from "../utils/crambleDisplay";
+import { generateScramble } from "../utils/scrambleUtils";
 
 import { useTranslations } from "next-intl";
 

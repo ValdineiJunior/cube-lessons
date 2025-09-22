@@ -3,11 +3,16 @@ import { useState } from "react";
 import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesFirstTwoLayers } from "@/data/cubeCasesFirstTwoLayers";
-import { generateCaseScramble } from "@/utils/scrambleUtils";
-import { getTranslations } from "next-intl/server";
-import { setRequestLocale } from "next-intl/server";
+import { generateF2LCaseScramble } from "@/utils/scrambleUtils";
 
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -59,6 +64,10 @@ export default function FirstTwoLayers({ params }: Props) {
             <SheetContent side="right">
               {selectedCase && (
                 <>
+                  <SheetHeader>
+                    <SheetTitle>{t.title}</SheetTitle>
+                    <SheetDescription>{t.description}</SheetDescription>
+                  </SheetHeader>
                   <CubeInfoCard3D
                     pieceKey={selectedCase.key}
                     colors={selectedCase.colors}
@@ -68,7 +77,7 @@ export default function FirstTwoLayers({ params }: Props) {
                     <div className="mt-4 text-center">
                       <div className="font-semibold">Scramble:</div>
                       <div className="break-words text-sm bg-gray-100 rounded p-2 mt-1">
-                        {generateCaseScramble(selectedCase.moves, 0)}
+                        {generateF2LCaseScramble(selectedCase.moves)}
                       </div>
                       <div className="mt-2 text-xs text-gray-500">
                         (Generated for this case)
