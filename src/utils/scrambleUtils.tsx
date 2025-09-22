@@ -17,10 +17,7 @@ export function generateScramble(): string {
   }
 }
 
-export function generateCaseScramble(
-  caseMoves: string,
-  llRandomMovesCount = 1,
-): string {
+export function generateF2LCaseScramble(caseMoves: string): string {
   try {
     // Import cubejs using require
     const Cube = require("cubejs");
@@ -36,33 +33,20 @@ export function generateCaseScramble(
         if (move.endsWith("2")) return move;
         return move + "'";
       });
-    // Generate random LL moves (U, U', U2, D, D', D2, L, L', L2, R, R', R2, F, F', F2, B, B', B2)
-    const llMoves = [
-      "U",
-      "U'",
-      "U2",
-      "D",
-      "D'",
-      "D2",
-      "L",
-      "L'",
-      "L2",
-      "R",
-      "R'",
-      "R2",
-      "F",
-      "F'",
-      "F2",
-      "B",
-      "B'",
-      "B2",
-    ];
-    const randomLL = Array.from(
-      { length: llRandomMovesCount },
-      () => llMoves[Math.floor(Math.random() * llMoves.length)],
+
+    // Import the orientation last layer cases
+    const {
+      cubeCasesOrientationLastLayer,
+    } = require("../data/cubeCasesOrientationLastLayer");
+    // Pick a random case
+    const randomIdx = Math.floor(
+      Math.random() * cubeCasesOrientationLastLayer.length,
     );
-    // Combine: random LL + inverse case moves
-    const scramble = [...randomLL, ...inverseMoves].join(" ");
+    const randomCase = cubeCasesOrientationLastLayer[randomIdx];
+    const lastLayerMoves = randomCase.moves;
+
+    // Combine: random last layer case + inverse case moves
+    const scramble = [lastLayerMoves, ...inverseMoves].join(" ");
     return scramble;
   } catch (error) {
     console.error("Error generating case scramble:", error);
