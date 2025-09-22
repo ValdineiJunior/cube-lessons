@@ -758,7 +758,7 @@ export const cubeCasesPermutationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "R' U R' U' y R' F' R2 U' R' U R' F R F",
+    moves: "R' U R' U' Y R' F' R2 U' R' U R' F R F",
   },
   {
     name: "Y",
