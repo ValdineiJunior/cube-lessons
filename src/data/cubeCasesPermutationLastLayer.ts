@@ -46,7 +46,7 @@ export const cubeCasesPermutationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "x L2 D2 L' U' L D2 L' U L'",
+    moves: "X L2 D2 L' U' L D2 L' U L'",
   },
   {
     name: "Ab",
@@ -93,7 +93,7 @@ export const cubeCasesPermutationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "x' L2 D2 L U L' D2 L U' L",
+    moves: "X' L2 D2 L U L' D2 L U' L",
   },
   {
     name: "F",
@@ -375,7 +375,7 @@ export const cubeCasesPermutationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "x R2 F R F' R U2 r' U r U2",
+    moves: "X R2 F R F' R U2 Rw' U Rw U2",
   },
   {
     name: "Jb",
@@ -614,7 +614,7 @@ export const cubeCasesPermutationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "x' L' U L D' L' U' L D L' U' L D' L' U L D",
+    moves: "X' L' U L D' L' U' L D L' U' L D' L' U L D",
   },
   {
     name: "Na",
@@ -758,7 +758,7 @@ export const cubeCasesPermutationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "R' U R' U' y R' F' R2 U' R' U R' F R F",
+    moves: "R' U R' U' Y R' F' R2 U' R' U R' F R F",
   },
   {
     name: "Y",

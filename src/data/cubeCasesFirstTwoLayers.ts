@@ -15,7 +15,7 @@ export const cubeCasesFirstTwoLayers = [
       ["r", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "r", "y", "z", "z", "z", "b"],
     ],
-    moves: "y L' U' L",
+    moves: "Y L' U' L",
   },
   {
     key: "case03",
@@ -24,7 +24,7 @@ export const cubeCasesFirstTwoLayers = [
       ["w", "z", "z", "z", "r", "r", "z", "r", "r"],
       ["z", "z", "z", "z", "y", "z", "z", "r", "r"],
     ],
-    moves: "y U' L' U L",
+    moves: "Y U' L' U L",
   },
   {
     key: "case04",
@@ -51,7 +51,7 @@ export const cubeCasesFirstTwoLayers = [
       ["z", "r", "z", "z", "r", "r", "r", "r", "r"],
       ["z", "z", "z", "z", "y", "b", "z", "z", "z"],
     ],
-    moves: "y U' L' U L U F U' F'",
+    moves: "Y U' L' U L U F U' F'",
   },
   {
     key: "case07",
