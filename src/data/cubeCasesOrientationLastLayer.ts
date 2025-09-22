@@ -33,7 +33,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         rightBorder: "yellow",
       },
     ],
-    moves: "r U r' U2 r U2 R' U2 R U' r'",
+    moves: "Rw U Rw' U2 Rw U2 R' U2 R U' Rw'",
   },
   {
     name: "case 03",
@@ -67,7 +67,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "r' R2 U R' U r U2 r' U M'",
+    moves: "r' R2 U R' U Rw U2 Rw' U M'",
   },
   {
     name: "case 04",
@@ -101,7 +101,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "M U' r U2 r' U' R U' R' M'",
+    moves: "M U' Rw U2 Rw' U' R U' R' M'",
   },
   {
     name: "case 05",
@@ -169,7 +169,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         rightBorder: "yellow",
       },
     ],
-    moves: "r U2 R' U' R U' r'",
+    moves: "Rw U2 R' U' R U' Rw'",
   },
   {
     name: "case 07",
@@ -203,7 +203,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "r U R' U R U2 r'",
+    moves: "Rw U R' U R U2 Rw'",
   },
   {
     name: "case 08",
@@ -339,7 +339,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "r U R' U R' F R F' R U2 r'",
+    moves: "Rw U R' U R' F R F' R U2 Rw'",
   },
   {
     name: "case 12",
@@ -373,7 +373,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         rightBorder: "yellow",
       },
     ],
-    moves: "M' R' U' R U' R' U2 R U' R r'",
+    moves: "M' R' U' R U' R' U2 R U' R Rw'",
   },
   {
     name: "case 13",
@@ -509,7 +509,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         rightBorder: "yellow",
       },
     ],
-    moves: "r U r' R U R' U' r U' r'",
+    moves: "Rw U Rw' R U R' U' Rw U' Rw'",
   },
   {
     name: "case 17",
@@ -543,7 +543,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "F R' F' R2 r' U R U' R' U' M'",
+    moves: "F R' F' R2 Rw' U R U' R' U' M'",
   },
   {
     name: "case 18",
@@ -577,7 +577,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "r U R' U R U2 r2 U' R U' R' U2 r",
+    moves: "Rw U R' U R U2 Rw2 U' R U' R' U2 Rw",
   },
   {
     name: "case 19",
@@ -645,7 +645,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "r U R' U' M2 U R U' R' U' M'",
+    moves: "Rw U R' U' M2 U R U' R' U' M'",
   },
   {
     name: "case 21",
@@ -781,7 +781,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "r U R' U' r' F R F'",
+    moves: "Rw U R' U' Rw' F R F'",
   },
   {
     name: "case 25",
@@ -815,7 +815,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "F' r U R' U' r' F R",
+    moves: "F' Rw U R' U' Rw' F R",
   },
   {
     name: "case 26",
@@ -917,7 +917,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "r U R' U' r' R U R U' R'",
+    moves: "Rw U R' U' Rw' R U R U' R'",
   },
   {
     name: "case 29",
@@ -1631,7 +1631,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "r U' r2 U r2 U r2 U' r",
+    moves: "Rw U' Rw2 U Rw2 U Rw2 U' Rw",
   },
   {
     name: "case 50",
@@ -1665,7 +1665,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "r' U r2 U' r2 U' r2 U r'",
+    moves: "r' U Rw2 U' Rw2 U' Rw2 U Rw'",
   },
   {
     name: "case 51",
@@ -1801,7 +1801,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         bottomBorder: "yellow",
       },
     ],
-    moves: "r U2 R' U' R U R' U' R U' r'",
+    moves: "Rw U2 R' U' R U R' U' R U' Rw'",
   },
   {
     name: "case 55",
@@ -1869,7 +1869,7 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         rightBorder: "yellow",
       },
     ],
-    moves: "r' U' r U' R' U R U' R' U R r' U r",
+    moves: "r' U' Rw U' R' U R U' R' U R Rw' U Rw",
   },
   {
     name: "case 57",
@@ -1903,6 +1903,6 @@ export const cubeCasesOrientationLastLayer: CubeInfo2D[] = [
         centerColor: "yellow",
       },
     ],
-    moves: "R U R' U' M' U R U' r'",
+    moves: "R U R' U' M' U R U' Rw'",
   },
 ];
