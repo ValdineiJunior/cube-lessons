@@ -1,32 +1,87 @@
+"use client";
+import { useState } from "react";
 import { CubeInfoCard2D } from "@/components/CubeInfoCard2D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesOrientationLastLayer } from "@/data/cubeCasesOrientationLastLayer";
-import { getTranslations } from "next-intl/server";
-import { setRequestLocale } from "next-intl/server";
+import { generateF2LCaseScramble } from "@/utils/scrambleUtils";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export default async function OrientationLastLayer({ params }: Props) {
-  const { locale } = await params;
-  setRequestLocale(locale);
-  const t = await getTranslations({
-    locale,
-    namespace: "orientationLastLayer",
-  });
+export default function OrientationLastLayer({ params }: Props) {
+  const [open, setOpen] = useState(false);
+  const [selectedCase, setSelectedCase] = useState<
+    (typeof cubeCasesOrientationLastLayer)[0] | null
+  >(null);
+
+  const t = { title: "Orientation Last Layer", description: "OLL cases" };
+
   return (
     <>
-      <PageHeader title={t("title")} description={t("description")} />
+      <PageHeader title={t.title} description={t.description} />
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {cubeCasesOrientationLastLayer.map((cubeCase) => (
-          <CubeInfoCard2D
+          <Sheet
             key={cubeCase.name}
-            name={cubeCase.name}
-            colors={cubeCase.colors}
-            moves={cubeCase.moves}
-          />
+            open={open && selectedCase?.name === cubeCase.name}
+            onOpenChange={(o) => {
+              setOpen(o);
+              if (!o) setSelectedCase(null);
+            }}
+          >
+            <SheetTrigger asChild>
+              <button
+                className="focus:outline-none"
+                onClick={() => {
+                  setSelectedCase(cubeCase);
+                  setOpen(true);
+                }}
+                aria-label="View case details"
+              >
+                <CubeInfoCard2D
+                  name={cubeCase.name}
+                  colors={cubeCase.colors}
+                  moves={cubeCase.moves}
+                />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              {selectedCase && (
+                <>
+                  <SheetHeader>
+                    <SheetTitle>{selectedCase.name}</SheetTitle>
+                    <SheetDescription>{t.description}</SheetDescription>
+                  </SheetHeader>
+                  <CubeInfoCard2D
+                    name={selectedCase.name}
+                    colors={selectedCase.colors}
+                    moves={selectedCase.moves}
+                  />
+                  {selectedCase.moves && (
+                    <div className="mt-4 text-center">
+                      <div className="font-semibold">Scramble:</div>
+                      <div className="break-words text-sm bg-gray-100 rounded p-2 mt-1">
+                        {generateF2LCaseScramble(selectedCase.moves)}
+                      </div>
+                      <div className="mt-2 text-xs text-gray-500">
+                        (Generated for this case)
+                      </div>
+                    </div>
+                  )}
+                </>
+              )}
+            </SheetContent>
+          </Sheet>
         ))}
       </div>
     </>
