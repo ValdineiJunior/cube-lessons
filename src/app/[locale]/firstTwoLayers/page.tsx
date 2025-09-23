@@ -37,7 +37,7 @@ export default function FirstTwoLayers() {
           >
             <SheetTrigger asChild>
               <button
-                className="focus:outline-none"
+                className="focus:outline-none transition-shadow pb-4 rounded-lg hover:shadow-lg hover:ring-2 hover:ring-blue-400 hover:bg-blue-50"
                 onClick={() => {
                   setSelectedCase(cubeCase);
                   setOpen(true);

@@ -41,7 +41,7 @@ export default function PermutationLastLayer({ params }: Props) {
           >
             <SheetTrigger asChild>
               <button
-                className="focus:outline-none"
+                className="focus:outline-none transition-shadow rounded-lg py-6 hover:shadow-lg hover:ring-2 hover:ring-blue-400 hover:bg-blue-50"
                 onClick={() => {
                   setSelectedCase(cubeCase);
                   setOpen(true);
