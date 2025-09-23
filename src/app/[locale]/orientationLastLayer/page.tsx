@@ -4,6 +4,7 @@ import { CubeInfoCard2D } from "@/components/CubeInfoCard2D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesOrientationLastLayer } from "@/data/cubeCasesOrientationLastLayer";
 import { generateOLLCaseScramble } from "@/utils/scrambleUtils";
+import { useTranslations } from "next-intl";
 import {
   Sheet,
   SheetTrigger,
@@ -18,16 +19,15 @@ type Props = {
 };
 
 export default function OrientationLastLayer({ params }: Props) {
+  const t = useTranslations("orientationLastLayer");
   const [open, setOpen] = useState(false);
   const [selectedCase, setSelectedCase] = useState<
     (typeof cubeCasesOrientationLastLayer)[0] | null
   >(null);
 
-  const t = { title: "Orientation Last Layer", description: "OLL cases" };
-
   return (
     <>
-      <PageHeader title={t.title} description={t.description} />
+      <PageHeader title={t("title")} description={t("description")} />
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {cubeCasesOrientationLastLayer.map((cubeCase) => (
@@ -59,14 +59,18 @@ export default function OrientationLastLayer({ params }: Props) {
               {selectedCase && (
                 <>
                   <SheetHeader>
-                    <SheetTitle>{selectedCase.name}</SheetTitle>
-                    <SheetDescription>{t.description}</SheetDescription>
+                    <SheetTitle>{t("title")}</SheetTitle>
+                    <SheetDescription>
+                      {t("practiceDescription")}
+                    </SheetDescription>
                   </SheetHeader>
-                  <CubeInfoCard2D
-                    name={selectedCase.name}
-                    colors={selectedCase.colors}
-                    moves={selectedCase.moves}
-                  />
+                  <div className="flex justify-center mt-4">
+                    <CubeInfoCard2D
+                      name={selectedCase.name}
+                      colors={selectedCase.colors}
+                      moves={selectedCase.moves}
+                    />
+                  </div>
                   {selectedCase.moves && (
                     <div className="mt-4 text-center">
                       <div className="font-semibold">Scramble:</div>

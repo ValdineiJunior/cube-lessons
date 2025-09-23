@@ -5,8 +5,8 @@ import { useSolveStats } from "@/hooks/useSolveStats";
 import { useTranslations } from "next-intl";
 
 export default function SolveTimesPage() {
-  const { solveTimes, deleteSolveTime, format } = useSolveStats();
   const t = useTranslations("solveTimes");
+  const { solveTimes, deleteSolveTime, format } = useSolveStats();
 
   return (
     <div className="min-h-screen p-6 flex flex-col items-center">

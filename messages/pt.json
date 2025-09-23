@@ -174,6 +174,7 @@
   "firstTwoLayers": {
     "title": "Primeiras Duas Camadas - F2L",
     "description": "O método F2L, abreviação para First Two Layers ou Primeiras Duas Camadas, foca na conclusão das primeiras duas camadas do cubo, representando dois terços da resolução total. Neste estágio, a abordagem difere do método básico ao priorizar a construção simultânea de pares de quinas e meios.",
+    "practiceDescription": "Pratique os 41 casos de F2L para melhorar seu reconhecimento e velocidade de execução.",
     "cases": {
       "case01": {
         "name": "Caso 01",
@@ -343,11 +344,13 @@
   },
   "orientationLastLayer": {
     "title": "Orientação da Última Camada - OLL",
-    "description": "OLL significa Orientação da Última Camada. Nesta etapa o objetivo é orientar todas as peças da face superior (geralmente amarela) para que fiquem voltadas para cima. Após completar as duas primeiras camadas, as peças da última camada estarão em uma das 57 situações específicas."
+    "description": "OLL significa Orientação da Última Camada. Nesta etapa o objetivo é orientar todas as peças da face superior (geralmente amarela) para que fiquem voltadas para cima. Após completar as duas primeiras camadas, as peças da última camada estarão em uma das 57 situações específicas.",
+    "practiceDescription": "Pratique os 57 casos de OLL para melhorar seu reconhecimento e velocidade de execução."
   },
   "permutationLastLayer": {
     "title": "Permutação da Última Camada - PLL",
-    "description": "PLL significa Permutação da Última Camada. Nesta etapa, o objetivo é resolver todas as peças da última camada mantendo a orientação correta. Após completar o OLL, as peças estarão em uma das 21 situações específicas."
+    "description": "PLL significa Permutação da Última Camada. Nesta etapa, o objetivo é resolver todas as peças da última camada mantendo a orientação correta. Após completar o OLL, as peças estarão em uma das 21 situações específicas.",
+    "practiceDescription": "Pratique os 21 casos de PLL para melhorar seu reconhecimento e velocidade de execução."
   },
   "language": {
     "switch": "Trocar idioma",

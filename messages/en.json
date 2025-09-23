@@ -174,6 +174,7 @@
   "firstTwoLayers": {
     "title": "First Two Layers - F2L",
     "description": "The F2L method, abbreviation for First Two Layers, focuses on completing the first two layers of the cube, representing two thirds of the total solution. At this stage, the approach differs from the basic method by prioritizing the simultaneous construction of corner and edge pairs.",
+    "practiceDescription": "Practice the 41 F2L cases to improve your recognition and execution speed.",
     "cases": {
       "case01": {
         "name": "Case 01",
@@ -343,11 +344,13 @@
   },
   "orientationLastLayer": {
     "title": "Orientation Last Layer - OLL",
-    "description": "OLL stands for Orientation of the Last Layer. At this stage the goal is to orient all pieces on the top face (usually yellow) so they face upward. After completing the first two layers, the top layer pieces will be in one of the 57 specific orientation cases."
+    "description": "OLL stands for Orientation of the Last Layer. At this stage the goal is to orient all pieces on the top face (usually yellow) so they face upward. After completing the first two layers, the top layer pieces will be in one of the 57 specific orientation cases.",
+    "practiceDescription": "Practice the 57 OLL cases to improve your recognition and execution speed."
   },
   "permutationLastLayer": {
     "title": "Permutation Last Layer - PLL",
-    "description": "PLL stands for Permutation of the Last Layer. At this stage, the goal is to solve all pieces in the last layer while maintaining their orientation. After completing OLL, the pieces will be in one of the 21 specific cases."
+    "description": "PLL stands for Permutation of the Last Layer. At this stage, the goal is to solve all pieces in the last layer while maintaining their orientation. After completing OLL, the pieces will be in one of the 21 specific cases.",
+    "practiceDescription": "Practice the 21 PLL cases to improve your recognition and execution speed."
   },
   "language": {
     "switch": "Switch language",

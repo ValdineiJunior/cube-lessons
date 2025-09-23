@@ -4,7 +4,7 @@ import { CubeInfoCard3D } from "@/components/CubeInfoCard3D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesFirstTwoLayers } from "@/data/cubeCasesFirstTwoLayers";
 import { generateF2LCaseScramble } from "@/utils/scrambleUtils";
-
+import { useTranslations } from "next-intl";
 import {
   Sheet,
   SheetTrigger,
@@ -14,26 +14,16 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-
-export default function FirstTwoLayers({ params }: Props) {
-  // Convert async to client component for interactivity
+export default function FirstTwoLayers() {
+  const t = useTranslations("firstTwoLayers");
   const [open, setOpen] = useState(false);
   const [selectedCase, setSelectedCase] = useState<
     (typeof cubeCasesFirstTwoLayers)[0] | null
   >(null);
 
-  // These will be fetched on the server, so we need to pass them as props or use a workaround for translations.
-  // For now, we skip translations for the Sheet title/desc, as CubeInfoCard3D handles it.
-
-  // @ts-ignore
-  const t = { title: "First Two Layers", description: "F2L cases" };
-
   return (
     <>
-      <PageHeader title={t.title} description={t.description} />
+      <PageHeader title={t("title")} description={t("description")} />
 
       <div className="flex flex-wrap gap-y-8 gap-x-24 justify-center">
         {cubeCasesFirstTwoLayers.map((cubeCase) => (
@@ -65,14 +55,18 @@ export default function FirstTwoLayers({ params }: Props) {
               {selectedCase && (
                 <>
                   <SheetHeader>
-                    <SheetTitle>{t.title}</SheetTitle>
-                    <SheetDescription>{t.description}</SheetDescription>
+                    <SheetTitle>{t("title")}</SheetTitle>
+                    <SheetDescription>
+                      {t("practiceDescription")}
+                    </SheetDescription>
                   </SheetHeader>
-                  <CubeInfoCard3D
-                    pieceKey={selectedCase.key}
-                    colors={selectedCase.colors}
-                    namespace="firstTwoLayers.cases"
-                  />
+                  <div className="flex justify-center">
+                    <CubeInfoCard3D
+                      pieceKey={selectedCase.key}
+                      colors={selectedCase.colors}
+                      namespace="firstTwoLayers.cases"
+                    />
+                  </div>
                   {selectedCase.moves && (
                     <div className="mt-4 text-center">
                       <div className="font-semibold">Scramble:</div>
