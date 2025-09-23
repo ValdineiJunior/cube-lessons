@@ -43,16 +43,26 @@ export function Header() {
         <div className="hidden md:flex items-center justify-between">
           <Tabs value={pathname} className="flex-1">
             <TabsList className="h-14 w-full justify-start rounded-none border-b bg-transparent p-0">
-              {navigationItems.map((item) => (
-                <TabsTrigger
-                  key={item.href}
-                  value={item.label}
-                  asChild
-                  className="h-14 rounded-none border-b-2 border-transparent px-6 text-base font-medium text-gray-500 transition-all hover:border-gray-300 hover:text-gray-900 data-[state=active]:border-blue-600 data-[state=active]:text-blue-600"
-                >
-                  <Link href={item.href}>{item.label}</Link>
-                </TabsTrigger>
-              ))}
+              {navigationItems.map((item) => {
+                const tabPath = `/${locale}${item.href === "/" ? "" : item.href}`;
+                const isActive = pathname === tabPath;
+                return (
+                  <TabsTrigger
+                    key={item.href}
+                    value={item.label}
+                    asChild
+                    className={`h-14 rounded-none border-b-2 px-6 text-base font-medium transition-all
+                            ${
+                              isActive
+                                ? "border-blue-600 text-blue-600 bg-blue-50"
+                                : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-900"
+                            }
+                          `}
+                  >
+                    <Link href={item.href}>{item.label}</Link>
+                  </TabsTrigger>
+                );
+              })}
             </TabsList>
           </Tabs>
 
