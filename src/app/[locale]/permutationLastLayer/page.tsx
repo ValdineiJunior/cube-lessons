@@ -3,7 +3,7 @@ import { useState } from "react";
 import { CubeInfoCard2D } from "@/components/CubeInfoCard2D";
 import PageHeader from "@/components/layout/PageHeader";
 import { cubeCasesPermutationLastLayer } from "@/data/cubeCasesPermutationLastLayer";
-import { generateOPLLCaseScramble } from "@/utils/scrambleUtils";
+import { generatePLLCaseScramble } from "@/utils/scrambleUtils";
 import {
   Sheet,
   SheetTrigger,
@@ -71,7 +71,7 @@ export default function PermutationLastLayer({ params }: Props) {
                     <div className="mt-4 text-center">
                       <div className="font-semibold">Scramble:</div>
                       <div className="break-words text-sm bg-gray-100 rounded p-2 mt-1">
-                        {generateOPLLCaseScramble(selectedCase.moves)}
+                        {generatePLLCaseScramble(selectedCase.moves)}
                       </div>
                       <div className="mt-2 text-xs text-gray-500">
                         (Generated for this case)

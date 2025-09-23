@@ -21,8 +21,8 @@ export function generateScramble(): string {
   }
 }
 
-export function generateF2LCaseScramble(caseMoves: string): string {
-  const inverseMoves = caseMoves
+function getInverseMoves(caseMoves: string): string[] {
+  return caseMoves
     .trim()
     .split(/\s+/)
     .reverse()
@@ -31,49 +31,29 @@ export function generateF2LCaseScramble(caseMoves: string): string {
       if (move.endsWith("2")) return move;
       return move + "'";
     });
+}
 
+export function generateF2LCaseScramble(caseMoves: string): string {
+  const inverseMoves = getInverseMoves(caseMoves);
   const randomIdx = Math.floor(
     Math.random() * cubeCasesOrientationLastLayer.length,
   );
   const randomCase = cubeCasesOrientationLastLayer[randomIdx];
   const lastLayerMoves = randomCase.moves;
-
-  const scramble = [lastLayerMoves, ...inverseMoves].join(" ");
-  return scramble;
+  return [lastLayerMoves, ...inverseMoves].join(" ");
 }
 
 export function generateOLLCaseScramble(caseMoves: string): string {
-  const inverseMoves = caseMoves
-    .trim()
-    .split(/\s+/)
-    .reverse()
-    .map((move) => {
-      if (move.endsWith("'")) return move.replace("'", "");
-      if (move.endsWith("2")) return move;
-      return move + "'";
-    });
-
+  const inverseMoves = getInverseMoves(caseMoves);
   const randomIdx = Math.floor(
     Math.random() * cubeCasesPermutationLastLayer.length,
   );
   const randomCase = cubeCasesPermutationLastLayer[randomIdx];
   const lastLayerMoves = randomCase.moves;
-
-  const scramble = [lastLayerMoves, ...inverseMoves].join(" ");
-  return scramble;
+  return [lastLayerMoves, ...inverseMoves].join(" ");
 }
 
-export function generateOPLLCaseScramble(caseMoves: string): string {
-  const inverseMoves = caseMoves
-    .trim()
-    .split(/\s+/)
-    .reverse()
-    .map((move) => {
-      if (move.endsWith("'")) return move.replace("'", "");
-      if (move.endsWith("2")) return move;
-      return move + "'";
-    });
-
-  const scramble = [...inverseMoves].join(" ");
-  return scramble;
+export function generatePLLCaseScramble(caseMoves: string): string {
+  const inverseMoves = getInverseMoves(caseMoves);
+  return inverseMoves.join(" ");
 }
