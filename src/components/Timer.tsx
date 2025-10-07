@@ -95,19 +95,11 @@ export function Timer() {
   });
 
   return (
-    <div className="min-h-screen select-none touch-none" ref={timerRef}>
+    <div className="min-h-screen select-none touch-none">
       <div className="text-center">
         <PageHeader title={t("title")} />
-        {/* --- Stats display --- */}
-        <div className="mb-8 flex flex-col items-center gap-1">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-base text-gray-700">
-              <span className="font-semibold">{stat.label}:</span> {stat.value}
-            </div>
-          ))}
-        </div>
         {/* Scramble type select and description */}
-        <div className="mb-2 flex flex-col items-center">
+        <div className="mb-4 flex flex-col items-center">
           <label
             htmlFor="scrambleType"
             className="mb-1 text-sm font-medium text-gray-700"
@@ -130,28 +122,40 @@ export function Timer() {
             {SCRAMBLE_DESCRIPTIONS[scrambleType]}
           </div>
         </div>
-        <p className="text-lg font-mono mb-4">
-          {isHydrated ? currentScramble : t("generatingScramble")}
-        </p>
 
-        {/* --- Timer display --- */}
-        <div className="text-6xl font-mono font-bold mb-8">
-          {formatTime(time)}
-        </div>
-        <div className="w-64 h-2 bg-gray-200 rounded-full mx-auto mb-8 overflow-hidden">
-          <div
-            className={`h-full transition-all duration-100 ${
-              holdProgress >= 100 ? "bg-green-500" : "bg-blue-500"
-            }`}
-            style={{ width: `${holdProgress}%` }}
-          />
-        </div>
-        <div className="text-sm text-gray-600 mb-8">
-          {isRunning ? (
-            <p>{isMobile ? t("stopMobile") : t("stopDesktop")}</p>
-          ) : (
-            <p>{isMobile ? t("prepareMobile") : t("prepareDesktop")}</p>
-          )}
+        <div ref={timerRef}>
+          {/* --- Stats display --- */}
+          <div className="mb-8 flex flex-col items-center gap-1">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-base text-gray-700">
+                <span className="font-semibold">{stat.label}:</span>{" "}
+                {stat.value}
+              </div>
+            ))}
+          </div>
+          <p className="text-lg font-mono mb-4">
+            {isHydrated ? currentScramble : t("generatingScramble")}
+          </p>
+
+          {/* --- Timer display --- */}
+          <div className="text-6xl font-mono font-bold mb-8">
+            {formatTime(time)}
+          </div>
+          <div className="w-64 h-2 bg-gray-200 rounded-full mx-auto mb-8 overflow-hidden">
+            <div
+              className={`h-full transition-all duration-100 ${
+                holdProgress >= 100 ? "bg-green-500" : "bg-blue-500"
+              }`}
+              style={{ width: `${holdProgress}%` }}
+            />
+          </div>
+          <div className="text-sm text-gray-600 mb-8">
+            {isRunning ? (
+              <p>{isMobile ? t("stopMobile") : t("stopDesktop")}</p>
+            ) : (
+              <p>{isMobile ? t("prepareMobile") : t("prepareDesktop")}</p>
+            )}
+          </div>
         </div>
       </div>
     </div>
