@@ -7,15 +7,41 @@ import { useIsMobile } from "../hooks/useIsMobile";
 import { useTimer } from "../hooks/useTimer";
 import { useTimerControls } from "../hooks/useTimerControls";
 import { useSolveStats } from "../hooks/useSolveStats";
-import { generateScramble } from "../utils/scrambleUtils";
+import { scramble } from "cube-solver";
 
 import { useTranslations } from "next-intl";
+
+type Scrambler =
+  | "3x3"
+  | "2gll"
+  | "cmll"
+  | "corners"
+  | "edges"
+  | "lse"
+  | "lsll"
+  | "pll"
+  | "zbll"
+  | "zzls";
+
+const SCRAMBLE_DESCRIPTIONS: Record<Scrambler, string> = {
+  "3x3": "Standard 3x3 scramble for general practice.",
+  "2gll": "2GLL: Last layer corners oriented, practice corner permutation.",
+  cmll: "CMLL: Corners of the last layer, used in Roux method.",
+  corners: "Corners: Scramble for practicing only corner pieces.",
+  edges: "Edges: Scramble for practicing only edge pieces.",
+  lse: "LSE: Last six edges, Roux method.",
+  lsll: "LSLL: Last slot and last layer.",
+  pll: "PLL: Permute last layer pieces.",
+  zbll: "ZBLL: All last layer cases with oriented edges.",
+  zzls: "ZZLS: ZZ method last slot.",
+};
 
 export function Timer() {
   const isMobile = useIsMobile();
   const t = useTranslations("timer");
   const timerRef = useRef<HTMLDivElement>(null);
   const [currentScramble, setCurrentScramble] = useState<string>("");
+  const [scrambleType, setScrambleType] = useState<Scrambler>("3x3");
   const [isHydrated, setIsHydrated] = useState(false);
 
   const {
@@ -36,15 +62,23 @@ export function Timer() {
   // Generate initial scramble only on client side after hydration
   useEffect(() => {
     setIsHydrated(true);
-    setCurrentScramble(generateScramble());
-  }, []);
+    setCurrentScramble(scramble(scrambleType));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scrambleType]);
+
+  // Regenerate scramble when scrambleType changes
+  useEffect(() => {
+    if (isHydrated) {
+      setCurrentScramble(scramble(scrambleType));
+    }
+  }, [scrambleType, isHydrated]);
 
   // Detect when timer stops and save the time, also generate new scramble
   useEffect(() => {
     if (prevIsRunning && !isRunning && time > 0) {
       addSolveTime(time, currentScramble);
       // Generate new scramble when timer stops
-      setCurrentScramble(generateScramble());
+      setCurrentScramble(scramble(scrambleType));
     }
     setPrevIsRunning(isRunning);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -71,6 +105,30 @@ export function Timer() {
               <span className="font-semibold">{stat.label}:</span> {stat.value}
             </div>
           ))}
+        </div>
+        {/* Scramble type select and description */}
+        <div className="mb-2 flex flex-col items-center">
+          <label
+            htmlFor="scrambleType"
+            className="mb-1 text-sm font-medium text-gray-700"
+          >
+            Scramble Type:
+          </label>
+          <select
+            id="scrambleType"
+            value={scrambleType}
+            onChange={(e) => setScrambleType(e.target.value as Scrambler)}
+            className="mb-2 px-2 py-1 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            {Object.keys(SCRAMBLE_DESCRIPTIONS).map((type) => (
+              <option key={type} value={type}>
+                {type.toUpperCase()}
+              </option>
+            ))}
+          </select>
+          <div className="text-xs text-gray-500 text-center max-w-md">
+            {SCRAMBLE_DESCRIPTIONS[scrambleType]}
+          </div>
         </div>
         <p className="text-lg font-mono mb-4">
           {isHydrated ? currentScramble : t("generatingScramble")}
