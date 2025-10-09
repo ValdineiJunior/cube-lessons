@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { MIN_HOLD_DURATION_MS } from "../constants/time";
 
 interface UseTimerControlsProps {
-  timerRef: React.RefObject<HTMLDivElement>;
+  timerRef: React.RefObject<HTMLDivElement | null>;
   isRunning: boolean;
   holdStartTime: number | null;
   startTimer: () => void;

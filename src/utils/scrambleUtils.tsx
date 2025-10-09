@@ -1,20 +1,10 @@
-import Cube from "cubejs";
+import { scramble } from "cube-solver";
 import { cubeCasesOrientationLastLayer } from "../data/cubeCasesOrientationLastLayer";
 import { cubeCasesPermutationLastLayer } from "@/data/cubeCasesPermutationLastLayer";
 
-let solverInitialized = false;
-function initCubeSolver() {
-  if (!solverInitialized) {
-    Cube.initSolver();
-    solverInitialized = true;
-  }
-}
-
 export function generateScramble(): string {
   try {
-    initCubeSolver();
-    const scramble = Cube.scramble();
-    return scramble;
+    return scramble("3x3");
   } catch (error) {
     console.error("Error generating scramble:", error);
     return "R2 U2 F2 U' F2 L2 D' B2 R2 D' R2 U' L' U L R F' D F2 U2 R' U'";
