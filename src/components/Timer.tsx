@@ -143,10 +143,13 @@ export function Timer() {
           </div>
           <div className="w-64 h-2 bg-gray-200 rounded-full mx-auto mb-8 overflow-hidden">
             <div
-              className={`h-full transition-all duration-100 ${
+              className={`h-full transition-none ${
                 holdProgress >= 100 ? "bg-green-500" : "bg-blue-500"
               }`}
-              style={{ width: `${holdProgress}%` }}
+              style={{
+                width: `${holdProgress}%`,
+                willChange: "width",
+              }}
             />
           </div>
           <div className="text-sm text-gray-600 mb-8">
