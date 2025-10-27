@@ -95,9 +95,8 @@ export function Timer() {
   });
 
   return (
-    <div className="min-h-screen select-none touch-none">
+    <div className="select-none touch-none">
       <div className="text-center">
-        <PageHeader title={t("title")} />
         {/* Scramble type select and description */}
         <div className="mb-4 flex flex-col items-center">
           <label
