@@ -71,30 +71,43 @@ export function useSolveStats() {
     return sum / n;
   }
 
-  const stats = [
+  // Define milestone averages: 1-5, 12, 50, 100, then every 100 from 200 onwards
+  function getAverageMilestones() {
+    const milestones: number[] = [1, 2, 3, 4, 5, 12, 50, 100];
+    const solveCount = solveTimes.length;
+
+    // Add increments of 100 from 200 onwards, up to the nearest 100 above current solve count
+    const maxMilestone = Math.ceil(solveCount / 100) * 100;
+    for (let i = 200; i <= maxMilestone; i += 100) {
+      milestones.push(i);
+    }
+
+    // Only include milestones that are <= solveCount
+    return milestones.filter((milestone) => milestone <= solveCount);
+  }
+
+  const baseStats = [
     { label: "Best time", value: best !== null ? format(best) : "N/A" },
     { label: "Worst time", value: worst !== null ? format(worst) : "N/A" },
-    {
-      label: "Average of 5",
-      value: averageOf(5) ? format(averageOf(5)!) : "N/A",
-    },
-    {
-      label: "Average of 12",
-      value: averageOf(12) ? format(averageOf(12)!) : "N/A",
-    },
-    {
-      label: "Average of 50",
-      value: averageOf(50) ? format(averageOf(50)!) : "N/A",
-    },
-    {
-      label: "Average of 100",
-      value: averageOf(100) ? format(averageOf(100)!) : "N/A",
-    },
-    {
-      label: "Average of 1000",
-      value: averageOf(1000) ? format(averageOf(1000)!) : "N/A",
-    },
     { label: "Number of solutions", value: solveTimes.length },
+  ];
+
+  const averageStats = getAverageMilestones()
+    .map((milestone) => ({
+      label: `Average of ${milestone}`,
+      value: averageOf(milestone) ? format(averageOf(milestone)!) : "N/A",
+    }))
+    .filter((stat) => stat.value !== "N/A");
+
+  // Only include the last (most recent) average
+  const lastAverage =
+    averageStats.length > 0 ? averageStats[averageStats.length - 1] : null;
+
+  const stats = [
+    baseStats[0],
+    baseStats[1],
+    ...(lastAverage ? [lastAverage] : []),
+    baseStats[2],
   ];
 
   return {
