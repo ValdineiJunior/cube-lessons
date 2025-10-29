@@ -67,23 +67,25 @@ export function useSolveStats() {
   function averageOf(n: number) {
     if (times.length < n) return null;
     const lastN = times.slice(-n);
-    const sum = lastN.reduce((a, b) => a + b, 0);
-    return sum / n;
-  }
 
-  // Define milestone averages: 1-5, 12, 50, 100, then every 100 from 200 onwards
-  function getAverageMilestones() {
-    const milestones: number[] = [1, 2, 3, 4, 5, 12, 50, 100];
-    const solveCount = solveTimes.length;
+    // Special trimmed averages for cube timing
+    let trimmed: number[] = [...lastN].sort((a, b) => a - b);
 
-    // Add increments of 100 from 200 onwards, up to the nearest 100 above current solve count
-    const maxMilestone = Math.ceil(solveCount / 100) * 100;
-    for (let i = 200; i <= maxMilestone; i += 100) {
-      milestones.push(i);
+    if (n === 5) {
+      // Drop lowest 1 and highest 1 -> average remaining 3
+      trimmed = trimmed.slice(1, trimmed.length - 1);
+    } else if (n === 12) {
+      // Drop lowest 1 and highest 1 -> average remaining 10
+      trimmed = trimmed.slice(1, trimmed.length - 1);
+    } else if (n >= 100) {
+      // Drop 5% lowest and 5% highest
+      const dropEachSide = Math.floor(n * 0.05);
+      trimmed = trimmed.slice(dropEachSide, trimmed.length - dropEachSide);
     }
 
-    // Only include milestones that are <= solveCount
-    return milestones.filter((milestone) => milestone <= solveCount);
+    if (trimmed.length === 0) return null;
+    const sum = trimmed.reduce((a, b) => a + b, 0);
+    return sum / trimmed.length;
   }
 
   const baseStats = [
@@ -92,21 +94,19 @@ export function useSolveStats() {
     { label: "Number of solutions", value: solveTimes.length },
   ];
 
-  const averageStats = getAverageMilestones()
-    .map((milestone) => ({
-      label: `Average of ${milestone}`,
-      value: averageOf(milestone) ? format(averageOf(milestone)!) : "N/A",
-    }))
-    .filter((stat) => stat.value !== "N/A");
-
-  // Only include the last (most recent) average
-  const lastAverage =
-    averageStats.length > 0 ? averageStats[averageStats.length - 1] : null;
+  // Include specific averages: Ao5, Ao12, Ao100
+  const ao5 = averageOf(5);
+  const ao12 = averageOf(12);
+  const ao100 = averageOf(100);
 
   const stats = [
     baseStats[0],
     baseStats[1],
-    ...(lastAverage ? [lastAverage] : []),
+    ...(ao5 !== null ? [{ label: "Average of 5", value: format(ao5) }] : []),
+    ...(ao12 !== null ? [{ label: "Average of 12", value: format(ao12) }] : []),
+    ...(ao100 !== null
+      ? [{ label: "Average of 100", value: format(ao100) }]
+      : []),
     baseStats[2],
   ];
 

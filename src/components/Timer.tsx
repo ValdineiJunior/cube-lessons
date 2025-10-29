@@ -124,23 +124,23 @@ export function Timer() {
 
         <div ref={timerRef}>
           {/* --- Stats display --- */}
-          <div className="mb-8 flex flex-col items-center gap-1">
+          <div className="mb-4 flex flex-col items-center gap-1">
             {stats.map((stat) => (
               <div key={stat.label} className="text-base text-gray-700">
-                <span className="font-semibold">{stat.label}:</span>{" "}
+                <span className="text-sm font-semibold">{stat.label}:</span>{" "}
                 {stat.value}
               </div>
             ))}
           </div>
-          <p className="text-lg font-mono mb-4">
+          <p className="font-mono mb-4">
             {isHydrated ? currentScramble : t("generatingScramble")}
           </p>
 
           {/* --- Timer display --- */}
-          <div className="text-6xl font-mono font-bold mb-8">
+          <div className="text-5xl font-mono font-bold mb-4">
             {formatTime(time)}
           </div>
-          <div className="w-64 h-2 bg-gray-200 rounded-full mx-auto mb-8 overflow-hidden">
+          <div className="w-64 h-2 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
             <div
               className={`h-full transition-none ${
                 holdProgress >= 100 ? "bg-green-500" : "bg-blue-500"
@@ -151,7 +151,7 @@ export function Timer() {
               }}
             />
           </div>
-          <div className="text-sm text-gray-600 mb-8">
+          <div className="text-xs text-gray-600 mb-4">
             {isRunning ? (
               <p>{isMobile ? t("stopMobile") : t("stopDesktop")}</p>
             ) : (
