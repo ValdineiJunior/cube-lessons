@@ -8,7 +8,7 @@ interface PageHeaderProps {
 
 function PageHeader({ title, description, className }: PageHeaderProps) {
   return (
-    <div className={`text-center mb-16 ${className || ""}`}>
+    <div className={className || "text-center mb-16"}>
       <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-8">
         {title}
       </h1>
