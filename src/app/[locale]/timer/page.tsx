@@ -12,7 +12,7 @@ export default async function TimerPage({ params }: Props) {
 
   const t = await getTranslations({ locale, namespace: "timer" });
   return (
-    <div>
+    <div className="flex flex-col h-screen overflow-hidden">
       <PageHeader className="text-center mb-0" title={t("title")} />
       <Timer />
     </div>
