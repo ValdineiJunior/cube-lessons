@@ -95,8 +95,8 @@ export function Timer() {
   });
 
   return (
-    <div className="select-none touch-none">
-      <div className="text-center">
+    <div className="select-none touch-none flex-1 flex flex-col min-h-0">
+      <div className="text-center flex flex-col flex-1 min-h-0">
         {/* Scramble type select and description */}
         <div className="mb-4 flex flex-col items-center">
           <label
@@ -122,7 +122,7 @@ export function Timer() {
           </div>
         </div>
 
-        <div ref={timerRef}>
+        <div ref={timerRef} className="flex-1">
           {/* --- Stats display --- */}
           <div className="mb-4 flex flex-col items-center gap-1">
             {stats.map((stat) => (
