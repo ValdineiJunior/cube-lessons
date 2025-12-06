@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { formatTime } from "../utils/timeUtils";
 
 const STORAGE_KEY = "cube-solve-times";
@@ -8,42 +8,45 @@ interface SolveTime {
   scramble: string;
 }
 
-export function useSolveStats() {
-  const [solveTimes, setSolveTimes] = useState<SolveTime[]>([]);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  // Load from localStorage on client only
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        try {
-          const parsed = JSON.parse(stored);
-          if (
-            Array.isArray(parsed) &&
-            parsed.every(
-              (item: any) =>
-                item &&
-                typeof item.time === "number" &&
-                typeof item.scramble === "string",
-            )
-          ) {
-            setSolveTimes(parsed);
-          }
-        } catch (e) {
-          // Ignore parse errors
-        }
+function getInitialSolveTimes(): SolveTime[] {
+  if (typeof window === "undefined") return [];
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) {
+    try {
+      const parsed = JSON.parse(stored);
+      if (
+        Array.isArray(parsed) &&
+        parsed.every(
+          (item: unknown) =>
+            item &&
+            typeof item === "object" &&
+            "time" in item &&
+            "scramble" in item &&
+            typeof (item as SolveTime).time === "number" &&
+            typeof (item as SolveTime).scramble === "string",
+        )
+      ) {
+        return parsed;
       }
-      setIsLoaded(true);
+    } catch {
+      // Ignore parse errors
     }
-  }, []);
+  }
+  return [];
+}
 
-  // Save to localStorage whenever solveTimes changes (after initial load)
+export function useSolveStats() {
+  const [solveTimes, setSolveTimes] = useState<SolveTime[]>(getInitialSolveTimes);
+  const isFirstRender = useRef(true);
+
+  // Save to localStorage whenever solveTimes changes (skip first render)
   useEffect(() => {
-    if (isLoaded) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(solveTimes));
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
     }
-  }, [solveTimes, isLoaded]);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(solveTimes));
+  }, [solveTimes]);
 
   // Add a new solve time with scramble
   const addSolveTime = useCallback((time: number, scramble: string) => {
