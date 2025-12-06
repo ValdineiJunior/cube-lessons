@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useCallback, useSyncExternalStore } from "react";
 import { formatTime } from "../utils/timeUtils";
 
 const STORAGE_KEY = "cube-solve-times";
@@ -8,55 +8,88 @@ interface SolveTime {
   scramble: string;
 }
 
-function getInitialSolveTimes(): SolveTime[] {
-  if (typeof window === "undefined") return [];
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored) {
-    try {
-      const parsed = JSON.parse(stored);
-      if (
-        Array.isArray(parsed) &&
-        parsed.every(
-          (item: unknown) =>
-            item &&
-            typeof item === "object" &&
-            "time" in item &&
-            "scramble" in item &&
-            typeof (item as SolveTime).time === "number" &&
-            typeof (item as SolveTime).scramble === "string",
-        )
-      ) {
-        return parsed;
-      }
-    } catch {
-      // Ignore parse errors
+function parseSolveTimes(stored: string | null): SolveTime[] {
+  if (!stored) return [];
+  try {
+    const parsed = JSON.parse(stored);
+    if (
+      Array.isArray(parsed) &&
+      parsed.every(
+        (item: unknown) =>
+          item &&
+          typeof item === "object" &&
+          "time" in item &&
+          "scramble" in item &&
+          typeof (item as SolveTime).time === "number" &&
+          typeof (item as SolveTime).scramble === "string",
+      )
+    ) {
+      return parsed;
     }
+  } catch {
+    // Ignore parse errors
   }
   return [];
 }
 
-export function useSolveStats() {
-  const [solveTimes, setSolveTimes] =
-    useState<SolveTime[]>(getInitialSolveTimes);
-  const isFirstRender = useRef(true);
+// Store for solve times using useSyncExternalStore pattern
+let solveTimesCache: SolveTime[] = [];
+let listeners: Array<() => void> = [];
 
-  // Save to localStorage whenever solveTimes changes (skip first render)
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(solveTimes));
-  }, [solveTimes]);
+function emitChange() {
+  for (const listener of listeners) {
+    listener();
+  }
+}
+
+function subscribe(listener: () => void) {
+  listeners.push(listener);
+  return () => {
+    listeners = listeners.filter((l) => l !== listener);
+  };
+}
+
+function getSnapshot(): SolveTime[] {
+  return solveTimesCache;
+}
+
+function getServerSnapshot(): SolveTime[] {
+  return [];
+}
+
+function initializeFromStorage() {
+  if (typeof window !== "undefined" && solveTimesCache.length === 0) {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    solveTimesCache = parseSolveTimes(stored);
+  }
+}
+
+function updateSolveTimes(newTimes: SolveTime[]) {
+  solveTimesCache = newTimes;
+  if (typeof window !== "undefined") {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newTimes));
+  }
+  emitChange();
+}
+
+export function useSolveStats() {
+  // Initialize from storage on first client render
+  initializeFromStorage();
+
+  const solveTimes = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshot,
+  );
 
   // Add a new solve time with scramble
   const addSolveTime = useCallback((time: number, scramble: string) => {
-    setSolveTimes((prev) => [...prev, { time, scramble }]);
+    updateSolveTimes([...solveTimesCache, { time, scramble }]);
   }, []);
 
   // Delete a solve time by index
   const deleteSolveTime = useCallback((index: number) => {
-    setSolveTimes((prev) => prev.filter((_, i) => i !== index));
+    updateSolveTimes(solveTimesCache.filter((_, i) => i !== index));
   }, []);
 
   // Format helper
