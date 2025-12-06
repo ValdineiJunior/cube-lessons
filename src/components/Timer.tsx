@@ -63,7 +63,6 @@ export function Timer() {
   useEffect(() => {
     setIsHydrated(true);
     setCurrentScramble(scramble(scrambleType));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrambleType]);
 
   // Regenerate scramble when scrambleType changes
