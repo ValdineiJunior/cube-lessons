@@ -36,7 +36,8 @@ function getInitialSolveTimes(): SolveTime[] {
 }
 
 export function useSolveStats() {
-  const [solveTimes, setSolveTimes] = useState<SolveTime[]>(getInitialSolveTimes);
+  const [solveTimes, setSolveTimes] =
+    useState<SolveTime[]>(getInitialSolveTimes);
   const isFirstRender = useRef(true);
 
   // Save to localStorage whenever solveTimes changes (skip first render)
