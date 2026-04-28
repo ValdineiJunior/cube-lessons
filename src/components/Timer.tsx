@@ -145,9 +145,7 @@ export function Timer() {
               </div>
             ))}
           </div>
-          <p className="font-mono mb-4">
-            {currentScramble}
-          </p>
+          <p className="font-mono mb-4">{currentScramble}</p>
 
           {/* --- Timer display --- */}
           <div className="text-5xl font-mono font-bold mb-4">
