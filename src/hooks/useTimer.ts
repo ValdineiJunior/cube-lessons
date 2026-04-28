@@ -84,9 +84,13 @@ export function useTimer(): UseTimerReturn {
   }, [holdStartTime, hasReset, resetTimer]);
 
   useEffect(() => {
+    if (!holdStartTime || hasReset) {
+      return;
+    }
+
     const intervalId = setInterval(checkHoldTime, 10);
     return () => clearInterval(intervalId);
-  }, [checkHoldTime]);
+  }, [checkHoldTime, holdStartTime, hasReset]);
 
   return {
     time,
