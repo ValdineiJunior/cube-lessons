@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/header";
 import "../globals.css";
@@ -144,6 +145,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
             <main className="container mx-auto px-4 py-8">{children}</main>
           </div>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
