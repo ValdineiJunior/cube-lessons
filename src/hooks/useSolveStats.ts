@@ -8,8 +8,6 @@ interface SolveTime {
   scramble: string;
 }
 
-const EMPTY_SOLVE_TIMES: SolveTime[] = [];
-
 function parseSolveTimes(stored: string | null): SolveTime[] {
   if (!stored) return [];
   try {
@@ -56,7 +54,7 @@ function getSnapshot(): SolveTime[] {
 }
 
 function getServerSnapshot(): SolveTime[] {
-  return EMPTY_SOLVE_TIMES;
+  return [];
 }
 
 function initializeFromStorage() {
