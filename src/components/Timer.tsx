@@ -1,6 +1,12 @@
 "use client";
 
-import { useRef, useState, useMemo, useCallback, useSyncExternalStore } from "react";
+import {
+  useRef,
+  useState,
+  useMemo,
+  useCallback,
+  useSyncExternalStore,
+} from "react";
 import { formatTime } from "../utils/timeUtils";
 import PageHeader from "./layout/PageHeader";
 import { useIsMobile } from "../hooks/useIsMobile";
