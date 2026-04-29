@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState, useMemo, useCallback, useSyncExternalStore } from "react";
 import { formatTime } from "../utils/timeUtils";
 import PageHeader from "./layout/PageHeader";
 import { useIsMobile } from "../hooks/useIsMobile";
@@ -40,9 +40,13 @@ export function Timer() {
   const isMobile = useIsMobile();
   const t = useTranslations("timer");
   const timerRef = useRef<HTMLDivElement>(null);
-  const [currentScramble, setCurrentScramble] = useState<string>("");
   const [scrambleType, setScrambleType] = useState<Scrambler>("3x3");
-  const [isHydrated, setIsHydrated] = useState(false);
+  const [scrambleRevision, setScrambleRevision] = useState(0);
+  const isClient = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   const {
     time,
@@ -57,38 +61,31 @@ export function Timer() {
 
   // --- Use custom hook for solve stats ---
   const { addSolveTime, stats } = useSolveStats();
-  const [prevIsRunning, setPrevIsRunning] = useState(false);
 
-  // Generate initial scramble only on client side after hydration
-  useEffect(() => {
-    setIsHydrated(true);
-    setCurrentScramble(scramble(scrambleType));
-  }, [scrambleType]);
+  const scrambleDeps = useMemo(
+    () => ({ type: scrambleType, revision: scrambleRevision }),
+    [scrambleType, scrambleRevision],
+  );
 
-  // Regenerate scramble when scrambleType changes
-  useEffect(() => {
-    if (isHydrated) {
-      setCurrentScramble(scramble(scrambleType));
-    }
-  }, [scrambleType, isHydrated]);
+  const currentScramble = useMemo(() => {
+    if (!isClient) return "";
+    return scramble(scrambleDeps.type);
+  }, [isClient, scrambleDeps]);
 
-  // Detect when timer stops and save the time, also generate new scramble
-  useEffect(() => {
-    if (prevIsRunning && !isRunning && time > 0) {
+  const handleStopTimer = useCallback(() => {
+    if (isRunning && time > 0) {
       addSolveTime(time, currentScramble);
-      // Generate new scramble when timer stops
-      setCurrentScramble(scramble(scrambleType));
+      setScrambleRevision((r) => r + 1);
     }
-    setPrevIsRunning(isRunning);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isRunning]);
+    stopTimer();
+  }, [isRunning, time, currentScramble, addSolveTime, stopTimer]);
 
   useTimerControls({
     timerRef,
     isRunning,
     holdStartTime,
     startTimer,
-    stopTimer,
+    stopTimer: handleStopTimer,
     startHold,
     endHold,
   });
@@ -132,7 +129,7 @@ export function Timer() {
             ))}
           </div>
           <p className="font-mono mb-4">
-            {isHydrated ? currentScramble : t("generatingScramble")}
+            {isClient ? currentScramble : t("generatingScramble")}
           </p>
 
           {/* --- Timer display --- */}
