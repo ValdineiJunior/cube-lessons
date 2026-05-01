@@ -77,16 +77,12 @@ export async function generateMetadata(props: Omit<LayoutProps, "children">) {
     },
     icons: {
       icon: [
-        { url: "/favicon.ico", sizes: "any" },
         { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
         { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       ],
-      shortcut: "/favicon.ico",
+      shortcut: "/favicon-32x32.png",
       apple: [
         { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-      ],
-      other: [
-        { rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#000000" },
       ],
     },
     manifest: "/site.webmanifest",
@@ -129,6 +125,24 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         <meta name="application-name" content="Cube Lessons" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#ffffff" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="shortcut icon" href="/favicon-32x32.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
