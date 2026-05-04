@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 .left {
   transform: rotate(90deg) skewX(-30deg) scaleY(0.864);
