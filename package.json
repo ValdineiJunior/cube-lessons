@@ -20,11 +20,11 @@
     "clsx": "^2.1.1",
     "cube-solver": "^2.4.1",
     "lucide-react": "^1.12.0",
-    "next": "^16.2.4",
-    "next-intl": "^4.11.0",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "tailwind-merge": "^3.5.0",
+    "next": "^16.2.6",
+    "next-intl": "^4.11.2",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
