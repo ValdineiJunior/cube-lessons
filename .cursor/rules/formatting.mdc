@@ -1,0 +1,31 @@
+---
+description: Prettier formatting standards — run before finishing file changes
+alwaysApply: true
+---
+
+# Formatting (Prettier)
+
+CI runs `npm run format:check`. All created or edited files must pass before you finish.
+
+## Before finishing
+
+1. Run `npm run format` on changed paths (or the whole repo if many files changed).
+2. Run `npm run format:check` and fix any remaining warnings.
+3. Do not hand-format — use Prettier so output matches `.prettierrc.json`.
+
+## Common agent mistakes (Markdown / JSON)
+
+- **Frontmatter**: No blank line between closing `---` and the first heading.
+- **Lists after labels**: Add a blank line after `**Label**:` (or similar) before a bullet/numbered list.
+- **Nested blocks**: Add a blank line before fenced code blocks inside list items.
+- **JSON**: 2-space indent, trailing newline at EOF, no trailing commas (Prettier defaults).
+- **Line endings**: Let Prettier normalize; do not mix manual CRLF/LF edits.
+
+## TypeScript / TSX
+
+- Tailwind classes in `className` are sorted by `prettier-plugin-tailwindcss` — run format after editing class strings.
+- Match existing quote style in the file; Prettier will normalize on format.
+
+## Scope
+
+Prettier checks the whole repo (see `.prettierignore` if present). New files under `.cursor/`, `.specify/`, `.github/`, and `specs/` are included — not just `src/`.
