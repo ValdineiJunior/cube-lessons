@@ -1,6 +1,7 @@
 import type { UserColorPreference } from "@/types/colorTheme";
 import { PRESET_ORDER } from "@/data/cubeColorPresets";
 import type { ColorPresetId } from "@/types/colorTheme";
+import type { CubeColor } from "@/types/types";
 import { isValidHex } from "@/utils/cubeColorStyles";
 
 export const COLOR_PREFERENCE_KEY = "cube-lessons:color-preference";
@@ -47,6 +48,55 @@ function sanitizePreference(raw: unknown): UserColorPreference {
   return DEFAULT_PREFERENCE;
 }
 
+function preferencesEqual(
+  a: UserColorPreference,
+  b: UserColorPreference,
+): boolean {
+  if (a.presetId !== b.presetId) return false;
+  if (a.presetId !== "custom") return true;
+
+  const aOverrides = a.paletteOverrides ?? {};
+  const bOverrides = b.paletteOverrides ?? {};
+  const aKeys = Object.keys(aOverrides) as CubeColor[];
+  const bKeys = Object.keys(bOverrides) as CubeColor[];
+
+  if (aKeys.length !== bKeys.length) return false;
+  return aKeys.every((key) => aOverrides[key] === bOverrides[key]);
+}
+
+let cachedSnapshot: UserColorPreference = DEFAULT_PREFERENCE;
+let hydrated = false;
+
+function commitSnapshot(next: UserColorPreference): UserColorPreference {
+  if (preferencesEqual(next, cachedSnapshot)) {
+    return cachedSnapshot;
+  }
+
+  if (next.presetId !== "custom") {
+    cachedSnapshot = { version: 1, presetId: next.presetId };
+  } else {
+    cachedSnapshot = {
+      version: 1,
+      presetId: "custom",
+      paletteOverrides: { ...(next.paletteOverrides ?? {}) },
+    };
+  }
+
+  return cachedSnapshot;
+}
+
+function hydrateFromStorage() {
+  if (typeof window === "undefined" || hydrated) return;
+  commitSnapshot(loadPreference());
+  hydrated = true;
+}
+
+function reloadFromStorage() {
+  if (typeof window === "undefined") return;
+  commitSnapshot(loadPreference());
+  hydrated = true;
+}
+
 export function loadPreference(): UserColorPreference {
   if (typeof window === "undefined") return DEFAULT_PREFERENCE;
   try {
@@ -58,11 +108,58 @@ export function loadPreference(): UserColorPreference {
   }
 }
 
+type PreferenceListener = () => void;
+const preferenceListeners = new Set<PreferenceListener>();
+
+function notifyPreferenceListeners() {
+  preferenceListeners.forEach((listener) => listener());
+}
+
+export function subscribeColorPreference(
+  listener: PreferenceListener,
+): () => void {
+  preferenceListeners.add(listener);
+
+  const onStorage = (event: StorageEvent) => {
+    if (event.key === COLOR_PREFERENCE_KEY || event.key === null) {
+      reloadFromStorage();
+      listener();
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("storage", onStorage);
+  }
+
+  return () => {
+    preferenceListeners.delete(listener);
+    if (typeof window !== "undefined") {
+      window.removeEventListener("storage", onStorage);
+    }
+  };
+}
+
+export function getColorPreferenceSnapshot(): UserColorPreference {
+  hydrateFromStorage();
+  return cachedSnapshot;
+}
+
+export function getColorPreferenceServerSnapshot(): UserColorPreference {
+  return DEFAULT_PREFERENCE;
+}
+
 export function savePreference(pref: UserColorPreference): void {
+  commitSnapshot(pref);
+  notifyPreferenceListeners();
+
   if (typeof window === "undefined") return;
   try {
-    localStorage.setItem(COLOR_PREFERENCE_KEY, JSON.stringify(pref));
+    localStorage.setItem(COLOR_PREFERENCE_KEY, JSON.stringify(cachedSnapshot));
   } catch {
-    // Quota exceeded or private mode — session-only state
+    // Quota exceeded or private mode — cachedSnapshot keeps session state
   }
+}
+
+export function getCachedColorPreference(): UserColorPreference {
+  return cachedSnapshot;
 }

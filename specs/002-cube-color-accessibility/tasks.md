@@ -24,9 +24,9 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 **Purpose**: Install dependencies and shared types before implementation
 
-- [X] T001 Add `react-colorful` npm dependency and run install in `package.json`
-- [X] T002 [P] Add `ColorPresetId`, `CubeColorStop`, `CubeColorPalette`, `ColorPreset`, and `UserColorPreference` types in `src/types/colorTheme.ts`
-- [X] T003 [P] Add `--cube-red` through `--cube-gray` CSS custom property placeholders in `src/app/globals.css`
+- [x] T001 Add `react-colorful` npm dependency and run install in `package.json`
+- [x] T002 [P] Add `ColorPresetId`, `CubeColorStop`, `CubeColorPalette`, `ColorPreset`, and `UserColorPreference` types in `src/types/colorTheme.ts`
+- [x] T003 [P] Add `--cube-red` through `--cube-gray` CSS custom property placeholders in `src/app/globals.css`
 
 ---
 
@@ -36,11 +36,11 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [X] T004 Implement six accessibility presets (`default`, `reduced-contrast`, `protanopia`, `deuteranopia`, `tritanopia`, `achromatopsia`) with WCA face map in `src/data/cubeColorPresets.ts` per `specs/002-cube-color-accessibility/contracts/color-presets.md`
-- [X] T005 [P] Implement `mergePalette`, `resolveStickerStyle`, `resolveThemeState`, and `isValidHex` in `src/utils/cubeColorStyles.ts` per `specs/002-cube-color-accessibility/contracts/palette-resolution.md`
-- [X] T006 [P] Implement `loadPreference` and `savePreference` for key `cube-lessons:color-preference` in `src/utils/colorPreference.ts`
-- [X] T007 Implement `CubeThemeProvider` and `useCubeTheme` hook in `src/providers/CubeThemeProvider.tsx` per `specs/002-cube-color-accessibility/contracts/theme-provider.md`
-- [X] T008 Mount `CubeThemeProvider` inside `NextIntlClientProvider` in `src/app/[locale]/layout.tsx`
+- [x] T004 Implement six accessibility presets (`default`, `reduced-contrast`, `protanopia`, `deuteranopia`, `tritanopia`, `achromatopsia`) with WCA face map in `src/data/cubeColorPresets.ts` per `specs/002-cube-color-accessibility/contracts/color-presets.md`
+- [x] T005 [P] Implement `mergePalette`, `resolveStickerStyle`, `resolveThemeState`, and `isValidHex` in `src/utils/cubeColorStyles.ts` per `specs/002-cube-color-accessibility/contracts/palette-resolution.md`
+- [x] T006 [P] Implement `loadPreference` and `savePreference` for key `cube-lessons:color-preference` in `src/utils/colorPreference.ts`
+- [x] T007 Implement `CubeThemeProvider` and `useCubeTheme` hook in `src/providers/CubeThemeProvider.tsx` per `specs/002-cube-color-accessibility/contracts/theme-provider.md`
+- [x] T008 Mount `CubeThemeProvider` inside `NextIntlClientProvider` in `src/app/[locale]/layout.tsx`
 
 **Checkpoint**: Provider active with default preset; palette resolution callable
 
@@ -54,14 +54,14 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 ### Implementation for User Story 1
 
-- [X] T009 [P] [US1] Add `cubeTheme` namespace (preset labels, control aria-labels, reset) in `messages/en.json`
-- [X] T010 [P] [US1] Add `cubeTheme` namespace Portuguese translations in `messages/pt.json`
-- [X] T011 [US1] Create preset selector UI (six radio options + swatch preview) in `src/components/layout/ColorThemeControl.tsx`
-- [X] T012 [US1] Mount `ColorThemeControl` next to language switcher on desktop in `src/components/layout/header.tsx`
-- [X] T013 [US1] Refactor sticker rendering to use `resolveStickerStyle` via `useCubeTheme` in `src/components/CubeFace3D.tsx`
-- [X] T014 [US1] Refactor fill and border rendering to use `resolveStickerStyle` via `useCubeTheme` in `src/components/CubeFace2D.tsx`
-- [X] T015 [US1] Pass active `theme` from `useCubeTheme` into `faceletsToCube3DColors` in `src/components/ScrambleCubePreview.tsx`
-- [X] T016 [P] [US1] Add optional palette-aware helpers or re-exports in `src/utils/cubeTheme.ts` if needed by renderers
+- [x] T009 [P] [US1] Add `cubeTheme` namespace (preset labels, control aria-labels, reset) in `messages/en.json`
+- [x] T010 [P] [US1] Add `cubeTheme` namespace Portuguese translations in `messages/pt.json`
+- [x] T011 [US1] Create preset selector UI (six radio options + swatch preview) in `src/components/layout/ColorThemeControl.tsx`
+- [x] T012 [US1] Mount `ColorThemeControl` next to language switcher on desktop in `src/components/layout/header.tsx`
+- [x] T013 [US1] Refactor sticker rendering to use `resolveStickerStyle` via `useCubeTheme` in `src/components/CubeFace3D.tsx`
+- [x] T014 [US1] Refactor fill and border rendering to use `resolveStickerStyle` via `useCubeTheme` in `src/components/CubeFace2D.tsx`
+- [x] T015 [US1] Pass active `theme` from `useCubeTheme` into `faceletsToCube3DColors` in `src/components/ScrambleCubePreview.tsx`
+- [x] T016 [P] [US1] Add optional palette-aware helpers or re-exports in `src/utils/cubeTheme.ts` if needed by renderers
 
 **Checkpoint**: Header preset picker works; cubes repaint on theme change across lesson and timer preview paths
 
@@ -75,12 +75,12 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 ### Implementation for User Story 2
 
-- [X] T017 [US2] Tune protanopia role hex values for red–green separability in `src/data/cubeColorPresets.ts`
-- [X] T018 [P] [US2] Tune deuteranopia role hex values in `src/data/cubeColorPresets.ts`
-- [X] T019 [P] [US2] Tune tritanopia role hex values for blue–yellow separability in `src/data/cubeColorPresets.ts`
-- [X] T020 [P] [US2] Tune reduced-contrast palette (lower saturation, separable adjacents) in `src/data/cubeColorPresets.ts`
-- [X] T021 [US2] Add distinct CSS hatch `pattern` per role for achromatopsia preset in `src/data/cubeColorPresets.ts`
-- [X] T022 [US2] Layer `backgroundImage` from palette patterns in `resolveStickerStyle` in `src/utils/cubeColorStyles.ts`
+- [x] T017 [US2] Tune protanopia role hex values for red–green separability in `src/data/cubeColorPresets.ts`
+- [x] T018 [P] [US2] Tune deuteranopia role hex values in `src/data/cubeColorPresets.ts`
+- [x] T019 [P] [US2] Tune tritanopia role hex values for blue–yellow separability in `src/data/cubeColorPresets.ts`
+- [x] T020 [P] [US2] Tune reduced-contrast palette (lower saturation, separable adjacents) in `src/data/cubeColorPresets.ts`
+- [x] T021 [US2] Add distinct CSS hatch `pattern` per role for achromatopsia preset in `src/data/cubeColorPresets.ts`
+- [x] T022 [US2] Layer `backgroundImage` from palette patterns in `resolveStickerStyle` in `src/utils/cubeColorStyles.ts`
 
 **Checkpoint**: All six presets meet distinguishability goals on solved-cube smoke check
 
@@ -94,10 +94,10 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 ### Implementation for User Story 3
 
-- [X] T023 [US3] Add customize accordion with seven role rows and `HexColorPicker` from `react-colorful` in `src/components/layout/ColorThemeControl.tsx`
-- [X] T024 [US3] Implement `setRoleColor(role, hex)` merging into `paletteOverrides` with `presetId: "custom"` in `src/providers/CubeThemeProvider.tsx`
-- [X] T025 [US3] Clear `paletteOverrides` when `setPreset` selects a named preset in `src/providers/CubeThemeProvider.tsx`
-- [X] T026 [P] [US3] Add role label i18n keys (`roles.red`, `roles.green`, etc.) in `messages/en.json` and `messages/pt.json`
+- [x] T023 [US3] Add customize accordion with seven role rows and `HexColorPicker` from `react-colorful` in `src/components/layout/ColorThemeControl.tsx`
+- [x] T024 [US3] Implement `setRoleColor(role, hex)` merging into `paletteOverrides` with `presetId: "custom"` in `src/providers/CubeThemeProvider.tsx`
+- [x] T025 [US3] Clear `paletteOverrides` when `setPreset` selects a named preset in `src/providers/CubeThemeProvider.tsx`
+- [x] T026 [P] [US3] Add role label i18n keys (`roles.red`, `roles.green`, etc.) in `messages/en.json` and `messages/pt.json`
 
 **Checkpoint**: Custom colors apply globally; selecting a named preset replaces custom mapping
 
@@ -111,10 +111,10 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 ### Implementation for User Story 4
 
-- [X] T027 [US4] Hydrate state from `loadPreference()` on client mount in `src/providers/CubeThemeProvider.tsx`
-- [X] T028 [US4] Call `savePreference` on every `setPreset`, `setRoleColor`, and `resetToDefault` in `src/providers/CubeThemeProvider.tsx`
-- [X] T029 [US4] Add **Reset to Default** action wired to `resetToDefault()` in `src/components/layout/ColorThemeControl.tsx`
-- [X] T030 [US4] Apply optional `applyPaletteToDocument` CSS variables on theme change in `src/providers/CubeThemeProvider.tsx`
+- [x] T027 [US4] Hydrate state from `loadPreference()` on client mount in `src/providers/CubeThemeProvider.tsx`
+- [x] T028 [US4] Call `savePreference` on every `setPreset`, `setRoleColor`, and `resetToDefault` in `src/providers/CubeThemeProvider.tsx`
+- [x] T029 [US4] Add **Reset to Default** action wired to `resetToDefault()` in `src/components/layout/ColorThemeControl.tsx`
+- [x] T030 [US4] Apply optional `applyPaletteToDocument` CSS variables on theme change in `src/providers/CubeThemeProvider.tsx`
 
 **Checkpoint**: Preference survives reload; reset returns to default preset
 
@@ -128,8 +128,8 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 ### Implementation for User Story 5
 
-- [X] T031 [US5] Add `ColorThemeControl` section above language switcher inside mobile sheet in `src/components/layout/header.tsx`
-- [X] T032 [US5] Ensure sheet trigger, preset radiogroup, and picker rows have accessible labels in `src/components/layout/ColorThemeControl.tsx`
+- [x] T031 [US5] Add `ColorThemeControl` section above language switcher inside mobile sheet in `src/components/layout/header.tsx`
+- [x] T032 [US5] Ensure sheet trigger, preset radiogroup, and picker rows have accessible labels in `src/components/layout/ColorThemeControl.tsx`
 
 **Checkpoint**: Mobile and desktop both expose full theme control
 
@@ -139,11 +139,11 @@ Single Next.js project: `src/` at repository root (see plan.md).
 
 **Purpose**: Hydration polish, regression checks, and quickstart validation
 
-- [X] T033 [P] Expose `isReady` flag to suppress hydration mismatch flash in `src/providers/CubeThemeProvider.tsx`
-- [X] T034 Verify lesson pages (`src/app/[locale]/firstTwoLayers/page.tsx`, `orientationLastLayer/page.tsx`, `permutationLastLayer/page.tsx`, `movements/page.tsx`, `cubePieces/page.tsx`) show themed cubes without data changes
-- [X] T035 Confirm scramble text unchanged when switching themes on OLL lesson page (FR-014 manual check)
-- [X] T036 Run all scenarios in `specs/002-cube-color-accessibility/quickstart.md`
-- [X] T037 Run `npm run build` and `npm run format:check`
+- [x] T033 [P] Expose `isReady` flag to suppress hydration mismatch flash in `src/providers/CubeThemeProvider.tsx`
+- [x] T034 Verify lesson pages (`src/app/[locale]/firstTwoLayers/page.tsx`, `orientationLastLayer/page.tsx`, `permutationLastLayer/page.tsx`, `movements/page.tsx`, `cubePieces/page.tsx`) show themed cubes without data changes
+- [x] T035 Confirm scramble text unchanged when switching themes on OLL lesson page (FR-014 manual check)
+- [x] T036 Run all scenarios in `specs/002-cube-color-accessibility/quickstart.md`
+- [x] T037 Run `npm run build` and `npm run format:check`
 
 ---
 

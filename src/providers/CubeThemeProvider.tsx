@@ -6,14 +6,10 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
-import type {
-  ColorPresetId,
-  CubeColorPalette,
-  UserColorPreference,
-} from "@/types/colorTheme";
+import type { ColorPresetId, CubeColorPalette } from "@/types/colorTheme";
 import type { CubeColor } from "@/types/types";
 import {
   applyPaletteToDocument,
@@ -22,8 +18,11 @@ import {
 } from "@/utils/cubeColorStyles";
 import {
   DEFAULT_PREFERENCE,
-  loadPreference,
+  getCachedColorPreference,
+  getColorPreferenceServerSnapshot,
+  getColorPreferenceSnapshot,
   savePreference,
+  subscribeColorPreference,
 } from "@/utils/colorPreference";
 import type { CubeTheme } from "@/utils/cubeTheme";
 
@@ -40,15 +39,16 @@ type CubeThemeContextValue = {
 const CubeThemeContext = createContext<CubeThemeContextValue | null>(null);
 
 export function CubeThemeProvider({ children }: { children: ReactNode }) {
-  const [preference, setPreference] =
-    useState<UserColorPreference>(DEFAULT_PREFERENCE);
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    const stored = loadPreference();
-    setPreference(stored);
-    setIsReady(true);
-  }, []);
+  const preference = useSyncExternalStore(
+    subscribeColorPreference,
+    getColorPreferenceSnapshot,
+    getColorPreferenceServerSnapshot,
+  );
+  const isReady = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
   const { theme, palette, presetId } = useMemo(
     () => resolveThemeState(preference),
@@ -60,36 +60,25 @@ export function CubeThemeProvider({ children }: { children: ReactNode }) {
     applyPaletteToDocument(palette);
   }, [palette, isReady]);
 
-  const commit = useCallback((next: UserColorPreference) => {
-    setPreference(next);
-    savePreference(next);
+  const setPreset = useCallback((id: ColorPresetId) => {
+    savePreference({ version: 1, presetId: id });
   }, []);
-
-  const setPreset = useCallback(
-    (id: ColorPresetId) => {
-      commit({ version: 1, presetId: id });
-    },
-    [commit],
-  );
 
   const setRoleColor = useCallback((role: CubeColor, hex: string) => {
     if (!isValidHex(hex)) return;
-    setPreference((prev) => {
-      const baseOverrides =
-        prev.presetId === "custom" ? (prev.paletteOverrides ?? {}) : {};
-      const next: UserColorPreference = {
-        version: 1,
-        presetId: "custom",
-        paletteOverrides: { ...baseOverrides, [role]: hex },
-      };
-      savePreference(next);
-      return next;
+    const prev = getCachedColorPreference();
+    const baseOverrides =
+      prev.presetId === "custom" ? (prev.paletteOverrides ?? {}) : {};
+    savePreference({
+      version: 1,
+      presetId: "custom",
+      paletteOverrides: { ...baseOverrides, [role]: hex },
     });
   }, []);
 
   const resetToDefault = useCallback(() => {
-    commit(DEFAULT_PREFERENCE);
-  }, [commit]);
+    savePreference(DEFAULT_PREFERENCE);
+  }, []);
 
   const value = useMemo(
     () => ({
