@@ -53,8 +53,11 @@ function getSnapshot(): SolveTime[] {
   return solveTimesCache;
 }
 
+// Stable empty snapshot for SSR / hydration (must be referentially stable)
+const EMPTY_SOLVE_TIMES: SolveTime[] = [];
+
 function getServerSnapshot(): SolveTime[] {
-  return [];
+  return EMPTY_SOLVE_TIMES;
 }
 
 function initializeFromStorage() {

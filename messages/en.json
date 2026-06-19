@@ -360,6 +360,8 @@
   "timer": {
     "title": "Timer",
     "generatingScramble": "Generating scramble...",
+    "scrambleError": "Could not generate a scramble. Showing a fallback sequence.",
+    "wcaDisclaimer": "Scrambles are for practice only and are not valid for WCA-sanctioned competitions.",
     "stopMobile": "Tap the screen to stop the timer",
     "stopDesktop": "Press space to stop the timer",
     "prepareMobile": "Press and hold the screen for 1 second to prepare, release to start",
