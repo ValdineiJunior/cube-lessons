@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Menu, Globe } from "lucide-react";
+import { ColorThemeControl } from "@/components/layout/ColorThemeControl";
 import {
   Sheet,
   SheetContent,
@@ -66,8 +67,9 @@ export function Header() {
             </TabsList>
           </Tabs>
 
-          {/* Language Switcher */}
-          <div className="flex items-center gap-2 ml-4">
+          {/* Language Switcher & Color Theme */}
+          <div className="ml-4 flex items-center gap-2">
+            <ColorThemeControl />
             <Globe className="h-4 w-4 text-gray-500" />
             <button
               onClick={() => switchLanguage(locale === "en" ? "pt" : "en")}
@@ -112,8 +114,13 @@ export function Header() {
                   </SheetClose>
                 ))}
 
+                {/* Mobile Color Theme */}
+                <div className="border-t pt-4">
+                  <ColorThemeControl variant="mobile" />
+                </div>
+
                 {/* Mobile Language Switcher */}
-                <div className="flex items-center gap-2 pt-4 border-t">
+                <div className="flex items-center gap-2 border-t pt-4">
                   <Globe className="h-4 w-4 text-gray-500" />
                   <button
                     onClick={() =>
