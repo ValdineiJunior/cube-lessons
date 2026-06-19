@@ -42,6 +42,13 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --cube-red: #ef4444;
+    --cube-green: #22c55e;
+    --cube-blue: #3b82f6;
+    --cube-orange: #f97316;
+    --cube-yellow: #facc15;
+    --cube-white: #f0f9ff;
+    --cube-gray: #52525b;
   }
   .dark {
     --background: 222.2 84% 4.9%;

@@ -1,10 +1,23 @@
+import type { CubeColorPalette } from "@/types/colorTheme";
+import type { ColorPresetId } from "@/types/colorTheme";
 import type { CubeColor } from "@/types/types";
+import { getColorPreset } from "@/data/cubeColorPresets";
+import {
+  getDefaultPalette,
+  resolveStickerStyle,
+} from "@/utils/cubeColorStyles";
 import {
   CUBE_COLOR_TO_LEGACY,
   FACE_TO_CUBE_COLOR,
   type FaceLetter,
 } from "@/types/scramble";
 import { faceletsToFaces } from "@/utils/cubeState";
+
+export type {
+  CubeColorPalette,
+  ResolvedStickerStyle,
+} from "@/types/colorTheme";
+export { getDefaultPalette, resolveStickerStyle };
 
 export type CubeTheme = {
   id: string;
@@ -17,6 +30,15 @@ export const WCA_DEFAULT_THEME: CubeTheme = {
   label: "WCA Default",
   faces: FACE_TO_CUBE_COLOR,
 };
+
+export function getPresetTheme(presetId: ColorPresetId = "default"): CubeTheme {
+  const preset = getColorPreset(presetId);
+  return {
+    id: preset.id,
+    label: preset.labelKey,
+    faces: preset.faceMap,
+  };
+}
 
 export function themeFaceLetter(
   letter: FaceLetter,

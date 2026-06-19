@@ -374,5 +374,27 @@
     "scramble": "Scramble",
     "action": "Action",
     "delete": "Delete"
+  },
+  "cubeTheme": {
+    "openControl": "Cube color theme",
+    "customize": "Customize colors",
+    "reset": "Reset to Default",
+    "presets": {
+      "default": "Default",
+      "reducedContrast": "Reduced contrast",
+      "protanopia": "Protanopia",
+      "deuteranopia": "Deuteranopia",
+      "tritanopia": "Tritanopia",
+      "achromatopsia": "Achromatopsia"
+    },
+    "roles": {
+      "white": "White",
+      "yellow": "Yellow",
+      "red": "Red",
+      "orange": "Orange",
+      "green": "Green",
+      "blue": "Blue",
+      "gray": "Gray"
+    }
   }
 }

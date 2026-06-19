@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { routing } from "@/i18n/routing";
+import { CubeThemeProvider } from "@/providers/CubeThemeProvider";
 import { Header } from "@/components/layout/header";
 import "../globals.css";
 
@@ -154,10 +155,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
       </head>
       <body className={`${inter.className} flex h-full flex-col`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-            <Header />
-            <main className="container mx-auto px-4 py-8">{children}</main>
-          </div>
+          <CubeThemeProvider>
+            <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+              <Header />
+              <main className="container mx-auto px-4 py-8">{children}</main>
+            </div>
+          </CubeThemeProvider>
         </NextIntlClientProvider>
         <Analytics />
       </body>

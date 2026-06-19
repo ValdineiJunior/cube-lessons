@@ -374,5 +374,27 @@
     "scramble": "Embaralhamento",
     "action": "Ação",
     "delete": "Excluir"
+  },
+  "cubeTheme": {
+    "openControl": "Tema de cores do cubo",
+    "customize": "Personalizar cores",
+    "reset": "Restaurar padrão",
+    "presets": {
+      "default": "Padrão",
+      "reducedContrast": "Contraste reduzido",
+      "protanopia": "Protanopia",
+      "deuteranopia": "Deuteranopia",
+      "tritanopia": "Tritanopia",
+      "achromatopsia": "Acromatopsia"
+    },
+    "roles": {
+      "white": "Branco",
+      "yellow": "Amarelo",
+      "red": "Vermelho",
+      "orange": "Laranja",
+      "green": "Verde",
+      "blue": "Azul",
+      "gray": "Cinza"
+    }
   }
 }
