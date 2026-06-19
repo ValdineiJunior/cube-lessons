@@ -49,6 +49,10 @@ Contributions are welcome! Feel free to open issues or submit pull requests to h
 
 MIT
 
+### Third-party scramble library
+
+Timer 3x3 scrambles use [`cubing`](https://www.npmjs.com/package/cubing) under the **MPL-2.0** license option (`MPL-2.0 OR GPL-3.0-or-later`). Training-subset scrambles continue to use MIT-licensed [`cube-solver`](https://www.npmjs.com/package/cube-solver). Facelet move application uses MIT-licensed [`cubejs`](https://www.npmjs.com/package/cubejs).
+
 ---
 
 Happy cubing! 🧩

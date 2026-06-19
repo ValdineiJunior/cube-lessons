@@ -360,6 +360,8 @@
   "timer": {
     "title": "Timer",
     "generatingScramble": "Gerando embaralhamento...",
+    "scrambleError": "Não foi possível gerar o embaralhamento. Exibindo uma sequência alternativa.",
+    "wcaDisclaimer": "Embaralhamentos são apenas para prática e não são válidos para competições oficiais da WCA.",
     "stopMobile": "Clique na tela para parar o timer",
     "stopDesktop": "Pressione espaço para parar o timer",
     "prepareMobile": "Pressione a tela por 1 segundo para preparar, solte para iniciar",

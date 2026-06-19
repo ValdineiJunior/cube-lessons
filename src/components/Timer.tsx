@@ -1,58 +1,22 @@
 "use client";
 
-import {
-  useRef,
-  useState,
-  useMemo,
-  useCallback,
-  useSyncExternalStore,
-} from "react";
-import { formatTime } from "../utils/timeUtils";
-import PageHeader from "./layout/PageHeader";
+import { useCallback, useRef } from "react";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { useTimer } from "../hooks/useTimer";
 import { useTimerControls } from "../hooks/useTimerControls";
 import { useSolveStats } from "../hooks/useSolveStats";
-import { scramble } from "cube-solver";
-
+import { useScramble } from "../hooks/useScramble";
+import {
+  SCRAMBLE_DESCRIPTIONS,
+  type TimerScrambleType,
+} from "@/types/scramble";
+import { formatTime } from "../utils/timeUtils";
 import { useTranslations } from "next-intl";
-
-type Scrambler =
-  | "3x3"
-  | "2gll"
-  | "cmll"
-  | "corners"
-  | "edges"
-  | "lse"
-  | "lsll"
-  | "pll"
-  | "zbll"
-  | "zzls";
-
-const SCRAMBLE_DESCRIPTIONS: Record<Scrambler, string> = {
-  "3x3": "Standard 3x3 scramble for general practice.",
-  "2gll": "2GLL: Last layer corners oriented, practice corner permutation.",
-  cmll: "CMLL: Corners of the last layer, used in Roux method.",
-  corners: "Corners: Scramble for practicing only corner pieces.",
-  edges: "Edges: Scramble for practicing only edge pieces.",
-  lse: "LSE: Last six edges, Roux method.",
-  lsll: "LSLL: Last slot and last layer.",
-  pll: "PLL: Permute last layer pieces.",
-  zbll: "ZBLL: All last layer cases with oriented edges.",
-  zzls: "ZZLS: ZZ method last slot.",
-};
 
 export function Timer() {
   const isMobile = useIsMobile();
   const t = useTranslations("timer");
   const timerRef = useRef<HTMLDivElement>(null);
-  const [scrambleType, setScrambleType] = useState<Scrambler>("3x3");
-  const [scrambleRevision, setScrambleRevision] = useState(0);
-  const isClient = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false,
-  );
 
   const {
     time,
@@ -65,26 +29,31 @@ export function Timer() {
     endHold,
   } = useTimer();
 
-  // --- Use custom hook for solve stats ---
   const { addSolveTime, stats } = useSolveStats();
-
-  const scrambleDeps = useMemo(
-    () => ({ type: scrambleType, revision: scrambleRevision }),
-    [scrambleType, scrambleRevision],
-  );
-
-  const currentScramble = useMemo(() => {
-    if (!isClient) return "";
-    return scramble(scrambleDeps.type);
-  }, [isClient, scrambleDeps]);
+  const {
+    scramble: currentScramble,
+    status: scrambleStatus,
+    error: scrambleError,
+    scrambleType,
+    setScrambleType,
+    refresh: refreshScramble,
+  } = useScramble("3x3");
 
   const handleStopTimer = useCallback(() => {
-    if (isRunning && time > 0) {
+    if (isRunning && time > 0 && scrambleStatus === "ready") {
       addSolveTime(time, currentScramble);
-      setScrambleRevision((r) => r + 1);
+      refreshScramble();
     }
     stopTimer();
-  }, [isRunning, time, currentScramble, addSolveTime, stopTimer]);
+  }, [
+    isRunning,
+    time,
+    currentScramble,
+    scrambleStatus,
+    addSolveTime,
+    refreshScramble,
+    stopTimer,
+  ]);
 
   useTimerControls({
     timerRef,
@@ -96,10 +65,16 @@ export function Timer() {
     endHold,
   });
 
+  const scrambleDisplay =
+    scrambleStatus === "loading"
+      ? t("generatingScramble")
+      : scrambleStatus === "error"
+        ? (scrambleError?.fallback ?? currentScramble)
+        : currentScramble;
+
   return (
     <div className="select-none touch-none flex-1 flex flex-col min-h-0">
       <div className="text-center flex flex-col flex-1 min-h-0">
-        {/* Scramble type select and description */}
         <div className="mb-4 flex flex-col items-center">
           <label
             htmlFor="scrambleType"
@@ -110,7 +85,9 @@ export function Timer() {
           <select
             id="scrambleType"
             value={scrambleType}
-            onChange={(e) => setScrambleType(e.target.value as Scrambler)}
+            onChange={(e) =>
+              setScrambleType(e.target.value as TimerScrambleType)
+            }
             className="mb-2 px-2 py-1 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             {Object.keys(SCRAMBLE_DESCRIPTIONS).map((type) => (
@@ -122,10 +99,12 @@ export function Timer() {
           <div className="text-xs text-gray-500 text-center max-w-md">
             {SCRAMBLE_DESCRIPTIONS[scrambleType]}
           </div>
+          <p className="mt-2 text-xs text-gray-400 max-w-md">
+            {t("wcaDisclaimer")}
+          </p>
         </div>
 
         <div ref={timerRef} className="flex-1">
-          {/* --- Stats display --- */}
           <div className="mb-4 flex flex-col items-center gap-1">
             {stats.map((stat) => (
               <div key={stat.label} className="text-base text-gray-700">
@@ -134,11 +113,11 @@ export function Timer() {
               </div>
             ))}
           </div>
-          <p className="font-mono mb-4">
-            {isClient ? currentScramble : t("generatingScramble")}
-          </p>
+          <p className="font-mono mb-4">{scrambleDisplay}</p>
+          {scrambleStatus === "error" && (
+            <p className="text-xs text-amber-700 mb-2">{t("scrambleError")}</p>
+          )}
 
-          {/* --- Timer display --- */}
           <div className="text-5xl font-mono font-bold mb-4">
             {formatTime(time)}
           </div>
